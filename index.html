@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDP Surfaces - Manufacturer Direct Premium Surfaces</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="MDP Surfaces offers manufacturer direct premium quartz, granite, and marble surfaces. Discover our Lusso, Ultimate, Allegria, and Prime collections with nationwide warehouses in Montreal, Toronto, and Vancouver.">
+    <meta name="keywords" content="MDP Surfaces, premium surfaces, quartz countertops, manufacturer direct quartz, low silica mineral surface, custom cut to size, Lusso collection, Ultimate collection, kitchen countertops">
+    <meta name="author" content="MDP Surfaces Inc.">
+    <link rel="canonical" href="https://www.mdpsurfaces.com/">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.mdpsurfaces.com/">
+    <meta property="og:title" content="MDP Surfaces - Manufacturer Direct Premium Surfaces">
+    <meta property="og:description" content="1.1 Million Square Foot Factory / Warehouse. 30 Years in Business. Manufacture facility using the finest Italian Technology.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Structured Data (JSON-LD) for Local Business SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "MDP Surfaces",
+      "image": "https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1200&q=80",
+      "description": "Manufacturer Direct Premium Surfaces including Quartz, Granite, and Marble.",
+      "url": "https://www.mdpsurfaces.com/",
+      "telephone": "+18888508838",
+      "email": "info@mdpsurfaces.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "808 Selkirk Ave",
+        "addressLocality": "Pointe Claire",
+        "addressRegion": "QC",
+        "postalCode": "H9R 3S3",
+        "addressCountry": "CA"
+      }
+    }
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config for Logo Colors and Dark Mode -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        mdp: {
+                            red: '#E31837', // MDP Logo Red
+                            darkred: '#B7122A',
+                            grey: '#D1D3D4', // MDP Logo Grey
+                            darkgrey: '#8A8C8E',
+                            dark: '#121212',
+                            darker: '#0a0a0a',
+                            light: '#ffffff',
+                            lighter: '#f8f9fa'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles & Transitions */
+        body {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .view-section {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        .view-section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Hide scrollbar for horizontal scrolling areas if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-mdp-light text-gray-800 dark:bg-mdp-dark dark:text-gray-200 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/90 dark:bg-mdp-darker/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24">
+                <!-- Logo -->
+                <div class="flex items-center cursor-pointer" onclick="app.navigate('home')">
+                    <img src="mdplogo.png" alt="MDP Surfaces Logo" class="h-16 sm:h-20 w-auto object-contain">
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="#" onclick="app.navigate('home')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navHome">Home</a>
+                    
+                    <!-- Dropdown for Collections -->
+                    <div class="relative group">
+                        <button class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors flex items-center">
+                            <span data-i18n="navCollections">Collections</span>
+                            <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                            <a href="#" onclick="app.navigate('lusso')" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" data-i18n="navLusso">Lusso</a>
+                            <a href="#" onclick="app.navigate('ultimate')" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" data-i18n="navUltimate">Ultimate</a>
+                            <a href="#" onclick="app.navigate('allegria')" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" data-i18n="navAllegria">Allegria</a>
+                            <a href="#" onclick="app.navigate('prime')" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700" data-i18n="navPrime">Prime</a>
+                        </div>
+                    </div>
+                    
+                    <a href="#" onclick="app.navigate('cts')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navCTS">Cut To Size</a>
+                    <a href="#" onclick="app.navigate('gallery')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navGallery">Gallery</a>
+                    <a href="#" onclick="app.navigate('contact')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navContact">Contact</a>
+                </div>
+
+                <!-- Tools (Theme & Lang) -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- Language Toggle -->
+                    <div class="flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
+                        <button onclick="app.setLang('en')" id="lang-en" class="px-3 py-1 rounded-full text-sm font-bold transition-colors bg-white dark:bg-gray-600 shadow-sm text-mdp-red">EN</button>
+                        <button onclick="app.setLang('fr')" id="lang-fr" class="px-3 py-1 rounded-full text-sm font-bold transition-colors text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">FR</button>
+                    </div>
+                    <!-- Theme Toggle -->
+                    <button onclick="app.toggleTheme()" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i id="theme-icon" class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="app.toggleMobileMenu()" class="text-gray-600 dark:text-gray-300 hover:text-mdp-red focus:outline-none p-2">
+                        <i id="mobile-menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-mdp-darker border-t border-gray-200 dark:border-gray-800 px-4 pt-2 pb-6 space-y-1 shadow-lg absolute w-full left-0">
+            <a href="#" onclick="app.navigate('home'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navHome">Home</a>
+            <div class="px-3 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider" data-i18n="navCollections">Collections</div>
+            <a href="#" onclick="app.navigate('lusso'); app.toggleMobileMenu()" class="block pl-6 pr-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navLusso">Lusso</a>
+            <a href="#" onclick="app.navigate('ultimate'); app.toggleMobileMenu()" class="block pl-6 pr-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navUltimate">Ultimate</a>
+            <a href="#" onclick="app.navigate('allegria'); app.toggleMobileMenu()" class="block pl-6 pr-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navAllegria">Allegria</a>
+            <a href="#" onclick="app.navigate('prime'); app.toggleMobileMenu()" class="block pl-6 pr-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navPrime">Prime</a>
+            <a href="#" onclick="app.navigate('cts'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navCTS">Cut To Size</a>
+            <a href="#" onclick="app.navigate('gallery'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navGallery">Gallery</a>
+            <a href="#" onclick="app.navigate('contact'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navContact">Contact</a>
+            
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-4 pt-4 flex justify-between items-center px-3">
+                <div class="flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
+                    <button onclick="app.setLang('en')" id="mobile-lang-en" class="px-3 py-1 rounded-full text-sm font-bold bg-white dark:bg-gray-600 text-mdp-red shadow-sm">EN</button>
+                    <button onclick="app.setLang('fr')" id="mobile-lang-fr" class="px-3 py-1 rounded-full text-sm font-bold text-gray-500 dark:text-gray-400">FR</button>
+                </div>
+                <button onclick="app.toggleTheme()" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">
+                    <i id="mobile-theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+        
+        <!-- HOME VIEW -->
+        <section id="view-home" class="view-section active">
+            <!-- Hero Banner -->
+            <div class="relative bg-gray-900 text-white overflow-hidden">
+                <!-- Abstract Background placeholder mimicking marble/quartz -->
+                <div class="absolute inset-0 opacity-40">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1920&q=80" alt="Quartz Background" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
+                        <span class="block text-mdp-grey uppercase text-xl md:text-2xl mb-2 tracking-widest" data-i18n="homeSubtitle">A New Generation Solid Surface</span>
+                        <span data-i18n="homeTitle1">Your Partner…For</span><br>
+                        <span class="text-mdp-red" data-i18n="homeTitle2">Manufacturer Direct</span><br>
+                        <span data-i18n="homeTitle3">Premium Surfaces</span>
+                    </h1>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-300" data-i18n="homeDesc">1.1 Million Square Foot Factory / Warehouse. 30 Years in Business. Manufacture facility using the finest Italian Technology.</p>
+                    <div class="mt-10 flex space-x-4">
+                        <button onclick="app.navigate('collections')" class="bg-mdp-red hover:bg-mdp-darkred text-white px-8 py-3 rounded-md font-semibold transition-colors shadow-lg" data-i18n="btnExplore">Explore Collections</button>
+                        <button onclick="app.navigate('contact')" class="bg-transparent border border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-md font-semibold transition-colors" data-i18n="btnContact">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intro Section -->
+            <div class="py-16 bg-white dark:bg-mdp-dark text-center px-4">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6" data-i18n="quartzComposition">Our Quartz consists of 93 percent quartz, 7 percent resin</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300" data-i18n="quartzDesc">8K is a Low Silica Mineral Surface. We bring you the most popular and modern colours and patterns on the market with consistent, ultimate quality.</p>
+                </div>
+                <!-- Badges -->
+                <div class="flex justify-center items-center gap-8 mt-10 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                    <img src="nsf.png" alt="NSF Certified" class="h-16 w-auto object-contain">
+                    <img src="greenguard.png" alt="Greenguard Certified" class="h-16 w-auto object-contain">
+                </div>
+            </div>
+
+            <!-- Collections Quick Links -->
+            <div class="py-16 bg-gray-50 dark:bg-mdp-darker">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12" data-i18n="ourCollections">Our Collections</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Lusso -->
+                        <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('lusso')">
+                            <div class="h-48 bg-gray-300 overflow-hidden relative">
+                                <img src="VenatinoGrigio.jpg" alt="Lusso" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">LUSSO</h3>
+                                <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
+                            </div>
+                        </div>
+                        <!-- Ultimate -->
+                        <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('ultimate')">
+                            <div class="h-48 bg-gray-300 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1588854337221-4cfb6388ceea?auto=format&fit=crop&w=600&q=80" alt="Ultimate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">ULTIMATE</h3>
+                                <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
+                            </div>
+                        </div>
+                        <!-- Allegria -->
+                        <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('allegria')">
+                            <div class="h-48 bg-gray-300 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1590623190807-6c0b36ee2627?auto=format&fit=crop&w=600&q=80" alt="Allegria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">ALLEGRIA</h3>
+                                <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
+                            </div>
+                        </div>
+                        <!-- Prime -->
+                        <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('prime')">
+                            <div class="h-48 bg-gray-300 overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Prime" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">PRIME</h3>
+                                <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Reviews Section -->
+            <div class="py-16 bg-white dark:bg-mdp-dark">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <div class="flex items-center justify-center gap-3 mb-2">
+                            <h2 class="text-3xl font-bold text-gray-900 dark:text-white" data-i18n="reviewsTitle">Google Reviews</h2>
+                            <svg class="w-8 h-8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                        </div>
+                        <div class="flex items-center justify-center text-yellow-400 text-xl gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-600 dark:text-gray-300 text-base font-medium ml-2">5.0 Rating</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Review 1 -->
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 flex items-center justify-center font-bold text-lg mr-3">H</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 dark:text-white text-sm">Harvey Short</div>
+                                    <div class="text-xs text-gray-500">1 review</div>
+                                </div>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs mb-3 gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">"Great service! We have made our kitchen countertop with MDP Surfaces this summer. Mena is amazing, she takes time to find the best product for her client and makes sure everyone is satisfied..."</p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 flex items-center justify-center font-bold text-lg mr-3">D</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 dark:text-white text-sm">David Mckay</div>
+                                    <div class="text-xs text-gray-500">1 review</div>
+                                </div>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs mb-3 gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">"I have used the services of MDP since way before they were MDP... 8K Ultra HD has been the best. Great consistent quality with the most popular and modern colours."</p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 flex items-center justify-center font-bold text-lg mr-3">F</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 dark:text-white text-sm">Frank Nasso</div>
+                                    <div class="text-xs text-gray-500">4 reviews</div>
+                                </div>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs mb-3 gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">"As a rapidly growing business, our company has always sought out the best solutions for our office kitchen space to ensure that they not only serve their functional purposes but also exude professionalism..."</p>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 flex items-center justify-center font-bold text-lg mr-3">T</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 dark:text-white text-sm">TravelOnly Elise</div>
+                                    <div class="text-xs text-gray-500">Local Guide · 58 reviews</div>
+                                </div>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs mb-3 gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">"They just did my mom's counter tops. Looks absolutely stunning !!! There was constantly communication between us and they accommodated all our specific requests. 5/5 recommend."</p>
+                        </div>
+                        
+                        <!-- Review 5 -->
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 flex items-center justify-center font-bold text-lg mr-3">H</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 dark:text-white text-sm">HaouNa2</div>
+                                    <div class="text-xs text-gray-500">2 reviews</div>
+                                </div>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs mb-3 gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">"Attention to detail, quality of the countertops and regular following up on delivery and installation. What more can I ask for?!? Thank you so much for such a great and seamless experience."</p>
+                        </div>
+
+                        <!-- Review 6 -->
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-300 flex items-center justify-center font-bold text-lg mr-3">M</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 dark:text-white text-sm">Mathieu Guertin</div>
+                                    <div class="text-xs text-gray-500">2 reviews</div>
+                                </div>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs mb-3 gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">"Excellent service. Mena opened her warehouse to us on a Saturday to accommodate us. She gave us excellent advice without any sales pressure. Very competitive prices. We recommend MDP Surfaces without hesitation."</p>
+                        </div>
+                        
+                        <!-- Review 7 -->
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-300 flex items-center justify-center font-bold text-lg mr-3">D</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 dark:text-white text-sm">Domenic Mancini</div>
+                                    <div class="text-xs text-gray-500">7 reviews</div>
+                                </div>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs mb-3 gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">"As a cabinet maker I recommend MDP surfaces to all my clients. Great product with at a great price point and working with MENA is an absolute pleasure."</p>
+                        </div>
+                        
+                        <!-- Review 8 -->
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-teal-100 dark:bg-teal-900 text-teal-600 dark:text-teal-300 flex items-center justify-center font-bold text-lg mr-3">N</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 dark:text-white text-sm">notoriousnic1982</div>
+                                    <div class="text-xs text-gray-500">8 reviews</div>
+                                </div>
+                            </div>
+                            <div class="flex text-yellow-400 text-xs mb-3 gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">"The product is durable and amazing. They did my Kitchen countertops and my backsplash in QUARTZ. Very good quality, as well the service was amazing. Thank you MDP & Mena."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LUSSO COLLECTION VIEW -->
+        <section id="view-lusso" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">LUSSO COLLECTION</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="lowSilica">8K is a Low Silica Mineral Surface. Natural characteristics in quartz may cause slight colour variation.</p>
+                <button onclick="app.navigate('contact')" class="mt-6 bg-mdp-red hover:bg-mdp-darkred px-6 py-2 rounded font-medium" data-i18n="reqSample">Request Sample 4x6</button>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div id="grid-lusso" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- JS Populated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ULTIMATE COLLECTION VIEW -->
+        <section id="view-ultimate" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">ULTIMATE COLLECTION</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="lowSilica">8K is a Low Silica Mineral Surface. Featuring the New Colours of 2024.</p>
+                <button onclick="app.navigate('contact')" class="mt-6 bg-mdp-red hover:bg-mdp-darkred px-6 py-2 rounded font-medium" data-i18n="reqSample">Request Sample 4x6</button>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div id="grid-ultimate" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- JS Populated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ALLEGRIA COLLECTION VIEW -->
+        <section id="view-allegria" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">ALLEGRIA COLLECTION</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="lowSilica">8K is a Low Silica Mineral Surface. Discover elegant aesthetics.</p>
+                <button onclick="app.navigate('contact')" class="mt-6 bg-mdp-red hover:bg-mdp-darkred px-6 py-2 rounded font-medium" data-i18n="reqSample">Request Sample 4x6</button>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div id="grid-allegria" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- JS Populated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PRIME COLLECTION VIEW -->
+        <section id="view-prime" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">PRIME COLLECTION</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="lowSilica">8K is a Low Silica Mineral Surface. Pure and uniform patterns.</p>
+                <button onclick="app.navigate('contact')" class="mt-6 bg-mdp-red hover:bg-mdp-darkred px-6 py-2 rounded font-medium" data-i18n="reqSample">Request Sample 4x6</button>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div id="grid-prime" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- JS Populated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CUT TO SIZE VIEW -->
+        <section id="view-cts" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">CTS Solution</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="ctsSubtitle">The blueprint cut-to-size solution for fabricated quartz, granite and marble surfaces. We are your trusted partner.</p>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-2xl font-bold text-mdp-red mb-6" data-i18n="weOfferYou">WE OFFER YOU:</h2>
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                            <li><i class="fa-solid fa-check text-mdp-red mr-2"></i> All manufacturing, quality control, logistics and coordination.</li>
+                            <li><i class="fa-solid fa-check text-mdp-red mr-2"></i> Quality assured, fast turnaround, less waste, no offcuts.</li>
+                            <li><i class="fa-solid fa-check text-mdp-red mr-2"></i> Color and pattern matched quartz, full format slabs.</li>
+                            <li><i class="fa-solid fa-check text-mdp-red mr-2"></i> Most selections of granite and marble are available.</li>
+                            <li><i class="fa-solid fa-check text-mdp-red mr-2"></i> Aggressively priced, enabling larger projects profitably.</li>
+                            <li><i class="fa-solid fa-check text-mdp-red mr-2"></i> Reduced wear and tear on your machinery and tooling.</li>
+                            <li><i class="fa-solid fa-check text-mdp-red mr-2"></i> 10 Year Commercial Warranty (material only).</li>
+                        </ul>
+                        
+                        <h2 class="text-2xl font-bold text-mdp-red mt-10 mb-6" data-i18n="valueAdded">VALUE ADDED ADVANTAGES:</h2>
+                        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                            <li><i class="fa-solid fa-star text-mdp-red mr-2"></i> Ideal for high-rises and multi-family units.</li>
+                            <li><i class="fa-solid fa-star text-mdp-red mr-2"></i> Ability to explore multiple solutions.</li>
+                            <li><i class="fa-solid fa-star text-mdp-red mr-2"></i> Facilitation of commercial project management.</li>
+                            <li><i class="fa-solid fa-star text-mdp-red mr-2"></i> Manufactured and engineered with efficiency.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg border-t-4 border-mdp-red">
+                        <h2 class="text-2xl font-bold mb-6 dark:text-white" data-i18n="fiveEasySteps">5 EASY STEPS:</h2>
+                        <div class="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 dark:before:via-gray-600 before:to-transparent">
+                            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-mdp-red text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">1</div>
+                                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm">
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">We review and quote from your shop drawings</p>
+                                </div>
+                            </div>
+                            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-mdp-red text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">2</div>
+                                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm">
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">Control samples sent for your approval</p>
+                                </div>
+                            </div>
+                            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-mdp-red text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">3</div>
+                                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm">
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">Final details confirmed (Sink placement, edges)</p>
+                                </div>
+                            </div>
+                            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-mdp-red text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">4</div>
+                                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm">
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">You sign-off on drawings with PO & 50% deposit</p>
+                                </div>
+                            </div>
+                            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-mdp-red text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">5</div>
+                                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm">
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200">Final production of your project</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY VIEW -->
+        <section id="view-gallery" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="navGallery">Gallery</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="gallerySub">See our stunning surfaces in action.</p>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <!-- Placeholder Images for Gallery -->
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=500&q=60" alt="Kitchen" onclick="app.openModal('Gallery - Kitchen', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=60" alt="Bathroom" onclick="app.openModal('Gallery - Bathroom', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=500&q=60" alt="Living" onclick="app.openModal('Gallery - Living Space', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=500&q=60" alt="Kitchen 2" onclick="app.openModal('Gallery - Modern Kitchen', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=60" alt="Counter" onclick="app.openModal('Gallery - Countertop Detail', 'Commercial Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=500&q=60" alt="Kitchen 3" onclick="app.openModal('Gallery - Open Kitchen', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT VIEW -->
+        <section id="view-contact" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="contactUsToday">Contact Us TODAY!</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="getInTouch">Get in touch, we're here to help! Send us a message.</p>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <!-- Form -->
+                    <div class="w-full lg:w-1/2 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md border-t-4 border-mdp-red">
+                        <form id="contactForm" name="contact" data-netlify="true" onsubmit="app.handleFormSubmit(event)">
+                            <input type="hidden" name="form-name" value="contact" />
+                            <div class="mb-6">
+                                <label for="fullName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="fullName">Nom complet / Full Name: *</label>
+                                <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="emailAddress">Adresse courriel / Email Address: *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="yourMessage">Votre message / Your Message:</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-mdp-red hover:bg-mdp-darkred text-white font-bold py-3 px-4 rounded transition-colors" data-i18n="submit">Submit</button>
+                            <p id="formSuccess" class="hidden mt-4 text-green-600 dark:text-green-400 font-medium text-center" data-i18n="formSuccessMsg">Message sent successfully!</p>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="w-full lg:w-1/2 space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b pb-2 dark:border-gray-700">Main Office</h3>
+                            <p class="text-gray-600 dark:text-gray-300 flex items-center mb-2"><i class="fa-solid fa-envelope w-6 text-mdp-red"></i> <a href="mailto:info@mdpsurfaces.com" class="hover:text-mdp-red transition">info@mdpsurfaces.com</a></p>
+                            <p class="text-gray-600 dark:text-gray-300 flex items-center mb-2"><i class="fa-solid fa-phone w-6 text-mdp-red"></i> <a href="tel:18888508838" class="hover:text-mdp-red transition">1-888-850-8838</a></p>
+                            <p class="text-gray-600 dark:text-gray-300 flex items-start"><i class="fa-solid fa-location-dot w-6 mt-1 text-mdp-red"></i> 808 Selkirk Ave, Pointe Claire, QC H9R 3S3</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b pb-2 dark:border-gray-700">Toronto Office</h3>
+                            <p class="text-gray-600 dark:text-gray-300 flex items-center"><i class="fa-solid fa-phone w-6 text-mdp-red"></i> <a href="tel:12268990129" class="hover:text-mdp-red transition">1-226-899-0129</a></p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b pb-2 dark:border-gray-700" data-i18n="hours">Hours</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-2"><strong>Warehouse:</strong> Monday to Friday: 8:00am - 4:00pm</p>
+                            <p class="text-gray-600 dark:text-gray-300"><strong>Office:</strong> By Appointment Only.</p>
+                        </div>
+
+                        <!-- Slab Viewing Section -->
+                        <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg border-l-4 border-mdp-red shadow-sm">
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 flex items-center"><i class="fa-solid fa-calendar-check text-mdp-red mr-2"></i> <span data-i18n="slabViewingTitle">Slab Viewing Appointments</span></h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-2"><span data-i18n="slabViewingText">For slab viewing please contact Mena to book an appointment:</span></p>
+                            <p class="font-bold text-mdp-red text-lg"><a href="mailto:info@mdpsurfaces.com" class="hover:underline">info@mdpsurfaces.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Item Modal (Pop-up) -->
+        <div id="itemModal" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm overflow-y-auto opacity-0 transition-opacity duration-300" onclick="app.closeModal()">
+            <div class="min-h-screen px-4 py-10 flex items-center justify-center pointer-events-none">
+                <div class="relative bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-full max-w-4xl flex flex-col md:flex-row transform scale-95 transition-transform duration-300 mx-auto pointer-events-auto" id="itemModalContent" onclick="event.stopPropagation()">
+                    
+                    <!-- Bubble X Close Button -->
+                    <button onclick="app.closeModal()" class="absolute -top-3 -right-3 md:-top-4 md:-right-4 z-50 bg-mdp-red text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center shadow-xl hover:bg-mdp-darkred transition text-xl focus:outline-none ring-4 ring-white dark:ring-gray-900">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <!-- Left: Images & Info -->
+                    <div class="w-full md:w-1/2 relative bg-gray-200 dark:bg-gray-900 rounded-t-xl md:rounded-l-xl md:rounded-tr-none overflow-hidden flex flex-col">
+                        <div class="h-64 md:h-full relative min-h-[250px] w-full flex-grow">
+                            <!-- Single Product Image -->
+                            <img id="modalImage" src="" alt="Product View" class="absolute inset-0 w-full h-full object-cover">
+                            
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none z-20"></div>
+                            <div class="absolute bottom-0 left-0 p-6 text-white w-full pointer-events-none z-30">
+                                <h3 id="modalTitle" class="text-2xl md:text-3xl font-bold mb-1 shadow-sm">Collection Item</h3>
+                                <p id="modalSubtitle" class="text-gray-300 font-medium tracking-wide">ID - Size</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="inquiryTitle">Interested in this surface?</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6 text-sm" data-i18n="inquiryDesc">Fill out the form below and we'll get back to you with availability and details.</p>
+                        
+                        <!-- Netlify Ready Modal Form -->
+                        <form id="modalForm" name="item-inquiry" data-netlify="true" onsubmit="app.handleModalFormSubmit(event)">
+                            <input type="hidden" name="form-name" value="item-inquiry" />
+                            <input type="hidden" id="modalInterestedIn" name="interested_in" value="" />
+                            
+                            <div class="mb-4">
+                                <label for="modalName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="fullName">Nom complet / Full Name: *</label>
+                                <input type="text" id="modalName" name="fullName" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                            </div>
+                            <div class="mb-4">
+                                <label for="modalEmail" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="emailAddress">Adresse courriel / Email Address: *</label>
+                                <input type="email" id="modalEmail" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                            </div>
+                            <div class="mb-6">
+                                <label for="modalMessage" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="yourMessage">Votre message / Your Message:</label>
+                                <textarea id="modalMessage" name="message" rows="3" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-mdp-red hover:bg-mdp-darkred text-white font-bold py-3 px-4 rounded transition-colors" data-i18n="submit">Submit</button>
+                            <p id="modalFormSuccess" class="hidden mt-4 text-green-600 dark:text-green-400 font-medium text-center" data-i18n="formSuccessMsg">Message sent successfully!</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-mdp-darker border-t border-gray-200 dark:border-gray-800 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Branding -->
+                <div>
+                    <div class="mb-4 cursor-pointer inline-block" onclick="app.navigate('home')">
+                        <img src="mdplogo.png" alt="MDP Surfaces Logo" class="h-16 w-auto object-contain">
+                    </div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-i18n="footerDesc">Your Partner…For Manufacturer Direct Premium Surfaces.</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 font-medium"><i class="fa-solid fa-envelope text-mdp-red mr-2"></i><a href="mailto:info@mdpsurfaces.com" class="hover:text-mdp-red transition">info@mdpsurfaces.com</a></p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-mdp-red transition"><i class="fa-brands fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-mdp-red transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-mdp-red transition"><i class="fa-brands fa-youtube text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-mdp-red transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Warehouses 1 -->
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4" data-i18n="ourWarehouses">OUR WAREHOUSES</h4>
+                    <div class="mb-4">
+                        <h5 class="font-semibold text-sm text-gray-800 dark:text-gray-200">MONTREAL WAREHOUSE</h5>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">808 Selkirk Ave, Pointe Claire, QC H9R 3S3</p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-sm text-gray-800 dark:text-gray-200">VANCOUVER WAREHOUSE</h5>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">12380 Vickers Way, Richmond, BC V6V 1H9</p>
+                    </div>
+                </div>
+
+                <!-- Warehouses 2 -->
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4 invisible">Locations</h4>
+                    <div class="mb-4">
+                        <h5 class="font-semibold text-sm text-gray-800 dark:text-gray-200">TORONTO WAREHOUSE 1</h5>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">150 Jardin Dr #6 Concord, ON L4K 1X6</p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-sm text-gray-800 dark:text-gray-200">TORONTO WAREHOUSE 2</h5>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">22999 HWY 48 Georgina, ON L0E 1R0</p>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4" data-i18n="downloads">Downloads & Forms</h4>
+                    <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a href="https://drive.google.com/file/d/1mkSxBdJd98lmbyTlG982_5Yea0Z7CPie/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-mdp-red transition"><i class="fa-solid fa-file-pdf mr-2"></i>8K ULTRA - Commercial Warranty</a></li>
+                        <li><a href="https://drive.google.com/file/d/11KiPk3Fdl4sqS62_LGvRkhFavXEPGt0X/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-mdp-red transition"><i class="fa-solid fa-file-pdf mr-2"></i>8K ULTRA - Residential Warranty</a></li>
+                        <li><a href="https://drive.google.com/file/d/1mE0xjTu2H--N6Jx-XXPA0vXfa30q6S8o/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-mdp-red transition"><i class="fa-solid fa-file-pdf mr-2"></i>MDP Care and Maintenance</a></li>
+                        <li><a href="https://drive.google.com/file/d/1AQM06dwiYiHFyxd9jMk5TwMzFF45vl7p/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-mdp-red transition"><i class="fa-solid fa-file-pdf mr-2"></i>Product Waiver Forms</a></li>
+                        <li><a href="https://drive.google.com/file/d/1QwWzRp-N6KbCG7FD3vV7nNqcrz_MqGkv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-mdp-red transition"><i class="fa-solid fa-download mr-2"></i>Download Brochure</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">Copyright &copy; <span id="year">2026</span> MDP Surfaces Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Logic -->
+    <script>
+        // --- 1. DATA: Product Collections ---
+        const products = {
+            lusso: [
+                { id: "UHD-900", name: "Venatino Grigio", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", imgThumbnail: "VenatinoGrigio.jpg", imgModal: "VenatinoGrigiousage.jpg" },
+                { id: "UHD-901", name: "Calacatta Rustico", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", imgThumbnail: "UHD-901.png", imgModal: "UHD-901-app.png" },
+                { id: "UHD-902", name: "Boticcino", size: "63” x 126”", descEn: "Colour is translucent.", descFr: "La couleur est translucide.", imgThumbnail: "UHD-902.png", imgModal: "UHD-902-app.png" },
+                { id: "UHD-903", name: "Moscato Beige", size: "63” x 126”", descEn: "Colour is translucent.", descFr: "La couleur est translucide.", imgThumbnail: "UHD-903.png", imgModal: "UHD-903-app.png" },
+                { id: "UHD-904", name: "Calacatta Picasso", size: "63” x 126”", descEn: "Natural characteristics in quartz.", descFr: "Caractéristiques naturelles du quartz.", imgThumbnail: "UHD-904.png", imgModal: "UHD-904-app.png" },
+                { id: "UHD-905", name: "Marmo", size: "63” x 126”", descEn: "Natural characteristics in quartz.", descFr: "Caractéristiques naturelles du quartz.", imgThumbnail: "UHD-905.png", imgModal: "UHD-905-app.png" },
+                { id: "UHD-906", name: "Statuario Classico", size: "63” x 126”", descEn: "Natural characteristics in quartz.", descFr: "Caractéristiques naturelles du quartz.", imgThumbnail: "UHD-906.png", imgModal: "UHD-906-app.png" }
+            ],
+            ultimate: [
+                { id: "UHD-700", name: "Carrara Oro", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super-white with a subtle and undefined gold veining pattern.", descFr: "Grain ultra fin super-blanc avec un motif de veines dorées subtil et non défini.", imgThumbnail: "UHD-700.png", imgModal: "UHD-700-app.png" },
+                { id: "UHD-690", name: "Vene Grigio", size: "63” x 126”", descEn: "Soft elegant white with dark grey detailed veining.", descFr: "Blanc élégant et doux avec des veines gris foncé détaillées.", imgThumbnail: "UHD-690.png", imgModal: "UHD-690-app.png" },
+                { id: "UHD-808", name: "Ultima Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with high-definition broad diagonal grey veining.", descFr: "Grain ultra fin blanc avec veines grises diagonales larges haute définition.", imgThumbnail: "UHD-808.png", imgModal: "UHD-808-app.png" },
+                { id: "UHD-818", name: "Crema Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with characteristic diagonal grey veining.", descFr: "Grain ultra fin blanc avec veines grises diagonales caractéristiques.", imgThumbnail: "UHD-818.png", imgModal: "UHD-818-app.png" },
+                { id: "UHD-680", name: "Carrara", size: "Jumbo 63″x126″", descEn: "Super-white with subtle undefined grey veining.", descFr: "Super-blanc avec de subtiles veines grises indéfinies.", imgThumbnail: "UHD-680.png", imgModal: "UHD-680-app.png" },
+                { id: "UHD-858-L", name: "Nero Statuario", size: "Jumbo 63″x126″", descEn: "Deep dark black color in Antico (mat) finish.", descFr: "Couleur noir profond avec finition Antico (mat).", imgThumbnail: "UHD-858-L.png", imgModal: "UHD-858-L-app.png" }
+            ],
+            allegria: [
+                { id: "UHD-788", name: "Osso Marrone", size: "63” x 126”", descEn: "Beige effect color, soft smooth wave with superior lustre.", descFr: "Couleur effet beige, vague douce et lisse avec un lustre supérieur.", imgThumbnail: "UHD-788.png", imgModal: "UHD-788-app.png" },
+                { id: "UHD-798", name: "Ghiacciaio", size: "63” x 126”", descEn: "Effect of an ice look with smooth waves and lustre.", descFr: "Effet d'un aspect de glace avec des vagues lisses et du lustre.", imgThumbnail: "UHD-798.png", imgModal: "UHD-798-app.png" },
+                { id: "UHD-848", name: "Calacatta Marmo", size: "Jumbo 63″x126″", descEn: "A soft elegant white/grey marble look & feel.", descFr: "Un aspect et une sensation de marbre blanc/gris doux et élégant.", imgThumbnail: "UHD-848.png", imgModal: "UHD-848-app.png" },
+                { id: "UHD-778", name: "Sabbia Oro", size: "Jumbo 63″x126″", descEn: "A wavey golden sand with an elegant finish.", descFr: "Un sable doré ondulé avec une finition élégante.", imgThumbnail: "UHD-778.png", imgModal: "UHD-778-app.png" },
+                { id: "UHD-758", name: "Macchiato", size: "Jumbo 63″x126″", descEn: "An espresso brown with soft gold veining throughout.", descFr: "Un brun expresso avec de douces veines dorées partout.", imgThumbnail: "UHD-758.png", imgModal: "UHD-758-app.png" }
+            ],
+            prime: [
+                { id: "UHD-300", name: "Montreal", size: "Jumbo 63″x126″", descEn: "Fine grain white, pure and uniform pattern.", descFr: "Grain fin blanc, motif pur et uniforme.", imgThumbnail: "UHD-300.png", imgModal: "UHD-300-app.png" },
+                { id: "UHD-301", name: "Toronto", size: "Jumbo 63″x126″", descEn: "Midsize particulate white, pure and uniform pattern.", descFr: "Particules de taille moyenne blanc, motif pur et uniforme.", imgThumbnail: "UHD-301.png", imgModal: "UHD-301-app.png" },
+                { id: "UHD-302", name: "Vancouver", size: "Jumbo 63″x126″", descEn: "Large particulate white, pure and uniform pattern.", descFr: "Grandes particules blanc, motif pur et uniforme.", imgThumbnail: "UHD-302.png", imgModal: "UHD-302-app.png" },
+                { id: "UHD-303", name: "Calgary", size: "Jumbo 63″x126″", descEn: "Midsize particulate light grey, pure and uniform pattern.", descFr: "Particules moyennes gris clair, motif pur et uniforme.", imgThumbnail: "UHD-303.png", imgModal: "UHD-303-app.png" },
+                { id: "UHD-304", name: "Ottawa", size: "Jumbo 63″x126″", descEn: "Midsize particulate medium grey with reflection.", descFr: "Particules moyennes gris moyen avec réflexion.", imgThumbnail: "UHD-304.png", imgModal: "UHD-304-app.png" },
+                { id: "UHD-307", name: "Edmonton", size: "Jumbo 63″x126″", descEn: "Midsize particulate medium grey, pure and uniform pattern.", descFr: "Particules moyennes gris moyen, motif pur et uniforme.", imgThumbnail: "UHD-307.png", imgModal: "UHD-307-app.png" }
+            ]
+        };
+
+        // --- 2. DATA: Translations ---
+        const translations = {
+            en: {
+                navHome: "Home", navCollections: "Collections", navLusso: "Lusso", navUltimate: "Ultimate", 
+                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Cut To Size", navGallery: "Gallery", navContact: "Contact",
+                homeSubtitle: "A New Generation Solid Surface",
+                homeTitle1: "Your Partner…For", homeTitle2: "Manufacturer Direct", homeTitle3: "Premium Surfaces",
+                homeDesc: "1.1 Million Square Foot Factory / Warehouse. 30 Years in Business. Manufacture facility using the finest Italian Technology.",
+                btnExplore: "Explore Collections", btnContact: "Contact Us",
+                quartzComposition: "Our Quartz consists of 93 percent quartz, 7 percent resin",
+                quartzDesc: "8K is a Low Silica Mineral Surface. We bring you the most popular and modern colours and patterns on the market with consistent, ultimate quality.",
+                ourCollections: "Our Collections", viewCollection: "View Collection &rarr;",
+                testimonialsTitle: "What Our Partners Say",
+                lowSilica: "8K is a Low Silica Mineral Surface. Natural characteristics in quartz may cause slight colour variation.",
+                reqSample: "Request Sample 4x6",
+                ctsSubtitle: "The blueprint cut-to-size solution for fabricated quartz, granite and marble surfaces. We are your trusted partner.",
+                weOfferYou: "WE OFFER YOU:", valueAdded: "VALUE ADDED ADVANTAGES:", fiveEasySteps: "5 EASY STEPS:",
+                gallerySub: "See our stunning surfaces in action.",
+                contactUsToday: "Contact Us TODAY!", getInTouch: "Get in touch, we're here to help! Send us a message.",
+                fullName: "Nom complet / Full Name: *", emailAddress: "Adresse courriel / Email Address: *", yourMessage: "Votre message / Your Message:",
+                submit: "Submit", formSuccessMsg: "Message sent successfully!",
+                hours: "Hours", footerDesc: "Your Partner…For Manufacturer Direct Premium Surfaces.",
+                ourWarehouses: "OUR WAREHOUSES", downloads: "Downloads & Forms",
+                slabViewingTitle: "Slab Viewing Appointments", slabViewingText: "For slab viewing please contact Mena to book an appointment:",
+                reviewsTitle: "Google Reviews",
+                inquiryTitle: "Interested in this surface?",
+                inquiryDesc: "Fill out the form below and we'll get back to you with availability and details."
+            },
+            fr: {
+                navHome: "Accueil", navCollections: "Collections", navLusso: "Lusso", navUltimate: "Ultimate", 
+                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Coupé sur Mesure", navGallery: "Galerie", navContact: "Contact",
+                homeSubtitle: "Une Surface Solide Nouvelle Génération",
+                homeTitle1: "Votre Partenaire…Pour", homeTitle2: "Direct Manufacturier", homeTitle3: "Surfaces Premium",
+                homeDesc: "Usine / Entrepôt de 1,1 million de pieds carrés. 30 ans d'expérience. Installation de fabrication utilisant la meilleure technologie italienne.",
+                btnExplore: "Explorer les Collections", btnContact: "Contactez-nous",
+                quartzComposition: "Notre Quartz est composé à 93 % de quartz et 7 % de résine",
+                quartzDesc: "8K est une surface minérale à faible teneur en silice. Nous vous apportons les couleurs et motifs les plus populaires et modernes du marché avec une qualité constante.",
+                ourCollections: "Nos Collections", viewCollection: "Voir la Collection &rarr;",
+                testimonialsTitle: "Ce Que Disent Nos Partenaires",
+                lowSilica: "8K est une surface minérale à faible teneur en silice. Les caractéristiques naturelles peuvent causer de légères variations.",
+                reqSample: "Demander Échantillon 4x6",
+                ctsSubtitle: "La solution sur mesure pour les surfaces de quartz, granit et marbre fabriquées. Nous sommes votre partenaire de confiance.",
+                weOfferYou: "NOUS VOUS OFFRONS :", valueAdded: "AVANTAGES À VALEUR AJOUTÉE :", fiveEasySteps: "5 ÉTAPES SIMPLES :",
+                gallerySub: "Découvrez nos superbes surfaces en action.",
+                contactUsToday: "Contactez-nous AUJOURD'HUI!", getInTouch: "Entrez en contact, nous sommes là pour vous aider ! Envoyez-nous un message.",
+                fullName: "Nom complet / Full Name: *", emailAddress: "Adresse courriel / Email Address: *", yourMessage: "Votre message / Your Message:",
+                submit: "Soumettre", formSuccessMsg: "Message envoyé avec succès !",
+                hours: "Heures", footerDesc: "Votre Partenaire…Pour Des Surfaces Premium Directement Du Manufacturier.",
+                ourWarehouses: "NOS ENTREPÔTS", downloads: "Téléchargements et Formulaires",
+                slabViewingTitle: "Rendez-vous pour Visualisation", slabViewingText: "Pour la visualisation des tranches, veuillez contacter Mena pour prendre rendez-vous :",
+                reviewsTitle: "Avis Google",
+                inquiryTitle: "Intéressé par cette surface ?",
+                inquiryDesc: "Remplissez le formulaire ci-dessous et nous vous contacterons avec les disponibilités et les détails."
+            }
+        };
+
+        // --- 3. APPLICATION LOGIC ---
+        const app = {
+            currentLang: localStorage.getItem('mdp_lang') || 'en',
+            currentTheme: localStorage.getItem('mdp_theme') || 'light',
+            
+            init() {
+                document.getElementById('year').textContent = new Date().getFullYear();
+                this.applyTheme();
+                this.setLang(this.currentLang);
+                this.renderAllCollections();
+                
+                // Set initial view based on hash or default to home
+                const hash = window.location.hash.substring(1);
+                if(['home','lusso','ultimate','allegria','prime','cts','gallery','contact'].includes(hash)) {
+                    this.navigate(hash);
+                } else {
+                    this.navigate('home');
+                }
+            },
+
+            // Navigation / Routing
+            navigate(viewId) {
+                // Handle sub-routing to home if 'collections' button clicked
+                if(viewId === 'collections') {
+                    window.scrollTo({ top: document.querySelector('.bg-gray-50').offsetTop, behavior: 'smooth' });
+                    return;
+                }
+
+                // Hide all views
+                document.querySelectorAll('.view-section').forEach(el => {
+                    el.classList.remove('active');
+                });
+                // Show target view
+                const target = document.getElementById(`view-${viewId}`);
+                if (target) {
+                    target.classList.add('active');
+                    window.location.hash = viewId;
+                    window.scrollTo(0, 0); // Reset scroll position on nav
+                }
+            },
+
+            toggleMobileMenu() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            },
+
+            // Theming
+            toggleTheme() {
+                this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+                localStorage.setItem('mdp_theme', this.currentTheme);
+                this.applyTheme();
+            },
+
+            applyTheme() {
+                const htmlEl = document.documentElement;
+                const iconDesktop = document.getElementById('theme-icon');
+                const iconMobile = document.getElementById('mobile-theme-icon');
+                
+                if (this.currentTheme === 'dark') {
+                    htmlEl.classList.add('dark');
+                    iconDesktop.className = 'fa-solid fa-sun';
+                    iconMobile.className = 'fa-solid fa-sun';
+                } else {
+                    htmlEl.classList.remove('dark');
+                    iconDesktop.className = 'fa-solid fa-moon';
+                    iconMobile.className = 'fa-solid fa-moon';
+                }
+            },
+
+            // Internationalization
+            setLang(lang) {
+                this.currentLang = lang;
+                localStorage.setItem('mdp_lang', lang);
+                
+                // Update toggle buttons UI
+                ['lang-en', 'lang-fr', 'mobile-lang-en', 'mobile-lang-fr'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if(el.id.includes(lang)) {
+                        el.classList.remove('text-gray-500', 'dark:text-gray-400');
+                        el.classList.add('bg-white', 'dark:bg-gray-600', 'text-mdp-red', 'shadow-sm');
+                    } else {
+                        el.classList.add('text-gray-500', 'dark:text-gray-400');
+                        el.classList.remove('bg-white', 'dark:bg-gray-600', 'text-mdp-red', 'shadow-sm');
+                    }
+                });
+
+                // Apply translations
+                const dict = translations[lang];
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if(dict[key]) {
+                        if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                            el.placeholder = dict[key];
+                        } else {
+                            el.innerHTML = dict[key];
+                        }
+                    }
+                });
+
+                // Re-render product grids to apply correct language descriptions
+                this.renderAllCollections();
+            },
+
+            // Product Rendering
+            renderAllCollections() {
+                this.renderGrid('lusso');
+                this.renderGrid('ultimate');
+                this.renderGrid('allegria');
+                this.renderGrid('prime');
+            },
+
+            renderGrid(collectionName) {
+                const container = document.getElementById(`grid-${collectionName}`);
+                if (!container) return;
+                
+                container.innerHTML = '';
+                const items = products[collectionName];
+                
+                items.forEach(item => {
+                    const desc = this.currentLang === 'en' ? item.descEn : item.descFr;
+                    
+                    // Grab the exact image filenames you specified in the products list!
+                    const imgThumbnail = item.imgThumbnail;
+                    const imgModal = item.imgModal;
+                    
+                    // Escape single quotes for the onclick handler safely
+                    const safeName = item.name.replace(/'/g, "\\'");
+                    const safeIdSize = `${item.id} - ${item.size}`.replace(/'/g, "\\'");
+                    
+                    const card = `
+                        <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow group cursor-pointer" onclick="app.openModal('${safeName}', '${safeIdSize}', '${imgModal}', '${collectionName}')">
+                            <div class="h-64 bg-gray-200 relative overflow-hidden">
+                                <!-- Thumbnail Image -->
+                                <img src="${imgThumbnail}" 
+                                     onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80'" 
+                                     alt="${item.name}" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute bottom-0 left-0 bg-mdp-red text-white text-xs font-bold px-3 py-1 m-2 rounded shadow">
+                                    ${item.id}
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">${item.name}</h3>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 mb-3 font-semibold tracking-wider">Size: ${item.size}</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">${desc}</p>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += card;
+                });
+            },
+
+            openModal(title, subtitle, imgSrc, collection = '') {
+                // Populate Modal Data
+                document.getElementById('modalTitle').textContent = title;
+                document.getElementById('modalSubtitle').textContent = subtitle;
+                document.getElementById('modalImage').src = imgSrc;
+                
+                // Set hidden input value for the form to know what the user is interested in
+                let interestString = title;
+                if(collection) interestString += ` (${collection.toUpperCase()} Collection)`;
+                document.getElementById('modalInterestedIn').value = interestString;
+
+                // Show Modal with animation
+                const modal = document.getElementById('itemModal');
+                const modalContent = document.getElementById('itemModalContent');
+                
+                modal.classList.remove('hidden');
+                modal.classList.add('block');
+                
+                // Small delay to allow display:block to apply before animating opacity
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }, 10);
+                
+                // Prevent body scrolling
+                document.body.style.overflow = 'hidden';
+            },
+
+            closeModal() {
+                const modal = document.getElementById('itemModal');
+                const modalContent = document.getElementById('itemModalContent');
+                
+                // Animate out
+                modal.classList.add('opacity-0');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                
+                // Hide after animation finishes
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('block');
+                    document.body.style.overflow = ''; // Restore body scrolling
+                }, 300);
+            },
+
+            handleFormSubmit(e) {
+                e.preventDefault();
+                
+                const form = e.target;
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                
+                // Show loading spinner
+                btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i>';
+                btn.disabled = true;
+
+                // Prepare form data for Netlify
+                const formData = new FormData(form);
+                const searchParams = new URLSearchParams(formData);
+
+                // Submit to Netlify via AJAX
+                fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: searchParams.toString()
+                })
+                .then(() => {
+                    // Success handling
+                    form.reset();
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    document.getElementById('formSuccess').classList.remove('hidden');
+                    setTimeout(() => {
+                        document.getElementById('formSuccess').classList.add('hidden');
+                    }, 5000);
+                })
+                .catch((error) => {
+                    // Error handling
+                    console.error('Form submission error:', error);
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    alert('There was an error submitting your message. Please try again.');
+                });
+            },
+
+            handleModalFormSubmit(e) {
+                e.preventDefault();
+                
+                const form = e.target;
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                
+                // Show loading spinner
+                btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i>';
+                btn.disabled = true;
+
+                // Prepare form data for Netlify
+                const formData = new FormData(form);
+                const searchParams = new URLSearchParams(formData);
+
+                // Submit to Netlify via AJAX
+                fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: searchParams.toString()
+                })
+                .then(() => {
+                    // Success handling
+                    form.reset();
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    document.getElementById('modalFormSuccess').classList.remove('hidden');
+                    
+                    // Auto-close modal after successful submission
+                    setTimeout(() => {
+                        document.getElementById('modalFormSuccess').classList.add('hidden');
+                        app.closeModal(); 
+                    }, 3000);
+                })
+                .catch((error) => {
+                    console.error('Modal Form submission error:', error);
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    alert('There was an error submitting your inquiry. Please try again.');
+                });
+            }
+        };
+
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', () => app.init());
+
+    </script>
+</body>
+</html>
