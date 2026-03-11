@@ -110,7 +110,7 @@
             <div class="flex justify-between h-24">
                 <!-- Logo -->
                 <div class="flex items-center cursor-pointer" onclick="app.navigate('home')">
-                    <img src="mdplogo.png" alt="MDP Surfaces Logo" class="h-16 sm:h-20 w-auto object-contain">
+                    <img src="mdplogo.jpg" alt="MDP Surfaces Logo" class="h-16 sm:h-20 w-auto object-contain">
                 </div>
 
                 <!-- Desktop Menu -->
@@ -142,6 +142,7 @@
                     <div class="flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
                         <button onclick="app.setLang('en')" id="lang-en" class="px-3 py-1 rounded-full text-sm font-bold transition-colors bg-white dark:bg-gray-600 shadow-sm text-mdp-red">EN</button>
                         <button onclick="app.setLang('fr')" id="lang-fr" class="px-3 py-1 rounded-full text-sm font-bold transition-colors text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">FR</button>
+                        <button onclick="app.setLang('it')" id="lang-it" class="px-3 py-1 rounded-full text-sm font-bold transition-colors text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">IT</button>
                     </div>
                     <!-- Theme Toggle -->
                     <button onclick="app.toggleTheme()" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
@@ -174,6 +175,7 @@
                 <div class="flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
                     <button onclick="app.setLang('en')" id="mobile-lang-en" class="px-3 py-1 rounded-full text-sm font-bold bg-white dark:bg-gray-600 text-mdp-red shadow-sm">EN</button>
                     <button onclick="app.setLang('fr')" id="mobile-lang-fr" class="px-3 py-1 rounded-full text-sm font-bold text-gray-500 dark:text-gray-400">FR</button>
+                    <button onclick="app.setLang('it')" id="mobile-lang-it" class="px-3 py-1 rounded-full text-sm font-bold text-gray-500 dark:text-gray-400">IT</button>
                 </div>
                 <button onclick="app.toggleTheme()" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">
                     <i id="mobile-theme-icon" class="fa-solid fa-moon"></i>
@@ -191,7 +193,7 @@
             <div class="relative bg-gray-900 text-white overflow-hidden">
                 <!-- Abstract Background placeholder mimicking marble/quartz -->
                 <div class="absolute inset-0 opacity-40">
-                    <img src="hero.jpeg" loading="lazy" alt="Quartz Background" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1920&q=80" loading="lazy" alt="Quartz Background" class="w-full h-full object-cover">
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
                 <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40">
@@ -215,8 +217,8 @@
                     <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6" data-i18n="quartzComposition">Our Quartz consists of 93 percent quartz, 7 percent resin</h2>
                     <p class="text-lg text-gray-600 dark:text-gray-300" data-i18n="quartzDesc">8K is a Low Silica Mineral Surface. We bring you the most popular and modern colours and patterns on the market with consistent, ultimate quality.</p>
                 </div>
-                <!-- Badges -->
-                <div class="flex justify-center items-center gap-8 mt-10 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                <!-- Badges (Grayscale removed) -->
+                <div class="flex justify-center items-center gap-8 mt-10 transition duration-300">
                     <img src="nsf.png" alt="NSF Certified" class="h-16 w-auto object-contain">
                     <img src="greenguard.png" alt="Greenguard Certified" class="h-16 w-auto object-contain">
                 </div>
@@ -367,7 +369,7 @@
                                 </div>
                             </div>
                             <div class="flex text-yellow-400 text-xs mb-3 gap-1"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">"Excellent service. Mena opened her warehouse to us on a Saturday to accommodate us. She gave us excellent advice without any sales pressure. Very competitive prices. We recommend MDP Surfaces without hesitation."</p>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm flex-grow">"Excellent service. Mena opened her warehouse to us on a Saturday to accommodate us. She gave us excellent advice senza aucune pression de vente. Very competitive prices. We recommend MDP Surfaces without hesitation."</p>
                         </div>
                         
                         <!-- Review 7 -->
@@ -536,7 +538,7 @@
                     <img src="CarraraOroinuse.jpg" loading="lazy" alt="Carrara Oro Kitchen" onclick="app.openModal('Gallery - Carrara Oro', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
                     <img src="OssoMarroneinuse.jpg" loading="lazy" alt="Osso Marrone Bathroom" onclick="app.openModal('Gallery - Osso Marrone', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
                     <img src="Montrealinuse.jpg" loading="lazy" alt="Montreal Living Space" onclick="app.openModal('Gallery - Montreal', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
-                    <img src="VenatinoGrigiousage.jpg" loading="lazy" alt="Venatino Grigio Kitchen" onclick="app.openModal('Gallery - Venatino Grigio', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <img src="VenatinoGrigioinuse.jpg" loading="lazy" alt="Venatino Grigio Kitchen" onclick="app.openModal('Gallery - Venatino Grigio', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
                     <img src="UltimaStatuarioinuse.jpg" loading="lazy" alt="Ultima Statuario Countertop" onclick="app.openModal('Gallery - Ultima Statuario', 'Commercial Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
                     <img src="CalacattaPicassoinuse.jpg" loading="lazy" alt="Calacatta Picasso Kitchen" onclick="app.openModal('Gallery - Calacatta Picasso', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
                 </div>
@@ -667,7 +669,7 @@
                 <!-- Branding -->
                 <div>
                     <div class="mb-4 cursor-pointer inline-block" onclick="app.navigate('home')">
-                        <img src="mdplogo.png" alt="MDP Surfaces Logo" class="h-16 w-auto object-contain">
+                        <img src="mdplogo.jpg" alt="MDP Surfaces Logo" class="h-16 w-auto object-contain">
                     </div>
                     <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-i18n="footerDesc">Your Partner…For Manufacturer Direct Premium Surfaces.</p>
                     <p class="text-sm text-gray-600 dark:text-gray-300 mb-4 font-medium"><i class="fa-solid fa-envelope text-mdp-red mr-2"></i><a href="mailto:info@mdpsurfaces.com" class="hover:text-mdp-red transition">info@mdpsurfaces.com</a></p>
@@ -729,59 +731,59 @@
         // --- 1. DATA: Product Collections ---
         const products = {
             lusso: [
-                { id: "UHD-900", name: "Venatino Grigio", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", imgThumbnail: "VenatinoGrigio.jpg", imgModal: "VenatinoGrigiousage.jpg" },
-                { id: "UHD-901", name: "Calacatta Rustico", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", imgThumbnail: "CalacattaRustico.jpg", imgModal: "CalacattaRusticoinuse.jpg" },
-                { id: "UHD-902", name: "Boticcino", size: "63” x 126”", descEn: "Colour is translucent.", descFr: "La couleur est translucide.", imgThumbnail: "Boticcino.jpg", imgModal: "Boticcinoinuse.jpg" },
-                { id: "UHD-903", name: "Moscato Beige", size: "63” x 126”", descEn: "Colour is translucent.", descFr: "La couleur est translucide.", imgThumbnail: "MoscatoBeige.jpg", imgModal: "MoscatoBeigeinuse.png" },
-                { id: "UHD-904", name: "Calacatta Picasso", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", imgThumbnail: "CalacattaPicasso.jpg", imgModal: "CalacattaPicassoinuse.jpg" },
-                { id: "UHD-905", name: "Marmo", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", imgThumbnail: "Marmo.jpg", imgModal: "Marmoinuse.jpg" },
-                { id: "UHD-906", name: "Statuario Classico", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", imgThumbnail: "StatuarioClassico.jpg", imgModal: "StatuarioClassicoinuse.jpg" }
+                { id: "UHD-900", name: "Venatino Grigio", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", imgThumbnail: "VenatinoGrigio.jpg", imgModal: "VenatinoGrigioinuse.jpg" },
+                { id: "UHD-901", name: "Calacatta Rustico", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", imgThumbnail: "CalacattaRustico.jpg", imgModal: "CalacattaRusticoinuse.jpg" },
+                { id: "UHD-902", name: "Boticcino", size: "63” x 126”", descEn: "Colour is translucent.", descFr: "La couleur est translucide.", descIt: "Il colore è traslucido.", imgThumbnail: "Boticcino.jpg", imgModal: "Boticcinoinuse.jpg" },
+                { id: "UHD-903", name: "Moscato Beige", size: "63” x 126”", descEn: "Colour is translucent.", descFr: "La couleur est translucide.", descIt: "Il colore è traslucido.", imgThumbnail: "MoscatoBeige.jpg", imgModal: "MoscatoBeigeinuse.png" },
+                { id: "UHD-904", name: "Calacatta Picasso", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", imgThumbnail: "CalacattaPicasso.jpg", imgModal: "CalacattaPicassoinuse.jpg" },
+                { id: "UHD-905", name: "Marmo", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", imgThumbnail: "Marmo.jpg", imgModal: "Marmoinuse.jpg" },
+                { id: "UHD-906", name: "Statuario Classico", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", imgThumbnail: "StatuarioClassico.jpg", imgModal: "StatuarioClassicoinuse.jpg" }
             ],
             ultimate: [
-                { id: "UHD-700", name: "Carrara Oro", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super-white with a subtle and undefined gold veining pattern, superior lustre.", descFr: "Grain ultra fin super-blanc avec un motif de veines dorées subtil et non défini, lustre supérieur.", imgThumbnail: "CarraraOro.png", imgModal: "CarraraOroinuse.jpg" },
-                { id: "UHD-690", name: "Vene Grigio", size: "63” x 126”", descEn: "Vene Grigio is a soft elegant white with dark grey detailed veining.", descFr: "Vene Grigio est un blanc élégant et doux avec des veines gris foncé détaillées.", imgThumbnail: "VeneGrigio.png", imgModal: "VeneGrigioinuse.jpg" },
-                { id: "UHD-808", name: "Ultima Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a super high-definition broad diagonal grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises diagonales larges haute définition, lustre supérieur, profondeur.", imgThumbnail: "UltimaStatuario.jpg", imgModal: "UltimaStatuarioinuse.jpg" },
-                { id: "UHD-818", name: "Crema Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a high-definition characteristic diagonal and undefined grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises diagonales caractéristiques, lustre supérieur.", imgThumbnail: "CremaStatuario.jpg", imgModal: "CremaStatuarioinuse.jpg" },
-                { id: "UHD-828", name: "Bianco Ora", size: "Jumbo 63″x126″", descEn: "Ultra fine grain translucent white with a high-definition diagonal and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin blanc translucide avec veines grises diagonales haute définition, lustre supérieur.", imgThumbnail: "BiancoOra.jpg", imgModal: "BiancoOrainuse.jpg" },
-                { id: "UHD-838", name: "Naturale Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a high-definition diagonal classic grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises classiques diagonales haute définition, lustre supérieur.", imgThumbnail: "NaturaleStatuario.jpg", imgModal: "NaturaleStatuarioinuse.jpg" },
-                { id: "UHD-680", name: "Carrara", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super-white with a subtle and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin super-blanc avec un motif de veines grises subtil et non défini, lustre supérieur.", imgThumbnail: "Carrara.jpg", imgModal: "Carrarainuse.jpg" },
-                { id: "UHD-684", name: "Carrara Chiaro", size: "Jumbo 63″x126″", descEn: "Ultra fine grain translucent white with a defined diagonal and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin blanc translucide avec veines grises définies et indéfinies, lustre supérieur.", imgThumbnail: "CarraraChiaro.jpg", imgModal: "CarraraChiaroinuse.jpg" },
-                { id: "UHD-681", name: "Aegean Grey", size: "Jumbo 63″x126″", descEn: "Fine grain light grey-concrete with an undefined seashell veining pattern, superior lustre.", descFr: "Grain fin gris clair avec un motif de veines de coquillage non défini, lustre supérieur.", imgThumbnail: "AegeanGrey.jpg", imgModal: "AegeanGreyinuse.jpg" },
-                { id: "UHD-682", name: "Aegean White", size: "Jumbo 63″x126″", descEn: "Fine grain white with an undefined cloud grey veining pattern, superior lustre.", descFr: "Grain fin blanc avec un motif de veines gris nuage non défini, lustre supérieur.", imgThumbnail: "AegeanWhite.jpg", imgModal: "AegeanWhiteinuse.jpg" },
-                { id: "UHD-683", name: "Noche", size: "Jumbo 63″x126″", descEn: "Fine grain medium grey-concrete with an undefined dark grey veining pattern, superior lustre.", descFr: "Grain fin gris moyen avec un motif de veines gris foncé non défini, lustre supérieur.", imgThumbnail: "Noche.jpg", imgModal: "Nocheinuse.jpg" },
-                { id: "UHD-686", name: "Biancaneve", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super white, pure and uniform pattern, classic lustre. (waiver required)", descFr: "Grain ultra fin super blanc, motif pur et uniforme, lustre classique. (décharge requise)", imgThumbnail: "Biancaneve.jpg", imgModal: "Biancaneveinuse.jpg" },
-                { id: "UHD-688", name: "Oyster", size: "Jumbo 63″x126″", descEn: "Fine grain off-white with translucent two-toned beige undefined shell pattern, superior lustre.", descFr: "Grain fin blanc cassé avec motif de coquille indéfini beige translucide bicolore, lustre supérieur.", imgThumbnail: "Oyster.jpg", imgModal: "Oysterinuse.jpg" },
-                { id: "UHD-687", name: "MoonStone", size: "Jumbo 63″x126″", descEn: "Fine grain medium dark grey-concrete with an undefined dark grey veining pattern, superior lustre.", descFr: "Grain fin gris foncé moyen avec un motif de veines gris foncé non défini, lustre supérieur.", imgThumbnail: "MoonStone.jpg", imgModal: "MoonStoneinuse.jpg" },
-                { id: "UHD-691", name: "Canella Cafe", size: "Jumbo 63″x126″", descEn: "Canella Café is a mid to dark brown color with smooth gold effect veining pattern in a superior lustre.", descFr: "Couleur brun moyen à foncé avec un motif de veines effet or lisse dans un lustre supérieur.", imgThumbnail: "CanellaCafe.jpg", imgModal: "CanellaCafeinuse.png" },
-                { id: "UHD-868", name: "Bella Staturario", size: "Jumbo 63″x126″", descEn: "Bella Statuario is a light grey cloud effect color, soft smooth wave with superior lustre.", descFr: "Couleur effet nuage gris clair, vague douce et lisse avec un lustre supérieur.", imgThumbnail: "BellaStaturario.jpg", imgModal: "BellaStaturarioinuse.png" },
-                { id: "UHD-878", name: "Argento", size: "Jumbo 63″x126″", descEn: "Argento has a light grey marble effect pattern with superior lustre.", descFr: "Argento a un motif effet marbre gris clair avec un lustre supérieur.", imgThumbnail: "Argento.jpg", imgModal: "Argentoinuse.png" },
-                { id: "UHD-858-L", name: "Nero Statuario", size: "Jumbo 63″x126″", descEn: "Deep dark black color in a Antico (mat) finish with high-definition broad diagonal white veining pattern. (waiver required)", descFr: "Couleur noir profond avec finition Antico (mat) et motif de veines blanches diagonales. (décharge requise)", imgThumbnail: "NeroStatuario.jpg", imgModal: "NeroStatuarioinuse.jpg" },
-                { id: "UHD-685-L", name: "Pietra", size: "Jumbo 63″x126″", descEn: "Deep dark concrete look in a Antico (mat) finish with a smooth touch of diagonal white veining pattern. (waiver required)", descFr: "Aspect béton foncé avec finition Antico (mat) et veines blanches diagonales. (décharge requise)", imgThumbnail: "Pietra.jpg", imgModal: "Pietrainuse.jpg" },
-                { id: "UHD-689", name: "Carrara Crema", size: "Jumbo 63″x126″", descEn: "Ultra fine grain beige with a subtle and undefined white veining throughout.", descFr: "Beige grain ultra fin avec des veines blanches subtiles et indéfinies.", imgThumbnail: "CarraraCrema.jpg", imgModal: "CarraraCremainuse.jpg" },
-                { id: "UHD-768", name: "Crema Caffe", size: "Jumbo 63″x126″", descEn: "A simple creamy look with a touch of soft caramel veining.", descFr: "Un look crémeux simple avec une touche de veines caramel doux.", imgThumbnail: "CremaCaffe.jpg", imgModal: "CremaCaffeinuse.jpg" }
+                { id: "UHD-700", name: "Carrara Oro", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super-white with a subtle and undefined gold veining pattern, superior lustre.", descFr: "Grain ultra fin super-blanc avec un motif de veines dorées subtil et non défini, lustre supérieur.", descIt: "Grana ultra fine super-bianco con un motivo di venature dorate sottile e non definito, lucentezza superiore.", imgThumbnail: "CarraraOro.png", imgModal: "CarraraOroinuse.jpg" },
+                { id: "UHD-690", name: "Vene Grigio", size: "63” x 126”", descEn: "Vene Grigio is a soft elegant white with dark grey detailed veining.", descFr: "Vene Grigio est un blanc élégant et doux avec des veines gris foncé détaillées.", descIt: "Vene Grigio è un bianco elegante e morbido con dettagliate venature grigio scuro.", imgThumbnail: "VeneGrigio.png", imgModal: "VeneGrigioinuse.jpg" },
+                { id: "UHD-808", name: "Ultima Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a super high-definition broad diagonal grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises diagonales larges haute définition, lustre supérieur, profondeur.", descIt: "Bianco a grana ultra fine con motivo a venature grigie diagonali larghe ad altissima definizione, lucentezza superiore, profondità profonda.", imgThumbnail: "UltimaStatuario.jpg", imgModal: "UltimaStatuarioinuse.jpg" },
+                { id: "UHD-818", name: "Crema Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a high-definition characteristic diagonal and undefined grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises diagonales caractéristiques, lustre supérieur.", descIt: "Bianco a grana ultra fine con caratteristico motivo di venature grigie diagonali e non definite ad alta definizione, lucentezza superiore.", imgThumbnail: "CremaStatuario.jpg", imgModal: "CremaStatuarioinuse.jpg" },
+                { id: "UHD-828", name: "Bianco Ora", size: "Jumbo 63″x126″", descEn: "Ultra fine grain translucent white with a high-definition diagonal and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin blanc translucide avec veines grises diagonales haute définition, lustre supérieur.", descIt: "Bianco traslucido a grana ultra fine con motivo di venature grigie diagonali e non definite ad alta definizione, lucentezza superiore.", imgThumbnail: "BiancoOra.jpg", imgModal: "BiancoOrainuse.jpg" },
+                { id: "UHD-838", name: "Naturale Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a high-definition diagonal classic grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises classiques diagonales haute définition, lustre supérieur.", descIt: "Bianco a grana ultra fine con classico motivo a venature grigie diagonali ad alta definizione, lucentezza superiore.", imgThumbnail: "NaturaleStatuario.jpg", imgModal: "NaturaleStatuarioinuse.jpg" },
+                { id: "UHD-680", name: "Carrara", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super-white with a subtle and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin super-blanc avec un motif de veines grises subtil et non défini, lustre supérieur.", descIt: "Super-bianco a grana ultra fine con motivo di venature grigie sottile e non definito, lucentezza superiore.", imgThumbnail: "Carrara.jpg", imgModal: "Carrarainuse.jpg" },
+                { id: "UHD-684", name: "Carrara Chiaro", size: "Jumbo 63″x126″", descEn: "Ultra fine grain translucent white with a defined diagonal and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin blanc translucide avec veines grises définies et indéfinies, lustre supérieur.", descIt: "Bianco traslucido a grana ultra fine con motivo di venature grigie definite e non definite, lucentezza superiore.", imgThumbnail: "CarraraChiaro.jpg", imgModal: "CarraraChiaroinuse.jpg" },
+                { id: "UHD-681", name: "Aegean Grey", size: "Jumbo 63″x126″", descEn: "Fine grain light grey-concrete with an undefined seashell veining pattern, superior lustre.", descFr: "Grain fin gris clair avec un motif de veines de coquillage non défini, lustre supérieur.", descIt: "Cemento grigio chiaro a grana fine con motivo di venature a conchiglia non definito, lucentezza superiore.", imgThumbnail: "AegeanGrey.jpg", imgModal: "AegeanGreyinuse.jpg" },
+                { id: "UHD-682", name: "Aegean White", size: "Jumbo 63″x126″", descEn: "Fine grain white with an undefined cloud grey veining pattern, superior lustre.", descFr: "Grain fin blanc avec un motif de veines gris nuage non défini, lustre supérieur.", descIt: "Bianco a grana fine con motivo di venature grigio nuvola non definito, lucentezza superiore.", imgThumbnail: "AegeanWhite.jpg", imgModal: "AegeanWhiteinuse.jpg" },
+                { id: "UHD-683", name: "Noche", size: "Jumbo 63″x126″", descEn: "Fine grain medium grey-concrete with an undefined dark grey veining pattern, superior lustre.", descFr: "Grain fin gris moyen avec un motif de veines gris foncé non défini, lustre supérieur.", descIt: "Cemento grigio medio a grana fine con motivo di venature grigio scuro non definito, lucentezza superiore.", imgThumbnail: "Noche.jpg", imgModal: "Nocheinuse.jpg" },
+                { id: "UHD-686", name: "Biancaneve", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super white, pure and uniform pattern, classic lustre. (waiver required)", descFr: "Grain ultra fin super blanc, motif pur et uniforme, lustre classique. (décharge requise)", descIt: "Super bianco a grana ultra fine, motivo puro e uniforme, lucentezza classica. (richiesta liberatoria)", imgThumbnail: "Biancaneve.jpg", imgModal: "Biancaneveinuse.jpg" },
+                { id: "UHD-688", name: "Oyster", size: "Jumbo 63″x126″", descEn: "Fine grain off-white with translucent two-toned beige undefined shell pattern, superior lustre.", descFr: "Grain fin blanc cassé avec motif de coquille indéfini beige translucide bicolore, lustre supérieur.", descIt: "Bianco sporco a grana fine con motivo a conchiglia bicolore beige traslucido non definito, lucentezza superiore.", imgThumbnail: "Oyster.jpg", imgModal: "Oysterinuse.jpg" },
+                { id: "UHD-687", name: "MoonStone", size: "Jumbo 63″x126″", descEn: "Fine grain medium dark grey-concrete with an undefined dark grey veining pattern, superior lustre.", descFr: "Grain fin gris foncé moyen avec un motif de veines gris foncé non défini, lustre supérieur.", descIt: "Cemento grigio scuro medio a grana fine con motivo di venature grigio scuro non definito, lucentezza superiore.", imgThumbnail: "MoonStone.jpg", imgModal: "MoonStoneinuse.jpg" },
+                { id: "UHD-691", name: "Canella Cafe", size: "Jumbo 63″x126″", descEn: "Canella Café is a mid to dark brown color with smooth gold effect veining pattern in a superior lustre.", descFr: "Couleur brun moyen à foncé avec un motif de veines effet or lisse dans un lustre supérieur.", descIt: "Canella Café è un colore marrone medio-scuro con un motivo di venature lisce effetto oro in una lucentezza superiore.", imgThumbnail: "CanellaCafe.jpg", imgModal: "CanellaCafeinuse.png" },
+                { id: "UHD-868", name: "Bella Staturario", size: "Jumbo 63″x126″", descEn: "Bella Statuario is a light grey cloud effect color, soft smooth wave with superior lustre.", descFr: "Couleur effet nuage gris clair, vague douce et lisse avec un lustre supérieur.", descIt: "Bella Statuario è un colore effetto nuvola grigio chiaro, onda liscia e morbida con lucentezza superiore.", imgThumbnail: "BellaStaturario.jpg", imgModal: "BellaStaturarioinuse.png" },
+                { id: "UHD-878", name: "Argento", size: "Jumbo 63″x126″", descEn: "Argento has a light grey marble effect pattern with superior lustre.", descFr: "Argento a un motif effet marbre gris clair avec un lustre supérieur.", descIt: "Argento ha un motivo effetto marmo grigio chiaro con lucentezza superiore.", imgThumbnail: "Argento.jpg", imgModal: "Argentoinuse.png" },
+                { id: "UHD-858-L", name: "Nero Statuario", size: "Jumbo 63″x126″", descEn: "Deep dark black color in a Antico (mat) finish with high-definition broad diagonal white veining pattern. (waiver required)", descFr: "Couleur noir profond avec finition Antico (mat) et motif de veines blanches diagonales. (décharge requise)", descIt: "Colore nero scuro profondo in finitura Antico (opaca) con ampio motivo di venature bianche diagonali ad alta definizione. (richiesta liberatoria)", imgThumbnail: "NeroStatuario.jpg", imgModal: "NeroStatuarioinuse.jpg" },
+                { id: "UHD-685-L", name: "Pietra", size: "Jumbo 63″x126″", descEn: "Deep dark concrete look in a Antico (mat) finish with a smooth touch of diagonal white veining pattern. (waiver required)", descFr: "Aspect béton foncé avec finition Antico (mat) et veines blanches diagonales. (décharge requise)", descIt: "Effetto cemento scuro profondo in finitura Antico (opaca) con un tocco morbido di motivo di venature bianche diagonali. (richiesta liberatoria)", imgThumbnail: "Pietra.jpg", imgModal: "Pietrainuse.jpg" },
+                { id: "UHD-689", name: "Carrara Crema", size: "Jumbo 63″x126″", descEn: "Ultra fine grain beige with a subtle and undefined white veining throughout.", descFr: "Beige grain ultra fin avec des veines blanches subtiles et indéfinies.", descIt: "Beige a grana ultra fine con sottili venature bianche non definite su tutta la superficie.", imgThumbnail: "CarraraCrema.jpg", imgModal: "CarraraCremainuse.jpg" },
+                { id: "UHD-768", name: "Crema Caffe", size: "Jumbo 63″x126″", descEn: "A simple creamy look with a touch of soft caramel veining.", descFr: "Un look crémeux simple avec une touche de veines caramel doux.", descIt: "Un look cremoso e semplice con un tocco di morbide venature caramello.", imgThumbnail: "CremaCaffe.jpg", imgModal: "CremaCaffeinuse.jpg" }
             ],
             allegria: [
-                { id: "UHD-788", name: "Osso Marrone", size: "63” x 126”", descEn: "Osso Marrone is a beige effect color, soft smooth wave with superior lustre.", descFr: "Couleur effet beige, vague douce et lisse avec un lustre supérieur.", imgThumbnail: "OssoMarrone.png", imgModal: "OssoMarroneinuse.jpg" },
-                { id: "UHD-798", name: "Ghiacciaio", size: "63” x 126”", descEn: "Ghiacciaio is an effect of an ice look with smooth waves and lustre.", descFr: "Effet d'un aspect de glace avec des vagues lisses et du lustre.", imgThumbnail: "Ghiacciaio.png", imgModal: "Ghiacciaioinuse.jpg" },
-                { id: "UHD-848", name: "Calacatta Marmo", size: "Jumbo 63″x126″", descEn: "A soft elegant white/grey marble look & feel.", descFr: "Un aspect et une sensation de marbre blanc/gris doux et élégant.", imgThumbnail: "CalacattaMarmo.png", imgModal: "CalacattaMarmoinuse.png" },
-                { id: "UHD-718", name: "Calacatta Vene Fino", size: "Jumbo 63″x126″", descEn: "A Calacatta style with slim grey veining throughout with a soft cloudy look.", descFr: "Un style Calacatta avec de fines veines grises et un aspect doux et nuageux.", imgThumbnail: "CalacattaVeneFino.png", imgModal: "CalacattaVeneFinoinuse.png" },
-                { id: "UHD-898", name: "Nuvola", size: "Jumbo 63″x126″", descEn: "A soft lace veining of light and dark gray flow throughout.", descFr: "De douces veines de dentelle gris clair et foncé s'écoulent partout.", imgThumbnail: "Nuvola.png", imgModal: "Nuvolainuse.png" },
-                { id: "UHD-728", name: "Oro Luminoso", size: "Jumbo 63″x126″", descEn: "A soft elegant Calacatta gold color veining style.", descFr: "Un style de veines douces et élégantes couleur or Calacatta.", imgThumbnail: "OroLuminoso.png", imgModal: "OroLuminosoinuse.png" },
-                { id: "UHD-708", name: "Calacatta Nero", size: "Jumbo 63″x126″", descEn: "A soft elegant Calacatta black color veining style.", descFr: "Un style de veines douces et élégantes couleur noir Calacatta.", imgThumbnail: "CalacattaNero.png", imgModal: "CalacattaNeroinuse.png" },
-                { id: "UHD-738", name: "Brezza Oro", size: "Jumbo 63″x126″", descEn: "A vibrant elegance of soft Calacatta with a fine touch of gold veining.", descFr: "Une élégance vibrante de Calacatta doux avec une fine touche de veines dorées.", imgThumbnail: "BrezzaOro.png", imgModal: "BrezzaOroinuse.png" },
-                { id: "UHD-748", name: "Nero Marmo", size: "Jumbo 63″x126″", descEn: "A Calacatta style with slim white veining throughout with a soft and smooth look.", descFr: "Un style Calacatta avec de fines veines blanches et un aspect doux et lisse.", imgThumbnail: "NeroMarmo.png", imgModal: "NeroMarmoinuse.png" },
-                { id: "UHD-758", name: "Macchiato", size: "Jumbo 63″x126″", descEn: "An espresso brown with soft gold veining throughout.", descFr: "Un brun expresso avec de douces veines dorées partout.", imgThumbnail: "Macchiato.png", imgModal: "Macchiatoinuse.png" },
-                { id: "UHD-778", name: "Sabbia Oro", size: "Jumbo 63″x126″", descEn: "A wavey golden sand with an elegant finish.", descFr: "Un sable doré ondulé avec une finition élégante.", imgThumbnail: "SabbiaOro.jpg", imgModal: "SabbiaOroinuse.jpg" }
+                { id: "UHD-788", name: "Osso Marrone", size: "63” x 126”", descEn: "Osso Marrone is a beige effect color, soft smooth wave with superior lustre.", descFr: "Couleur effet beige, vague douce et lisse avec un lustre supérieur.", descIt: "Osso Marrone è un colore effetto beige, onda liscia e morbida con lucentezza superiore.", imgThumbnail: "OssoMarrone.png", imgModal: "OssoMarroneinuse.jpg" },
+                { id: "UHD-798", name: "Ghiacciaio", size: "63” x 126”", descEn: "Ghiacciaio is an effect of an ice look with smooth waves and lustre.", descFr: "Effet d'un aspect de glace avec des vagues lisses et du lustre.", descIt: "Ghiacciaio è un effetto ghiaccio con onde lisce e lucentezza.", imgThumbnail: "Ghiacciaio.png", imgModal: "Ghiacciaioinuse.jpg" },
+                { id: "UHD-848", name: "Calacatta Marmo", size: "Jumbo 63″x126″", descEn: "A soft elegant white/grey marble look & feel.", descFr: "Un aspect et une sensation de marbre blanc/gris doux et élégant.", descIt: "Un look e una sensazione di marmo bianco/grigio morbido ed elegante.", imgThumbnail: "CalacattaMarmo.png", imgModal: "CalacattaMarmoinuse.png" },
+                { id: "UHD-718", name: "Calacatta Vene Fino", size: "Jumbo 63″x126″", descEn: "A Calacatta style with slim grey veining throughout with a soft cloudy look.", descFr: "Un style Calacatta avec de fines veines grises et un aspect doux et nuageux.", descIt: "Uno stile Calacatta con sottili venature grigie ovunque con un aspetto morbido e nuvoloso.", imgThumbnail: "CalacattaVeneFino.png", imgModal: "CalacattaVeneFinoinuse.png" },
+                { id: "UHD-898", name: "Nuvola", size: "Jumbo 63″x126″", descEn: "A soft lace veining of light and dark gray flow throughout.", descFr: "De douces veines de dentelle gris clair et foncé s'écoulent partout.", descIt: "Morbide venature in pizzo di grigio chiaro e scuro scorrono ovunque.", imgThumbnail: "Nuvola.png", imgModal: "Nuvolainuse.png" },
+                { id: "UHD-728", name: "Oro Luminoso", size: "Jumbo 63″x126″", descEn: "A soft elegant Calacatta gold color veining style.", descFr: "Un style de veines douces et élégantes couleur or Calacatta.", descIt: "Un morbido ed elegante stile di venature color oro Calacatta.", imgThumbnail: "OroLuminoso.png", imgModal: "OroLuminosoinuse.png" },
+                { id: "UHD-708", name: "Calacatta Nero", size: "Jumbo 63″x126″", descEn: "A soft elegant Calacatta black color veining style.", descFr: "Un style de veines douces et élégantes couleur noir Calacatta.", descIt: "Un morbido ed elegante stile di venature color nero Calacatta.", imgThumbnail: "CalacattaNero.png", imgModal: "CalacattaNeroinuse.png" },
+                { id: "UHD-738", name: "Brezza Oro", size: "Jumbo 63″x126″", descEn: "A vibrant elegance of soft Calacatta with a fine touch of gold veining.", descFr: "Une élégance vibrante de Calacatta doux avec une fine touche de veines dorées.", descIt: "Una vibrante eleganza di morbido Calacatta con un tocco raffinato di venature dorate.", imgThumbnail: "BrezzaOro.png", imgModal: "BrezzaOroinuse.png" },
+                { id: "UHD-748", name: "Nero Marmo", size: "Jumbo 63″x126″", descEn: "A Calacatta style with slim white veining throughout with a soft and smooth look.", descFr: "Un style Calacatta avec de fines veines blanches et un aspect doux et lisse.", descIt: "Uno stile Calacatta con sottili venature bianche ovunque con un aspetto morbido e liscio.", imgThumbnail: "NeroMarmo.png", imgModal: "NeroMarmoinuse.png" },
+                { id: "UHD-758", name: "Macchiato", size: "Jumbo 63″x126″", descEn: "An espresso brown with soft gold veining throughout.", descFr: "Un brun expresso avec de douces veines dorées partout.", descIt: "Un marrone espresso con morbide venature dorate ovunque.", imgThumbnail: "Macchiato.png", imgModal: "Macchiatoinuse.png" },
+                { id: "UHD-778", name: "Sabbia Oro", size: "Jumbo 63″x126″", descEn: "A wavey golden sand with an elegant finish.", descFr: "Un sable doré ondulé avec une finition elegante.", descIt: "Una sabbia dorata ondulata con una finitura elegante.", imgThumbnail: "SabbiaOro.jpg", imgModal: "SabbiaOroinuse.jpg" }
             ],
             prime: [
-                { id: "UHD-300", name: "Montreal", size: "Jumbo 63″x126″", descEn: "Fine grain white, pure and uniform pattern, superior lustre.", descFr: "Grain fin blanc, motif pur et uniforme, lustre supérieur.", imgThumbnail: "Montreal.jpg", imgModal: "Montrealinuse.jpg" },
-                { id: "UHD-301", name: "Toronto", size: "Jumbo 63″x126″", descEn: "Midsize particulate white, pure and uniform pattern, superior lustre.", descFr: "Particules de taille moyenne blanc, motif pur et uniforme, lustre supérieur.", imgThumbnail: "Toronto.jpg", imgModal: "Torontoinuse.jpg" },
-                { id: "UHD-302", name: "Vancouver", size: "Jumbo 63″x126″", descEn: "Large particulate white, pure and uniform pattern, superior lustre.", descFr: "Grandes particules blanc, motif pur et uniforme, lustre supérieur.", imgThumbnail: "Vancouver.jpg", imgModal: "Vancouverinuse.jpg" },
-                { id: "UHD-303", name: "Calgary", size: "Jumbo 63″x126″", descEn: "Midsize particulate light grey, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris clair, motif pur et uniforme, lustre supérieur.", imgThumbnail: "Calgary.jpg", imgModal: "Calgaryinuse.jpg" },
-                { id: "UHD-304", name: "Ottawa", size: "Jumbo 63″x126″", descEn: "Midsize particulate medium grey with reflection, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris moyen avec réflexion, motif pur et uniforme, lustre supérieur.", imgThumbnail: "Ottawa.jpg", imgModal: "Ottawainuse.jpg" },
-                { id: "UHD-308", name: "Regina", size: "Jumbo 63″x126″", descEn: "Midsize particulate white with reflection, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes blanc avec réflexion, motif pur et uniforme, lustre supérieur.", imgThumbnail: "Regina.jpg", imgModal: "Reginainuse.jpg" },
-                { id: "UHD-305", name: "Sydney", size: "Jumbo 63″x126″", descEn: "Sydney is a black color with reflective mirror particulates in a midsize black quartz pattern. (waiver required)", descFr: "Couleur noire avec particules de miroir réfléchissantes dans un motif de quartz noir de taille moyenne. (décharge requise)", imgThumbnail: "Sydney.jpg", imgModal: "Sydneyinuse.png" },
-                { id: "UHD-307", name: "Edmonton", size: "Jumbo 63″x126″", descEn: "Midsize particulate medium grey, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris moyen, motif pur et uniforme, lustre supérieur.", imgThumbnail: "Edmonton.png", imgModal: "Edmontoninuse.jpg" }
+                { id: "UHD-300", name: "Montreal", size: "Jumbo 63″x126″", descEn: "Fine grain white, pure and uniform pattern, superior lustre.", descFr: "Grain fin blanc, motif pur et uniforme, lustre supérieur.", descIt: "Bianco a grana fine, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Montreal.jpg", imgModal: "Montrealinuse.jpg" },
+                { id: "UHD-301", name: "Toronto", size: "Jumbo 63″x126″", descEn: "Midsize particulate white, pure and uniform pattern, superior lustre.", descFr: "Particules de taille moyenne blanc, motif pur et uniforme, lustre supérieur.", descIt: "Bianco particolato di medie dimensioni, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Toronto.jpg", imgModal: "Torontoinuse.jpg" },
+                { id: "UHD-302", name: "Vancouver", size: "Jumbo 63″x126″", descEn: "Large particulate white, pure and uniform pattern, superior lustre.", descFr: "Grandes particules blanc, motif pur et uniforme, lustre supérieur.", descIt: "Bianco particolato grande, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Vancouver.jpg", imgModal: "Vancouverinuse.jpg" },
+                { id: "UHD-303", name: "Calgary", size: "Jumbo 63″x126″", descEn: "Midsize particulate light grey, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris clair, motif pur et uniforme, lustre supérieur.", descIt: "Grigio chiaro particolato di medie dimensioni, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Calgary.jpg", imgModal: "Calgaryinuse.jpg" },
+                { id: "UHD-304", name: "Ottawa", size: "Jumbo 63″x126″", descEn: "Midsize particulate medium grey with reflection, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris moyen avec réflexion, motif pur et uniforme, lustre supérieur.", descIt: "Grigio medio particolato di medie dimensioni con riflesso, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Ottawa.jpg", imgModal: "Ottawainuse.jpg" },
+                { id: "UHD-308", name: "Regina", size: "Jumbo 63″x126″", descEn: "Midsize particulate white with reflection, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes blanc avec réflexion, motif pur et uniforme, lustre supérieur.", descIt: "Bianco particolato di medie dimensioni con riflesso, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Regina.jpg", imgModal: "Reginainuse.jpg" },
+                { id: "UHD-305", name: "Sydney", size: "Jumbo 63″x126″", descEn: "Sydney is a black color with reflective mirror particulates in a midsize black quartz pattern. (waiver required)", descFr: "Couleur noire avec particules de miroir réfléchissantes dans un motif de quartz noir de taille moyenne. (décharge requise)", descIt: "Sydney è un colore nero con particelle di specchio riflettenti in un motivo a quarzo nero di medie dimensioni. (richiesta liberatoria)", imgThumbnail: "Sydney.jpg", imgModal: "Sydneyinuse.png" },
+                { id: "UHD-307", name: "Edmonton", size: "Jumbo 63″x126″", descEn: "Midsize particulate medium grey, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris moyen, motif pur et uniforme, lustre supérieur.", descIt: "Grigio medio particolato di medie dimensioni, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Edmonton.png", imgModal: "Edmontoninuse.jpg" }
             ]
         };
 
@@ -791,8 +793,8 @@
                 navHome: "Home", navCollections: "Collections", navLusso: "Lusso", navUltimate: "Ultimate", 
                 navAllegria: "Allegria", navPrime: "Prime", navCTS: "Cut To Size", navGallery: "Gallery", navContact: "Contact",
                 homeSubtitle: "A New Generation Solid Surface",
-                homeTitle1: "Your Partner…For", homeTitle2: "Manufacturer Direct", homeTitle3: "Premium Surfaces",
-                homeDesc: "1.1 Million Square Foot Factory / Warehouse. 30 Years in Business. Manufacture facility using the finest Italian Technology.",
+                homeTitle1: "Your Partner… For", homeTitle2: "Manufacturer Direct", homeTitle3: "Premium Surfaces",
+                homeDesc: "1.1 Million Square Foot Factory / Warehouse. Operating since 1993. Manufacture facility using the finest Italian Technology.",
                 btnExplore: "Explore Collections", btnContact: "Contact Us",
                 quartzComposition: "Our Quartz consists of 93 percent quartz, 7 percent resin",
                 quartzDesc: "8K is a Low Silica Mineral Surface. We bring you the most popular and modern colours and patterns on the market with consistent, ultimate quality.",
@@ -817,11 +819,11 @@
                 navHome: "Accueil", navCollections: "Collections", navLusso: "Lusso", navUltimate: "Ultimate", 
                 navAllegria: "Allegria", navPrime: "Prime", navCTS: "Coupé sur Mesure", navGallery: "Galerie", navContact: "Contact",
                 homeSubtitle: "Une Surface Solide Nouvelle Génération",
-                homeTitle1: "Votre Partenaire…Pour", homeTitle2: "Direct Manufacturier", homeTitle3: "Surfaces Premium",
-                homeDesc: "Usine / Entrepôt de 1,1 million de pieds carrés. 30 ans d'expérience. Installation de fabrication utilisant la meilleure technologie italienne.",
+                homeTitle1: "Votre Partenaire… Pour", homeTitle2: "Direct Manufacturier", homeTitle3: "Surfaces Premium",
+                homeDesc: "Usine / Entrepôt de 1,1 million de pieds carrés. En opération depuis 1993. Installation de fabrication utilisant la meilleure technologie italienne.",
                 btnExplore: "Explorer les Collections", btnContact: "Contactez-nous",
                 quartzComposition: "Notre Quartz est composé à 93 % de quartz et 7 % de résine",
-                quartzDesc: "8K est une surface minérale à faible teneur en silice. Nous vous apportons les couleurs et motifs les plus populaires et modernes du marché avec une qualité constante.",
+                quartzDesc: "8K est une surface minérale à faible teneur en silice. Nous vous apportons les couleurs e motifs les plus populaires et modernes du marché avec une qualité constante.",
                 ourCollections: "Nos Collections", viewCollection: "Voir la Collection &rarr;",
                 testimonialsTitle: "Ce Que Disent Nos Partenaires",
                 lowSilica: "8K est une surface minérale à faible teneur en silice. Les caractéristiques naturelles peuvent causer de légères variations.",
@@ -838,6 +840,32 @@
                 reviewsTitle: "Avis Google",
                 inquiryTitle: "Intéressé par cette surface ?",
                 inquiryDesc: "Remplissez le formulaire ci-dessous et nous vous contacterons avec les disponibilités et les détails."
+            },
+            it: {
+                navHome: "Home", navCollections: "Collezioni", navLusso: "Lusso", navUltimate: "Ultimate", 
+                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Su Misura", navGallery: "Galleria", navContact: "Contatti",
+                homeSubtitle: "Una Superficie Solida di Nuova Generazione",
+                homeTitle1: "Il Tuo Partner… Per", homeTitle2: "Produttore Diretto", homeTitle3: "Superfici Premium",
+                homeDesc: "Fabbrica / Magazzino di 1,1 milioni di piedi quadrati. Operativi dal 1993. Struttura di produzione che utilizza la migliore tecnologia italiana.",
+                btnExplore: "Esplora le Collezioni", btnContact: "Contattaci",
+                quartzComposition: "Il nostro quarzo è composto al 93% da quarzo e al 7% da resina",
+                quartzDesc: "8K è una superficie minerale a basso contenuto di silice. Ti offriamo i colori e i motivi più popolari e moderni sul mercato con una qualità costante e assoluta.",
+                ourCollections: "Le Nostre Collezioni", viewCollection: "Vedi Collezione &rarr;",
+                testimonialsTitle: "Cosa Dicono i Nostri Partner",
+                lowSilica: "8K è una superficie minerale a basso contenuto di silice. Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.",
+                reqSample: "Richiedi Campione 4x6",
+                ctsSubtitle: "La soluzione su misura per superfici in quarzo, granito e marmo. Siamo il tuo partner di fiducia.",
+                weOfferYou: "TI OFFRIAMO:", valueAdded: "VANTAGGI A VALORE AGGIUNTO:", fiveEasySteps: "5 SEMPLICI PASSI:",
+                gallerySub: "Guarda le nostre splendide superfici in azione.",
+                contactUsToday: "Contattaci OGGI STESSO!", getInTouch: "Mettiti in contatto, siamo qui per aiutarti! Inviaci un messaggio.",
+                fullName: "Nome Completo / Full Name: *", emailAddress: "Indirizzo Email / Email Address: *", yourMessage: "Il Tuo Messaggio / Your Message:",
+                submit: "Invia", formSuccessMsg: "Messaggio inviato con successo!",
+                hours: "Orari", footerDesc: "Il Tuo Partner…Per Superfici Premium Direttamente dal Produttore.",
+                ourWarehouses: "I NOSTRI MAGAZZINI", downloads: "Download e Moduli",
+                slabViewingTitle: "Appuntamenti per la Visione delle Lastre", slabViewingText: "Per la visione delle lastre, contatta Mena per fissare un appuntamento:",
+                reviewsTitle: "Recensioni Google",
+                inquiryTitle: "Interessato a questa superficie?",
+                inquiryDesc: "Compila il modulo sottostante e ti ricontatteremo con disponibilità e dettagli."
             }
         };
 
@@ -915,10 +943,10 @@
                 this.currentLang = lang;
                 localStorage.setItem('mdp_lang', lang);
                 
-                // Update toggle buttons UI
-                ['lang-en', 'lang-fr', 'mobile-lang-en', 'mobile-lang-fr'].forEach(id => {
+                // Update toggle buttons UI dynamically for EN, FR, IT
+                ['lang-en', 'lang-fr', 'lang-it', 'mobile-lang-en', 'mobile-lang-fr', 'mobile-lang-it'].forEach(id => {
                     const el = document.getElementById(id);
-                    if(el.id.includes(lang)) {
+                    if(el.id.endsWith(lang)) {
                         el.classList.remove('text-gray-500', 'dark:text-gray-400');
                         el.classList.add('bg-white', 'dark:bg-gray-600', 'text-mdp-red', 'shadow-sm');
                     } else {
@@ -960,9 +988,10 @@
                 const items = products[collectionName];
                 
                 items.forEach(item => {
-                    const desc = this.currentLang === 'en' ? item.descEn : item.descFr;
+                    // Logic to pull the correct language description
+                    const desc = this.currentLang === 'en' ? item.descEn : (this.currentLang === 'fr' ? item.descFr : item.descIt);
                     
-                    // Grab the exact image filenames you specified in the products list!
+                    // Grab the exact image filenames you specified in the products list
                     const imgThumbnail = item.imgThumbnail;
                     const imgModal = item.imgModal;
                     
