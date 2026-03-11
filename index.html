@@ -191,7 +191,7 @@
             <div class="relative bg-gray-900 text-white overflow-hidden">
                 <!-- Abstract Background placeholder mimicking marble/quartz -->
                 <div class="absolute inset-0 opacity-40">
-                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1920&q=80" alt="Quartz Background" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1920&q=80" loading="lazy" alt="Quartz Background" class="w-full h-full object-cover">
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
                 <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40">
@@ -230,7 +230,7 @@
                         <!-- Lusso -->
                         <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('lusso')">
                             <div class="h-48 bg-gray-300 overflow-hidden relative">
-                                <img src="VenatinoGrigio.jpg" onerror="this.src='https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=600&q=80'" alt="Lusso" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="VenatinoGrigio.jpg" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=600&q=80'" alt="Lusso" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
                             </div>
                             <div class="p-6 text-center">
@@ -241,7 +241,7 @@
                         <!-- Ultimate -->
                         <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('ultimate')">
                             <div class="h-48 bg-gray-300 overflow-hidden relative">
-                                <img src="CarraraOro.jpg" onerror="this.src='https://images.unsplash.com/photo-1588854337221-4cfb6388ceea?auto=format&fit=crop&w=600&q=80'" alt="Ultimate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="CarraraOro.jpg" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1588854337221-4cfb6388ceea?auto=format&fit=crop&w=600&q=80'" alt="Ultimate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
                             </div>
                             <div class="p-6 text-center">
@@ -252,7 +252,7 @@
                         <!-- Allegria -->
                         <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('allegria')">
                             <div class="h-48 bg-gray-300 overflow-hidden relative">
-                                <img src="OssoMarrone.jpg" onerror="this.src='https://images.unsplash.com/photo-1590623190807-6c0b36ee2627?auto=format&fit=crop&w=600&q=80'" alt="Allegria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="OssoMarrone.jpg" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1590623190807-6c0b36ee2627?auto=format&fit=crop&w=600&q=80'" alt="Allegria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
                             </div>
                             <div class="p-6 text-center">
@@ -263,7 +263,7 @@
                         <!-- Prime -->
                         <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('prime')">
                             <div class="h-48 bg-gray-300 overflow-hidden relative">
-                                <img src="Montreal.jpg" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80'" alt="Prime" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <img src="Montreal.jpg" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80'" alt="Prime" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
                             </div>
                             <div class="p-6 text-center">
@@ -530,13 +530,13 @@
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <!-- Placeholder Images for Gallery -->
-                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=500&q=60" alt="Kitchen" onclick="app.openModal('Gallery - Kitchen', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=60" alt="Bathroom" onclick="app.openModal('Gallery - Bathroom', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=500&q=60" alt="Living" onclick="app.openModal('Gallery - Living Space', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=500&q=60" alt="Kitchen 2" onclick="app.openModal('Gallery - Modern Kitchen', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=60" alt="Counter" onclick="app.openModal('Gallery - Countertop Detail', 'Commercial Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=500&q=60" alt="Kitchen 3" onclick="app.openModal('Gallery - Open Kitchen', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <!-- Updated Images for Gallery using your 'inuse' files with lazy loading -->
+                    <img src="CarraraOroinuse.jpg" loading="lazy" alt="Carrara Oro Kitchen" onclick="app.openModal('Gallery - Carrara Oro', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <img src="OssoMarroneinuse.jpg" loading="lazy" alt="Osso Marrone Bathroom" onclick="app.openModal('Gallery - Osso Marrone', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <img src="Montrealinuse.jpg" loading="lazy" alt="Montreal Living Space" onclick="app.openModal('Gallery - Montreal', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <img src="VenatinoGrigioinuse.jpg" loading="lazy" alt="Venatino Grigio Kitchen" onclick="app.openModal('Gallery - Venatino Grigio', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <img src="UltimaStatuarioinuse.jpg" loading="lazy" alt="Ultima Statuario Countertop" onclick="app.openModal('Gallery - Ultima Statuario', 'Commercial Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
+                    <img src="CalacattaPicassoinuse.jpg" loading="lazy" alt="Calacatta Picasso Kitchen" onclick="app.openModal('Gallery - Calacatta Picasso', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
                 </div>
             </div>
         </section>
@@ -973,6 +973,7 @@
                             <div class="h-64 bg-gray-200 relative overflow-hidden">
                                 <!-- Thumbnail Image -->
                                 <img src="${imgThumbnail}" 
+                                     loading="lazy"
                                      onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80'" 
                                      alt="${item.name}" 
                                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
