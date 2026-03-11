@@ -25,7 +25,7 @@
       "@type": "HomeAndConstructionBusiness",
       "name": "MDP Surfaces",
       "image": "https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1200&q=80",
-      "description": "Manufacturer Direct Premium Surfaces including Quartz, Granite, and Marble.",
+      "description": "Manufacturer Direct Premium Surfaces compresi quarzo, granito e marmo.",
       "url": "https://www.mdpsurfaces.com/",
       "telephone": "+18888508838",
       "email": "info@mdpsurfaces.com",
@@ -133,6 +133,7 @@
                     
                     <a href="#" onclick="app.navigate('cts')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navCTS">Cut To Size</a>
                     <a href="#" onclick="app.navigate('gallery')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navGallery">Gallery</a>
+                    <a href="#" onclick="app.navigate('resources')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navResources">Resources</a>
                     <a href="#" onclick="app.navigate('contact')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navContact">Contact</a>
                 </div>
 
@@ -169,6 +170,7 @@
             <a href="#" onclick="app.navigate('prime'); app.toggleMobileMenu()" class="block pl-6 pr-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navPrime">Prime</a>
             <a href="#" onclick="app.navigate('cts'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navCTS">Cut To Size</a>
             <a href="#" onclick="app.navigate('gallery'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navGallery">Gallery</a>
+            <a href="#" onclick="app.navigate('resources'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navResources">Resources</a>
             <a href="#" onclick="app.navigate('contact'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navContact">Contact</a>
             
             <div class="border-t border-gray-200 dark:border-gray-700 mt-4 pt-4 flex justify-between items-center px-3">
@@ -199,7 +201,7 @@
                 <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
                         <span class="block text-mdp-grey uppercase text-xl md:text-2xl mb-2 tracking-widest" data-i18n="homeSubtitle">A New Generation Solid Surface</span>
-                        <span data-i18n="homeTitle1">Your Partner…For</span><br>
+                        <span data-i18n="homeTitle1">Your Partner… For</span><br>
                         <span class="text-mdp-red" data-i18n="homeTitle2">Manufacturer Direct</span><br>
                         <span data-i18n="homeTitle3">Premium Surfaces</span>
                     </h1>
@@ -243,7 +245,6 @@
                         <!-- Ultimate -->
                         <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('ultimate')">
                             <div class="h-48 bg-gray-300 overflow-hidden relative">
-                                <!-- Updated to .png based on new list -->
                                 <img src="CarraraOro.png" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1588854337221-4cfb6388ceea?auto=format&fit=crop&w=600&q=80'" alt="Ultimate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
                             </div>
@@ -255,7 +256,6 @@
                         <!-- Allegria -->
                         <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('allegria')">
                             <div class="h-48 bg-gray-300 overflow-hidden relative">
-                                <!-- Updated to .png based on new list -->
                                 <img src="OssoMarrone.png" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1590623190807-6c0b36ee2627?auto=format&fit=crop&w=600&q=80'" alt="Allegria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
                             </div>
@@ -545,6 +545,90 @@
             </div>
         </section>
 
+        <!-- RESOURCES VIEW (NEW) -->
+        <section id="view-resources" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="navResources">Resources</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="resourcesSub">Guides, forms, and insights for your premium surfaces.</p>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+                
+                <!-- Forms & Downloads Grid -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 border-b pb-2 dark:border-gray-800" data-i18n="downloads">Downloads & Forms</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <a href="https://drive.google.com/file/d/1mkSxBdJd98lmbyTlG982_5Yea0Z7CPie/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
+                            <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
+                                <i class="fa-solid fa-file-pdf text-2xl"></i>
+                            </div>
+                            <span class="font-medium text-gray-800 dark:text-gray-200">8K ULTRA - Commercial Warranty</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/11KiPk3Fdl4sqS62_LGvRkhFavXEPGt0X/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
+                            <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
+                                <i class="fa-solid fa-file-pdf text-2xl"></i>
+                            </div>
+                            <span class="font-medium text-gray-800 dark:text-gray-200">8K ULTRA - Residential Warranty</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1mE0xjTu2H--N6Jx-XXPA0vXfa30q6S8o/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
+                            <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
+                                <i class="fa-solid fa-hand-sparkles text-2xl"></i>
+                            </div>
+                            <span class="font-medium text-gray-800 dark:text-gray-200">MDP Care and Maintenance</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1AQM06dwiYiHFyxd9jMk5TwMzFF45vl7p/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
+                            <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
+                                <i class="fa-solid fa-file-signature text-2xl"></i>
+                            </div>
+                            <span class="font-medium text-gray-800 dark:text-gray-200">Product Waiver Forms</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1QwWzRp-N6KbCG7FD3vV7nNqcrz_MqGkv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
+                            <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
+                                <i class="fa-solid fa-book-open text-2xl"></i>
+                            </div>
+                            <span class="font-medium text-gray-800 dark:text-gray-200">Download Brochure</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Care & Maintenance -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 border-b pb-2 dark:border-gray-800" data-i18n="careTitle">Care & Maintenance</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                            <i class="fa-solid fa-spray-can-sparkles text-3xl text-mdp-red mb-4"></i>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careDaily">Daily Cleaning</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="careDailyText">For everyday maintenance, simply use a soft cloth or sponge with warm water and a mild dish soap. Wipe the surface clean and dry it thoroughly with a clean cloth to prevent water spots.</p>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                            <i class="fa-solid fa-shield-virus text-3xl text-mdp-red mb-4"></i>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careStains">Stubborn Stains</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="careStainsText">For dried spills or heavy stains, apply a non-abrasive cleaner (like Soft Scrub Liquid Gel). Gently rub with a non-scratch pad, rinse generously with warm water, and dry completely.</p>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                            <i class="fa-solid fa-ban text-3xl text-mdp-red mb-4"></i>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careAvoid">What to Avoid</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="careAvoidText">Avoid exposing your quartz to strong chemicals, solvents, bleach, or highly alkaline cleaners (pH > 10). If accidental exposure occurs, immediately flush the area with water.</p>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                            <i class="fa-solid fa-fire text-3xl text-mdp-red mb-4"></i>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careHeat">Heat & Scratches</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="careHeatText">While highly scratch and heat resistant, quartz is not indestructible. Always use a trivet or hot pad under hot pans, and never cut directly on the surface without a cutting board.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Articles & Blog -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 border-b pb-2 dark:border-gray-800" data-i18n="blogTitle">Articles & Insights</h2>
+                    <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <!-- CONTACT VIEW -->
         <section id="view-contact" class="view-section">
             <div class="bg-gray-900 text-white py-20 px-4 text-center">
@@ -660,6 +744,30 @@
             </div>
         </div>
 
+        <!-- Dynamic Blog Article Modal -->
+        <div id="blogModal" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm overflow-y-auto opacity-0 transition-opacity duration-300" onclick="app.closeBlogModal()">
+            <div class="min-h-screen px-4 py-10 flex items-center justify-center pointer-events-none">
+                <div class="relative bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-3xl transform scale-95 transition-transform duration-300 mx-auto pointer-events-auto overflow-hidden" id="blogModalContent" onclick="event.stopPropagation()">
+                    
+                    <button onclick="app.closeBlogModal()" class="absolute top-4 right-4 z-50 bg-black/50 hover:bg-mdp-red text-white rounded-full w-10 h-10 flex items-center justify-center shadow-xl transition text-xl focus:outline-none">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <div class="h-64 sm:h-80 w-full relative">
+                        <img id="blogModalImg" src="" alt="Article Banner" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+                    </div>
+                    
+                    <div class="p-8 md:p-10">
+                        <h3 id="blogModalTitle" class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">Title</h3>
+                        <div id="blogModalBody" class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed space-y-4">
+                            <!-- JS Populated Text -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -728,7 +836,7 @@
 
     <!-- Application Logic -->
     <script>
-        // --- 1. DATA: Product Collections ---
+        // --- 1. DATA: Product Collections & Blogs ---
         const products = {
             lusso: [
                 { id: "UHD-900", name: "Venatino Grigio", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", imgThumbnail: "VenatinoGrigio.jpg", imgModal: "VenatinoGrigioinuse.jpg" },
@@ -787,11 +895,131 @@
             ]
         };
 
+        const blogArticles = [
+            {
+                id: 1,
+                img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
+                titleEn: "The Rise of Low Silica Mineral Surfaces",
+                descEn: "Discover why 8K ultra-premium low silica surfaces are defining the future of safe, sustainable kitchen design.",
+                contentEn: `
+                    <p>The stone fabrication industry is currently experiencing one of the most massive and important shifts in its history. As awareness grows regarding the health and safety of stone fabricators, the global market is pivoting rapidly toward safer, smarter materials. <strong>Low Silica Mineral Surfaces</strong>, like our proprietary 8K collection, are at the absolute forefront of this revolution.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">A Shift in the Industry</h4>
+                    <p>Historically, traditional engineered quartz has contained high levels of crystalline silica. During the cutting, grinding, and polishing phases, silica dust can become airborne, posing significant respiratory risks to the craftsmen handling the stone. By transitioning to low silica formulations, the industry is prioritizing human health without forcing consumers to compromise on the luxury aesthetic they desire.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">The Italian Engineering Advantage</h4>
+                    <p>Our 8K surfaces are manufactured utilizing state-of-the-art Italian technology. This advanced engineering process allows us to dramatically reduce silica content while infusing the mineral surface with a proprietary resin blend. The result? A slab that is incredibly dense, non-porous, and structurally superior.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Why It Matters for Your Home</h4>
+                    <p>For homeowners, architects, and designers, low silica surfaces offer the perfect synergy of environmental responsibility and breathtaking luxury. You receive the exact same resistance to scratches, heat, and stubborn stains that traditional premium quartz is known for, alongside the peace of mind that your beautiful new kitchen or bathroom was fabricated safely and sustainably.</p>
+                `,
+                titleFr: "L'essor des surfaces minérales à faible teneur en silice",
+                descFr: "Découvrez pourquoi les surfaces 8K définissent l'avenir du design de cuisine.",
+                contentFr: `
+                    <p>L'industrie de la fabrication de la pierre connaît actuellement l'un des changements les plus importants de son histoire. Alors que la sensibilisation à la santé et à la sécurité des fabricants augmente, le marché mondial se tourne vers des matériaux plus sûrs. Les <strong>surfaces minérales à faible teneur en silice</strong>, comme notre collection 8K, sont à la pointe de cette révolution.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Un changement dans l'industrie</h4>
+                    <p>Historiquement, le quartz traditionnel contenait des niveaux élevés de silice cristalline. Lors de la coupe et du polissage, la poussière de silice présente des risques respiratoires pour les artisans. En passant à des formulations à faible teneur en silice, l'industrie donne la priorité à la santé humaine sans forcer les consommateurs à faire des compromis sur le luxe.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">L'avantage de l'ingénierie italienne</h4>
+                    <p>Nos surfaces 8K sont fabriquées à l'aide d'une technologie italienne de pointe. Ce processus nous permet de réduire considérablement la teneur en silice tout en infusant la surface avec un mélange de résine exclusif. Le résultat ? Une dalle incroyablement dense, non poreuse et structurellement supérieure.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Pourquoi c'est important pour votre maison</h4>
+                    <p>Pour les propriétaires et les designers, ces surfaces offrent la synergie parfaite entre responsabilité environnementale et luxe. Vous bénéficiez de la même résistance aux rayures, à la chaleur et aux taches que le quartz de qualité supérieure traditionnel, avec la tranquillité d'esprit en prime.</p>
+                `,
+                titleIt: "L'ascesa delle superfici minerali a basso contenuto di silice",
+                descIt: "Scopri perché le superfici 8K stanno definendo il futuro del design delle cucine.",
+                contentIt: `
+                    <p>L'industria della lavorazione della pietra sta vivendo uno dei cambiamenti più importanti della sua storia. Cresce la consapevolezza sulla salute dei lavoratori e il mercato si rivolge verso materiali più sicuri. Le <strong>superfici minerali a basso contenuto di silice</strong>, come la nostra collezione 8K, sono all'avanguardia in questa rivoluzione.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Un cambiamento nel settore</h4>
+                    <p>Storicamente, il quarzo tradizionale conteneva alti livelli di silice cristallina. Durante il taglio, la polvere di silice rappresenta un rischio per gli artigiani. Passando a formulazioni a basso contenuto di silice, il settore privilegia la salute umana senza compromettere l'estetica di lusso.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Il vantaggio dell'ingegneria italiana</h4>
+                    <p>Le nostre superfici 8K sono realizzate utilizzando una tecnologia italiana all'avanguardia. Questo processo ci consente di ridurre drasticamente il contenuto di silice pur mantenendo una lastra incredibilmente densa, non porosa e strutturalmente superiore.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Perché è importante per la tua casa</h4>
+                    <p>Per i proprietari di casa e i designer, queste superfici offrono la perfetta sinergia tra responsabilità ambientale e lusso mozzafiato. Si ottiene la stessa resistenza a graffi, calore e macchie del quarzo premium tradizionale, insieme a una totale tranquillità.</p>
+                `
+            },
+            {
+                id: 2,
+                titleEn: "Quartz Edge Profiles: Choosing the Right Look",
+                descEn: "From eased edges to dramatic waterfalls, learn how to select the perfect edge profile for your project.",
+                img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+                contentEn: `
+                    <p>When selecting a premium quartz countertop, the color and the flow of the veining are usually the first exciting decisions a client makes. However, it is the <strong>edge profile</strong> that ultimately frames the stone, dictating whether your kitchen feels ultra-modern, classic, or softly transitional.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">The Eased Edge</h4>
+                    <p>Often referred to as a "straight edge," the eased edge is actually slightly softened to prevent chipping and injuries. It offers a clean, architectural look that maximizes the perceived thickness of the stone. This is currently the most popular choice for modern, minimalist designs.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">The Bullnose & Half-Bullnose</h4>
+                    <p>A full bullnose provides a completely rounded edge, giving a softer, warmer, and more fluid feel to the kitchen. It is exceptionally popular for high-traffic family kitchens because the lack of sharp corners makes it incredibly safe for young children. The half-bullnose offers a curve on top with a flat bottom, aiding in water runoff.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">The Ogee Edge</h4>
+                    <p>The Ogee is a premium, traditional edge profile featuring an S-shaped curve (rounded on top, swooping into a concave dip). It adds a layer of classic, ornate elegance and is frequently paired with dramatic marble-look stones like our Ultimate Collection to replicate a European villa aesthetic.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">The Waterfall Panel</h4>
+                    <p>While not technically an "edge," dropping the quartz vertically down the sides of a kitchen island to meet the floor is a massive design trend. It creates a seamless, continuous flow of veining that acts as a show-stopping focal point in an open-concept living space.</p>
+                `,
+                titleFr: "Profils de chants en quartz : Choisir le bon look",
+                descFr: "Des chants adoucis aux cascades spectaculaires, apprenez à choisir le profil parfait.",
+                contentFr: `
+                    <p>Lors du choix d'un comptoir en quartz, la couleur est généralement la première décision. Cependant, c'est le <strong>profil du chant</strong> qui encadre la pierre, dictant si votre cuisine aura un aspect ultra-moderne, classique ou transitionnel.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Le Chant Adouci (Eased Edge)</h4>
+                    <p>Souvent appelé "bord droit", ce chant est légèrement adouci pour éviter les éclats. Il offre un look épuré et architectural qui maximise l'épaisseur perçue de la pierre. C'est le choix le plus populaire pour les designs modernes.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Le Demi-rond et Rond complet (Bullnose)</h4>
+                    <p>Le bord entièrement arrondi donne une sensation plus douce et chaleureuse. Il est idéal pour les cuisines familiales à fort trafic, car l'absence de coins pointus le rend très sûr pour les enfants.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Le Profil Ogee</h4>
+                    <p>Le profil Ogee est un bord traditionnel haut de gamme présentant une courbe en forme de S. Il ajoute une élégance classique et ornée, souvent associé à nos pierres aspect marbre pour reproduire l'esthétique d'une villa européenne.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">La Retombée en Cascade (Waterfall)</h4>
+                    <p>Faire descendre le quartz verticalement sur les côtés d'un îlot de cuisine pour rejoindre le sol est une grande tendance. Cela crée un flux continu de veines qui sert de point focal époustouflant.</p>
+                `,
+                titleIt: "Profili dei bordi in quarzo: Scegliere il look giusto",
+                descIt: "Dai bordi smussati alle spettacolari cascate, impara a selezionare il profilo perfetto.",
+                contentIt: `
+                    <p>Quando si seleziona un piano di lavoro in quarzo, il colore è solitamente la prima decisione. Tuttavia, è il <strong>profilo del bordo</strong> che incornicia la pietra, dettando se la tua cucina sembrerà ultra-moderna, classica o transizionale.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Bordo Smussato (Eased Edge)</h4>
+                    <p>Spesso chiamato "bordo dritto", è leggermente ammorbidito per prevenire sbeccature. Offre un look pulito e architettonico che massimizza lo spessore percepito della pietra. È la scelta più popolare per i design minimalisti.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Toro e Mezzo Toro (Bullnose)</h4>
+                    <p>Un bordo completamente arrotondato dona una sensazione più calda e fluida. È eccezionale per le cucine familiari ad alto traffico perché la mancanza di angoli vivi lo rende molto sicuro per i bambini.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Il Profilo Ogee</h4>
+                    <p>L'Ogee è un profilo tradizionale premium caratterizzato da una curva a forma di S. Aggiunge un livello di eleganza classica ed è spesso abbinato alle nostre pietre effetto marmo per replicare l'estetica di una villa europea.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">L'isola a Cascata (Waterfall)</h4>
+                    <p>Far scendere il quarzo verticalmente lungo i lati di un'isola per incontrare il pavimento è una grande tendenza di design. Crea un flusso continuo di venature che funge da punto focale mozzafiato.</p>
+                `
+            },
+            {
+                id: 3,
+                titleEn: "Understanding the Antico (Matte) Finish",
+                descEn: "A stylish, non-glossy finish that is soft to the touch and distinctly unique.",
+                img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
+                contentEn: `
+                    <p>The <strong>Antico Finish</strong> is a rapidly growing trend in modern interior design, offering a smooth, non-gloss, matte appearance with low reflectivity. It is soft to the touch and provides a highly sophisticated, organic alternative to traditional high-gloss polished materials.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">The Aesthetic Appeal of Matte</h4>
+                    <p>Antico finishes excel in environments with high natural light or strategic under-cabinet lighting. Because the surface does not reflect light like a mirror, the actual depth, veining, and authentic texture of the stone become the undisputed star of the room. It pairs beautifully with natural wood cabinets, brushed brass fixtures, and earthy color palettes.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Tactile Experience & Patina</h4>
+                    <p>Running your hand over an Antico surface feels entirely different than polished quartz. It feels grounded and raw. However, because it lacks a high-gloss sealant layer, the surface interacts with daily life differently. It may show fingerprints, cooking oils, or water spots more readily than a polished surface, developing a unique 'living patina' during daily use before being cleaned.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Care and Maintenance Deep Dive</h4>
+                    <p>It is crucial to understand that Antico is highly scratch-resistant, but not scratch-proof. Because of the matte texture, surface mars from sliding metal pots can sometimes appear. Fortunately, maintaining Antico is straightforward. Daily blemishes and oils can generally be removed using a non-abrasive cleaning pad along with a mild liquid abrasive like Soft Scrub. With a small amount of extra daily care, an Antico surface rewards you with an unmatched, ultra-modern aesthetic.</p>
+                `,
+                titleFr: "Comprendre la finition Antico (Mate)",
+                descFr: "Une finition élégante et non brillante, douce au toucher et distinctement unique.",
+                contentFr: `
+                    <p>La <strong>Finition Antico</strong> est une tendance en forte croissance dans le design d'intérieur moderne, offrant un aspect mat, non brillant et avec une faible réflectivité. Elle est douce au toucher et offre une alternative organique et sophistiquée aux matériaux polis traditionnels.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">L'attrait esthétique du Mat</h4>
+                    <p>Les finitions Antico excellent dans les environnements baignés de lumière naturelle. Parce que la surface ne reflète pas la lumière comme un miroir, la profondeur réelle, les veines et la texture authentique de la pierre deviennent la vedette de la pièce. Elle se marie à merveille avec des armoires en bois naturel et des luminaires en laiton.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Expérience tactile et Patine</h4>
+                    <p>Passer la main sur une surface Antico donne une sensation très différente du quartz poli. Cependant, comme elle n'a pas de couche de scellant ultra-brillante, la surface interagit différemment avec la vie quotidienne. Elle peut montrer plus facilement les empreintes digitales ou les huiles de cuisson.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Un entretien détaillé</h4>
+                    <p>Il est crucial de comprendre que l'Antico est très résistant aux rayures, mais pas à l'épreuve des rayures. Heureusement, l'entretien est simple. Les marques de surface peuvent généralement être éliminées à l'aide d'un tampon de nettoyage non abrasif avec un abrasif liquide doux. Avec un peu de soin, la surface Antico offre une esthétique ultra-moderne inégalée.</p>
+                `,
+                titleIt: "Comprendere la finitura Antico (Opaca)",
+                descIt: "Una finitura elegante e non lucida, morbida al tatto e distintamente unica.",
+                contentIt: `
+                    <p>La <strong>Finitura Antico</strong> è una tendenza in rapida crescita nel design d'interni moderno, offrendo un aspetto liscio, opaco e con bassa riflettività. È morbida al tatto e fornisce un'alternativa altamente sofisticata e organica ai tradizionali materiali lucidi.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Il fascino estetico dell'Opaco</h4>
+                    <p>Le finiture Antico eccellono in ambienti con molta luce naturale. Poiché la superficie non riflette la luce come uno specchio, la profondità reale, le venature e la consistenza autentica della pietra diventano le protagoniste indiscusse della stanza. Si abbina magnificamente con mobili in legno naturale e infissi in ottone spazzolato.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Esperienza tattile e Patina</h4>
+                    <p>Passare la mano su una superficie Antico regala una sensazione completamente diversa rispetto al quarzo lucido. Tuttavia, poiché manca di uno strato sigillante lucido, la superficie interagisce diversamente con la vita quotidiana. Può mostrare impronte digitali o oli di cottura più facilmente.</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Cura e manutenzione in dettaglio</h4>
+                    <p>È fondamentale capire che la finitura Antico è altamente resistente ai graffi, ma non antigraffio. Fortunatamente, mantenerla è semplice. I segni superficiali e gli oli possono generalmente essere rimossi utilizzando una spugna non abrasiva insieme a un abrasivo liquido delicato. Con un po' di cura quotidiana in più, una superficie Antico ti ricompensa con un'estetica ineguagliabile.</p>
+                `
+            }
+        ];
+
         // --- 2. DATA: Translations ---
         const translations = {
             en: {
                 navHome: "Home", navCollections: "Collections", navLusso: "Lusso", navUltimate: "Ultimate", 
-                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Cut To Size", navGallery: "Gallery", navContact: "Contact",
+                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Cut To Size", navGallery: "Gallery", navResources: "Resources", navContact: "Contact",
                 homeSubtitle: "A New Generation Solid Surface",
                 homeTitle1: "Your Partner… For", homeTitle2: "Manufacturer Direct", homeTitle3: "Premium Surfaces",
                 homeDesc: "1.1 Million Square Foot Factory / Warehouse. Operating since 1993. Manufacture facility using the finest Italian Technology.",
@@ -805,11 +1033,20 @@
                 ctsSubtitle: "The blueprint cut-to-size solution for fabricated quartz, granite and marble surfaces. We are your trusted partner.",
                 weOfferYou: "WE OFFER YOU:", valueAdded: "VALUE ADDED ADVANTAGES:", fiveEasySteps: "5 EASY STEPS:",
                 gallerySub: "See our stunning surfaces in action.",
+                resourcesSub: "Guides, forms, and insights for your premium surfaces.",
+                downloads: "Downloads & Forms",
+                careTitle: "Care & Maintenance",
+                careDaily: "Daily Cleaning", careDailyText: "For everyday maintenance, simply use a soft cloth or sponge with warm water and a mild dish soap. Wipe the surface clean and dry it thoroughly with a clean cloth to prevent water spots.",
+                careStains: "Stubborn Stains", careStainsText: "For dried spills or heavy stains, apply a non-abrasive cleaner (like Soft Scrub Liquid Gel). Gently rub with a non-scratch pad, rinse generously with warm water, and dry completely.",
+                careAvoid: "What to Avoid", careAvoidText: "Avoid exposing your quartz to strong chemicals, solvents, bleach, or highly alkaline cleaners (pH > 10). If accidental exposure occurs, immediately flush the area with water.",
+                careHeat: "Heat & Scratches", careHeatText: "While highly scratch and heat resistant, quartz is not indestructible. Always use a trivet or hot pad under hot pans, and never cut directly on the surface without a cutting board.",
+                blogTitle: "Articles & Insights",
+                readArticle: "Read Article",
                 contactUsToday: "Contact Us TODAY!", getInTouch: "Get in touch, we're here to help! Send us a message.",
                 fullName: "Nom complet / Full Name: *", emailAddress: "Adresse courriel / Email Address: *", yourMessage: "Votre message / Your Message:",
                 submit: "Submit", formSuccessMsg: "Message sent successfully!",
                 hours: "Hours", footerDesc: "Your Partner…For Manufacturer Direct Premium Surfaces.",
-                ourWarehouses: "OUR WAREHOUSES", downloads: "Downloads & Forms",
+                ourWarehouses: "OUR WAREHOUSES",
                 slabViewingTitle: "Slab Viewing Appointments", slabViewingText: "For slab viewing please contact Mena to book an appointment:",
                 reviewsTitle: "Google Reviews",
                 inquiryTitle: "Interested in this surface?",
@@ -817,13 +1054,13 @@
             },
             fr: {
                 navHome: "Accueil", navCollections: "Collections", navLusso: "Lusso", navUltimate: "Ultimate", 
-                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Coupé sur Mesure", navGallery: "Galerie", navContact: "Contact",
+                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Coupé sur Mesure", navGallery: "Galerie", navResources: "Ressources", navContact: "Contact",
                 homeSubtitle: "Une Surface Solide Nouvelle Génération",
                 homeTitle1: "Votre Partenaire… Pour", homeTitle2: "Direct Manufacturier", homeTitle3: "Surfaces Premium",
                 homeDesc: "Usine / Entrepôt de 1,1 million de pieds carrés. En opération depuis 1993. Installation de fabrication utilisant la meilleure technologie italienne.",
                 btnExplore: "Explorer les Collections", btnContact: "Contactez-nous",
                 quartzComposition: "Notre Quartz est composé à 93 % de quartz et 7 % de résine",
-                quartzDesc: "8K est une surface minérale à faible teneur en silice. Nous vous apportons les couleurs e motifs les plus populaires et modernes du marché avec une qualité constante.",
+                quartzDesc: "8K est une surface minérale à faible teneur en silice. Nous vous apportons les couleurs et motifs les plus populaires et modernes du marché avec une qualité constante.",
                 ourCollections: "Nos Collections", viewCollection: "Voir la Collection &rarr;",
                 testimonialsTitle: "Ce Que Disent Nos Partenaires",
                 lowSilica: "8K est une surface minérale à faible teneur en silice. Les caractéristiques naturelles peuvent causer de légères variations.",
@@ -831,11 +1068,20 @@
                 ctsSubtitle: "La solution sur mesure pour les surfaces de quartz, granit et marbre fabriquées. Nous sommes votre partenaire de confiance.",
                 weOfferYou: "NOUS VOUS OFFRONS :", valueAdded: "AVANTAGES À VALEUR AJOUTÉE :", fiveEasySteps: "5 ÉTAPES SIMPLES :",
                 gallerySub: "Découvrez nos superbes surfaces en action.",
+                resourcesSub: "Guides, formulaires et conseils pour vos surfaces premium.",
+                downloads: "Téléchargements et Formulaires",
+                careTitle: "Entretien et Nettoyage",
+                careDaily: "Nettoyage Quotidien", careDailyText: "Pour l'entretien quotidien, utilisez simplement un chiffon doux avec de l'eau tiède et un savon doux. Essuyez la surface et séchez-la soigneusement pour éviter les taches d'eau.",
+                careStains: "Taches Tenaces", careStainsText: "Pour les taches incrustées, appliquez un nettoyant non abrasif. Frottez doucement avec un tampon anti-rayures, rincez généreusement à l'eau tiède et séchez complètement.",
+                careAvoid: "À Éviter", careAvoidText: "Évitez d'exposer votre quartz à des produits chimiques puissants, solvants, eau de Javel ou nettoyants très alcalins. En cas d'exposition, rincez immédiatement à l'eau.",
+                careHeat: "Chaleur et Rayures", careHeatText: "Bien que très résistant, le quartz n'est pas indestructible. Utilisez toujours un dessous de plat sous les casseroles chaudes et ne coupez jamais directement sur la surface.",
+                blogTitle: "Articles et Aperçus",
+                readArticle: "Lire l'Article",
                 contactUsToday: "Contactez-nous AUJOURD'HUI!", getInTouch: "Entrez en contact, nous sommes là pour vous aider ! Envoyez-nous un message.",
                 fullName: "Nom complet / Full Name: *", emailAddress: "Adresse courriel / Email Address: *", yourMessage: "Votre message / Your Message:",
                 submit: "Soumettre", formSuccessMsg: "Message envoyé avec succès !",
                 hours: "Heures", footerDesc: "Votre Partenaire…Pour Des Surfaces Premium Directement Du Manufacturier.",
-                ourWarehouses: "NOS ENTREPÔTS", downloads: "Téléchargements et Formulaires",
+                ourWarehouses: "NOS ENTREPÔTS",
                 slabViewingTitle: "Rendez-vous pour Visualisation", slabViewingText: "Pour la visualisation des tranches, veuillez contacter Mena pour prendre rendez-vous :",
                 reviewsTitle: "Avis Google",
                 inquiryTitle: "Intéressé par cette surface ?",
@@ -843,7 +1089,7 @@
             },
             it: {
                 navHome: "Home", navCollections: "Collezioni", navLusso: "Lusso", navUltimate: "Ultimate", 
-                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Su Misura", navGallery: "Galleria", navContact: "Contatti",
+                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Su Misura", navGallery: "Galleria", navResources: "Risorse", navContact: "Contatti",
                 homeSubtitle: "Una Superficie Solida di Nuova Generazione",
                 homeTitle1: "Il Tuo Partner… Per", homeTitle2: "Produttore Diretto", homeTitle3: "Superfici Premium",
                 homeDesc: "Fabbrica / Magazzino di 1,1 milioni di piedi quadrati. Operativi dal 1993. Struttura di produzione che utilizza la migliore tecnologia italiana.",
@@ -857,11 +1103,20 @@
                 ctsSubtitle: "La soluzione su misura per superfici in quarzo, granito e marmo. Siamo il tuo partner di fiducia.",
                 weOfferYou: "TI OFFRIAMO:", valueAdded: "VANTAGGI A VALORE AGGIUNTO:", fiveEasySteps: "5 SEMPLICI PASSI:",
                 gallerySub: "Guarda le nostre splendide superfici in azione.",
+                resourcesSub: "Guide, moduli e approfondimenti per le tue superfici premium.",
+                downloads: "Download e Moduli",
+                careTitle: "Cura e Manutenzione",
+                careDaily: "Pulizia Quotidiana", careDailyText: "Per la manutenzione quotidiana, utilizzare un panno morbido con acqua tiepida e sapone neutro. Asciugare accuratamente per evitare macchie d'acqua.",
+                careStains: "Macchie Ostinate", careStainsText: "Per le macchie incrostate, applicare un detergente non abrasivo. Strofinare delicatamente, risciacquare abbondantemente con acqua tiepida e asciugare completamente.",
+                careAvoid: "Cosa Evitare", careAvoidText: "Evitare di esporre il quarzo a sostanze chimiche forti, solventi, candeggina o detergenti altamente alcalini. In caso di contatto, sciacquare immediatamente con acqua.",
+                careHeat: "Calore e Graffi", careHeatText: "Sebbene molto resistente, il quarzo non è indistruttibile. Usa sempre un sottopentola per le padelle calde e non tagliare mai direttamente sulla superficie.",
+                blogTitle: "Articoli e Approfondimenti",
+                readArticle: "Leggi l'Articolo",
                 contactUsToday: "Contattaci OGGI STESSO!", getInTouch: "Mettiti in contatto, siamo qui per aiutarti! Inviaci un messaggio.",
                 fullName: "Nome Completo / Full Name: *", emailAddress: "Indirizzo Email / Email Address: *", yourMessage: "Il Tuo Messaggio / Your Message:",
                 submit: "Invia", formSuccessMsg: "Messaggio inviato con successo!",
                 hours: "Orari", footerDesc: "Il Tuo Partner…Per Superfici Premium Direttamente dal Produttore.",
-                ourWarehouses: "I NOSTRI MAGAZZINI", downloads: "Download e Moduli",
+                ourWarehouses: "I NOSTRI MAGAZZINI",
                 slabViewingTitle: "Appuntamenti per la Visione delle Lastre", slabViewingText: "Per la visione delle lastre, contatta Mena per fissare un appuntamento:",
                 reviewsTitle: "Recensioni Google",
                 inquiryTitle: "Interessato a questa superficie?",
@@ -879,10 +1134,11 @@
                 this.applyTheme();
                 this.setLang(this.currentLang);
                 this.renderAllCollections();
+                this.renderBlogs();
                 
                 // Set initial view based on hash or default to home
                 const hash = window.location.hash.substring(1);
-                if(['home','lusso','ultimate','allegria','prime','cts','gallery','contact'].includes(hash)) {
+                if(['home','lusso','ultimate','allegria','prime','cts','gallery','resources','contact'].includes(hash)) {
                     this.navigate(hash);
                 } else {
                     this.navigate('home');
@@ -968,8 +1224,9 @@
                     }
                 });
 
-                // Re-render product grids to apply correct language descriptions
+                // Re-render dynamic grids
                 this.renderAllCollections();
+                this.renderBlogs();
             },
 
             // Product Rendering
@@ -1021,6 +1278,75 @@
                     `;
                     container.innerHTML += card;
                 });
+            },
+
+            // Blog Rendering
+            renderBlogs() {
+                const container = document.getElementById('blogGrid');
+                if (!container) return;
+                
+                container.innerHTML = '';
+                const readBtnText = translations[this.currentLang].readArticle || "Read Article";
+                
+                blogArticles.forEach(article => {
+                    const title = this.currentLang === 'en' ? article.titleEn : (this.currentLang === 'fr' ? article.titleFr : article.titleIt);
+                    const desc = this.currentLang === 'en' ? article.descEn : (this.currentLang === 'fr' ? article.descFr : article.descIt);
+                    
+                    const card = `
+                        <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow border border-gray-100 dark:border-gray-700 flex flex-col group cursor-pointer" onclick="app.openBlogModal(${article.id})">
+                            <div class="h-48 overflow-hidden">
+                                <img src="${article.img}" loading="lazy" alt="Blog Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-mdp-red transition-colors">${title}</h3>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">${desc}</p>
+                                <p class="text-mdp-red font-medium text-sm mt-auto">${readBtnText} &rarr;</p>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += card;
+                });
+            },
+
+            openBlogModal(id) {
+                const article = blogArticles.find(a => a.id === id);
+                if(!article) return;
+
+                const title = this.currentLang === 'en' ? article.titleEn : (this.currentLang === 'fr' ? article.titleFr : article.titleIt);
+                const content = this.currentLang === 'en' ? article.contentEn : (this.currentLang === 'fr' ? article.contentFr : article.contentIt);
+
+                document.getElementById('blogModalTitle').textContent = title;
+                document.getElementById('blogModalBody').innerHTML = content;
+                document.getElementById('blogModalImg').src = article.img;
+
+                const modal = document.getElementById('blogModal');
+                const modalContent = document.getElementById('blogModalContent');
+                
+                modal.classList.remove('hidden');
+                modal.classList.add('block');
+                
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }, 10);
+                
+                document.body.style.overflow = 'hidden';
+            },
+
+            closeBlogModal() {
+                const modal = document.getElementById('blogModal');
+                const modalContent = document.getElementById('blogModalContent');
+                
+                modal.classList.add('opacity-0');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('block');
+                    document.body.style.overflow = '';
+                }, 300);
             },
 
             openModal(title, subtitle, imgSrc, collection = '') {
