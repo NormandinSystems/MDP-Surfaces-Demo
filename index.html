@@ -197,21 +197,20 @@
         <section id="view-home" class="view-section active">
             <!-- Hero Banner -->
             <div class="relative bg-gray-900 text-white overflow-hidden">
-                <!-- Abstract Background placeholder mimicking marble/quartz -->
+                <!-- Video Background Setup (Falls back to poster image if hero-video.mp4 is missing) -->
                 <div class="absolute inset-0 opacity-40">
-                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1920&q=80" loading="lazy" alt="Quartz Background" class="w-full h-full object-cover">
+                    <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover">
+                        <source src="hero-video.mp4" type="video/mp4">
+                    </video>
                 </div>
-                <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
-                <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent z-10"></div>
+                <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40">
                     <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-                        <span class="block text-mdp-grey uppercase text-lg md:text-xl mb-2 tracking-widest" data-i18n="homeSubtitle">A New Generation Solid Surface</span>
-                        <span data-i18n="homeTitle1">Your Partner… For</span><br>
-                        <span class="text-mdp-red" data-i18n="homeTitle2">Manufacturer Direct</span><br>
-                        <span data-i18n="homeTitle3">Premium Surfaces</span>
+                        <span data-i18n="homeTitle">Manufacturer Direct Premium Surfaces</span>
                     </h1>
-                    <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-300 leading-relaxed" data-i18n="homeDesc">1.1 Million Square Foot Factory / Warehouse. Operating since 1993. Manufacture facility using the finest Italian Technology.</p>
+                    <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-300 leading-relaxed" data-i18n="homeDesc">Uncompromising quality and Italian engineering, direct from our factory to your project.</p>
                     <div class="mt-10 flex space-x-4">
-                        <button onclick="app.navigate('collections')" class="bg-mdp-red hover:bg-mdp-darkred text-white px-8 py-3 rounded-md font-semibold transition-colors shadow-lg" data-i18n="btnExplore">Explore Collections</button>
+                        <button onclick="app.navigate('collections')" class="bg-mdp-red hover:bg-mdp-darkred text-white px-8 py-3 rounded-md font-semibold transition-colors shadow-lg" data-i18n="btnExplore">Find Your Perfect Surface</button>
                         <button onclick="app.navigate('contact')" class="bg-transparent border border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-md font-semibold transition-colors" data-i18n="btnContact">Contact Us</button>
                     </div>
                 </div>
@@ -276,39 +275,6 @@
                             </div>
                             <div class="p-6 text-center">
                                 <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="namePrime">PRIME</h3>
-                                <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
-                            </div>
-                        </div>
-                        <!-- Ultimate -->
-                        <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('ultimate')">
-                            <div class="h-48 bg-gray-300 overflow-hidden relative">
-                                <img src="CarraraOro.png" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1588854337221-4cfb6388ceea?auto=format&fit=crop&w=600&q=80'" alt="Ultimate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                            </div>
-                            <div class="p-6 text-center">
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">ULTIMATE</h3>
-                                <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
-                            </div>
-                        </div>
-                        <!-- Allegria -->
-                        <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('allegria')">
-                            <div class="h-48 bg-gray-300 overflow-hidden relative">
-                                <img src="OssoMarrone.png" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1590623190807-6c0b36ee2627?auto=format&fit=crop&w=600&q=80'" alt="Allegria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                            </div>
-                            <div class="p-6 text-center">
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">ALLEGRIA</h3>
-                                <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
-                            </div>
-                        </div>
-                        <!-- Prime -->
-                        <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('prime')">
-                            <div class="h-48 bg-gray-300 overflow-hidden relative">
-                                <img src="Montreal.jpg" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80'" alt="Prime" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                            </div>
-                            <div class="p-6 text-center">
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">PRIME</h3>
                                 <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
                             </div>
                         </div>
@@ -1387,9 +1353,9 @@
                 navHome: "Home", navCollections: "Collections", navLusso: "Lusso", navUltimate: "Ultimate", 
                 navAllegria: "Allegria", navPrime: "Prime", navCTS: "(CTS) Cut To Size", navGallery: "Gallery", navFAQ: "FAQ", navResources: "Resources", navContact: "Contact",
                 homeSubtitle: "A New Generation Solid Surface",
-                homeTitle1: "Your Partner… For", homeTitle2: "Manufacturer Direct", homeTitle3: "Premium Surfaces",
-                homeDesc: "1.1 Million Square Foot Factory / Warehouse. Operating since 1993. Manufacture facility using the finest Italian Technology.",
-                btnExplore: "Explore Collections", btnContact: "Contact Us",
+                homeTitle: "Manufacturer Direct Premium Surfaces",
+                homeDesc: "Uncompromising quality and Italian engineering, direct from our factory to your project.",
+                btnExplore: "Find Your Perfect Surface", btnContact: "Contact Us",
                 quartzComposition: "Our Quartz consists of 93 percent quartz, 7 percent resin",
                 quartzDesc: "8K is a Low Silica Mineral Surface. We bring you the most popular and modern colours and patterns on the market with consistent, ultimate quality.",
                 ourCollections: "Our Collections", viewCollection: "View Collection &rarr;",
@@ -1476,9 +1442,9 @@
                 navHome: "Accueil", navCollections: "Collections", navLusso: "Lusso", navUltimate: "Ultimate", 
                 navAllegria: "Allegria", navPrime: "Prime", navCTS: "(CTS) Coupé sur Mesure", navGallery: "Galerie", navFAQ: "FAQ", navResources: "Ressources", navContact: "Contact",
                 homeSubtitle: "Une Surface Solide Nouvelle Génération",
-                homeTitle1: "Votre Partenaire… Pour", homeTitle2: "Direct Manufacturier", homeTitle3: "Surfaces Premium",
-                homeDesc: "Usine / Entrepôt de 1,1 million de pieds carrés. En opération depuis 1993. Installation de fabrication utilisant la meilleure technologie italienne.",
-                btnExplore: "Explorer les Collections", btnContact: "Contactez-nous",
+                homeTitle: "Surfaces Premium Direct Manufacturier",
+                homeDesc: "Une qualité sans compromis et une ingénierie italienne, directement de notre usine à votre projet.",
+                btnExplore: "Trouvez Votre Surface Parfaite", btnContact: "Contactez-nous",
                 quartzComposition: "Notre Quartz est composé à 93 % de quartz et 7 % de résine",
                 quartzDesc: "8K est une surface minérale à faible teneur en silice. Nous vous apportons les couleurs et motifs les plus populaires et modernes du marché avec une qualité constante.",
                 ourCollections: "Nos Collections", viewCollection: "Voir la Collection &rarr;",
@@ -1565,9 +1531,9 @@
                 navHome: "Home", navCollections: "Collezioni", navLusso: "Lusso", navUltimate: "Ultimate", 
                 navAllegria: "Allegria", navPrime: "Prime", navCTS: "(CTS) Su Misura", navGallery: "Galleria", navFAQ: "FAQ", navResources: "Risorse", navContact: "Contatti",
                 homeSubtitle: "Una Superficie Solida di Nuova Generazione",
-                homeTitle1: "Il Tuo Partner… Per", homeTitle2: "Produttore Diretto", homeTitle3: "Superfici Premium",
-                homeDesc: "Fabbrica / Magazzino di 1,1 milioni di piedi quadrati. Operativi dal 1993. Struttura di produzione che utilizza la migliore tecnologia italiana.",
-                btnExplore: "Esplora le Collezioni", btnContact: "Contattaci",
+                homeTitle: "Superfici Premium Direttamente dal Produttore",
+                homeDesc: "Qualità senza compromessi e ingegneria italiana, direttamente dalla nostra fabbrica al tuo progetto.",
+                btnExplore: "Trova la Tua Superficie Perfetta", btnContact: "Contattaci",
                 quartzComposition: "Il nostro quarzo è composto al 93% da quarzo e al 7% da resina",
                 quartzDesc: "8K è una superficie minerale a basso contenuto di silice. Ti offriamo i colori e i motivi più popolari e moderni sul mercato con una qualità costante e assoluta.",
                 ourCollections: "Le Nostre Collezioni", viewCollection: "Vedi Collezione &rarr;",
@@ -1654,9 +1620,9 @@
                 navHome: "首页", navCollections: "系列产品", navLusso: "Lusso 系列", navUltimate: "Ultimate 系列", 
                 navAllegria: "Allegria 系列", navPrime: "Prime 系列", navCTS: "(CTS) 定制切割", navGallery: "案例图库", navFAQ: "常见问题", navResources: "资源中心", navContact: "联系我们",
                 homeSubtitle: "新一代实体面材",
-                homeTitle1: "您值得信赖的合作伙伴…", homeTitle2: "厂家直销", homeTitle3: "高端表面材料",
-                homeDesc: "占地 110 万平方英尺的工厂/仓库。自 1993 年开始运营。采用最优质的意大利技术进行制造。",
-                btnExplore: "探索系列产品", btnContact: "联系我们",
+                homeTitle: "厂家直销高端表面材料",
+                homeDesc: "毫不妥协的质量与意大利工艺，从我们的工厂直达您的项目。",
+                btnExplore: "寻找您的完美表面", btnContact: "联系我们",
                 quartzComposition: "我们的石英石由 93% 的天然石英和 7% 的树脂组成",
                 quartzDesc: "8K 是一种低二氧化硅矿物表面。我们以始终如一的顶级质量，为您带来市场上最受欢迎、最现代的色彩和图案。",
                 ourCollections: "我们的系列", viewCollection: "查看系列 &rarr;",
