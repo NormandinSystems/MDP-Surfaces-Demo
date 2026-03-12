@@ -6,7 +6,7 @@
     <title>MDP Surfaces - Manufacturer Direct Premium Surfaces</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="MDP Surfaces offers manufacturer direct premium quartz, granite, and marble surfaces. Discover our Lusso, Ultimate, Allegria, and Prime collections with nationwide warehouses in Montreal, Toronto, and Vancouver.">
+    <meta name="description" content="MDP Surfaces offers manufacturer direct premium quartz, granite, and marble surfaces. Discover our Lusso, Ultimate, Allegria, and Prime collections with nationwide warehouses in Montreal and Vancouver.">
     <meta name="keywords" content="MDP Surfaces, premium surfaces, quartz countertops, manufacturer direct quartz, low silica mineral surface, custom cut to size, Lusso collection, Ultimate collection, kitchen countertops">
     <meta name="author" content="MDP Surfaces Inc.">
     <link rel="canonical" href="https://www.mdpsurfaces.com/">
@@ -114,7 +114,7 @@
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <div class="hidden lg:flex items-center space-x-3 xl:space-x-5 text-sm xl:text-base">
                     <a href="#" onclick="app.navigate('home')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navHome">Home</a>
                     
                     <!-- Dropdown for Collections -->
@@ -131,8 +131,9 @@
                         </div>
                     </div>
                     
-                    <a href="#" onclick="app.navigate('cts')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navCTS">Cut To Size</a>
+                    <a href="#" onclick="app.navigate('cts')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navCTS">(CTS) Cut To Size</a>
                     <a href="#" onclick="app.navigate('gallery')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navGallery">Gallery</a>
+                    <a href="#" onclick="app.navigate('faq')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navFAQ">FAQ</a>
                     <a href="#" onclick="app.navigate('resources')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navResources">Resources</a>
                     <a href="#" onclick="app.navigate('contact')" class="nav-link hover:text-mdp-red dark:hover:text-mdp-red font-medium transition-colors" data-i18n="navContact">Contact</a>
                 </div>
@@ -141,18 +142,19 @@
                 <div class="hidden md:flex items-center space-x-4">
                     <!-- Language Toggle -->
                     <div class="flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
-                        <button onclick="app.setLang('en')" id="lang-en" class="px-3 py-1 rounded-full text-sm font-bold transition-colors bg-white dark:bg-gray-600 shadow-sm text-mdp-red">EN</button>
-                        <button onclick="app.setLang('fr')" id="lang-fr" class="px-3 py-1 rounded-full text-sm font-bold transition-colors text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">FR</button>
-                        <button onclick="app.setLang('it')" id="lang-it" class="px-3 py-1 rounded-full text-sm font-bold transition-colors text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">IT</button>
+                        <button onclick="app.setLang('en')" id="lang-en" class="px-3 py-1 rounded-full text-xs font-bold transition-colors bg-white dark:bg-gray-600 shadow-sm text-mdp-red">EN</button>
+                        <button onclick="app.setLang('fr')" id="lang-fr" class="px-3 py-1 rounded-full text-xs font-bold transition-colors text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">FR</button>
+                        <button onclick="app.setLang('it')" id="lang-it" class="px-3 py-1 rounded-full text-xs font-bold transition-colors text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">IT</button>
+                        <button onclick="app.setLang('zh')" id="lang-zh" class="px-3 py-1 rounded-full text-xs font-bold transition-colors text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">中文</button>
                     </div>
                     <!-- Theme Toggle -->
-                    <button onclick="app.toggleTheme()" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <button onclick="app.toggleTheme()" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors shrink-0">
                         <i id="theme-icon" class="fa-solid fa-moon"></i>
                     </button>
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
+                <div class="lg:hidden flex items-center">
                     <button onclick="app.toggleMobileMenu()" class="text-gray-600 dark:text-gray-300 hover:text-mdp-red focus:outline-none p-2">
                         <i id="mobile-menu-icon" class="fa-solid fa-bars text-2xl"></i>
                     </button>
@@ -161,25 +163,27 @@
         </div>
 
         <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-mdp-darker border-t border-gray-200 dark:border-gray-800 px-4 pt-2 pb-6 space-y-1 shadow-lg absolute w-full left-0">
+        <div id="mobile-menu" class="lg:hidden hidden bg-white dark:bg-mdp-darker border-t border-gray-200 dark:border-gray-800 px-4 pt-2 pb-6 space-y-1 shadow-lg absolute w-full left-0 z-40">
             <a href="#" onclick="app.navigate('home'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navHome">Home</a>
             <div class="px-3 py-2 text-sm font-bold text-gray-400 uppercase tracking-wider" data-i18n="navCollections">Collections</div>
             <a href="#" onclick="app.navigate('lusso'); app.toggleMobileMenu()" class="block pl-6 pr-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navLusso">Lusso</a>
             <a href="#" onclick="app.navigate('ultimate'); app.toggleMobileMenu()" class="block pl-6 pr-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navUltimate">Ultimate</a>
             <a href="#" onclick="app.navigate('allegria'); app.toggleMobileMenu()" class="block pl-6 pr-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navAllegria">Allegria</a>
             <a href="#" onclick="app.navigate('prime'); app.toggleMobileMenu()" class="block pl-6 pr-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navPrime">Prime</a>
-            <a href="#" onclick="app.navigate('cts'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navCTS">Cut To Size</a>
+            <a href="#" onclick="app.navigate('cts'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navCTS">(CTS) Cut To Size</a>
             <a href="#" onclick="app.navigate('gallery'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navGallery">Gallery</a>
+            <a href="#" onclick="app.navigate('faq'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navFAQ">FAQ</a>
             <a href="#" onclick="app.navigate('resources'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navResources">Resources</a>
             <a href="#" onclick="app.navigate('contact'); app.toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="navContact">Contact</a>
             
             <div class="border-t border-gray-200 dark:border-gray-700 mt-4 pt-4 flex justify-between items-center px-3">
-                <div class="flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
-                    <button onclick="app.setLang('en')" id="mobile-lang-en" class="px-3 py-1 rounded-full text-sm font-bold bg-white dark:bg-gray-600 text-mdp-red shadow-sm">EN</button>
-                    <button onclick="app.setLang('fr')" id="mobile-lang-fr" class="px-3 py-1 rounded-full text-sm font-bold text-gray-500 dark:text-gray-400">FR</button>
-                    <button onclick="app.setLang('it')" id="mobile-lang-it" class="px-3 py-1 rounded-full text-sm font-bold text-gray-500 dark:text-gray-400">IT</button>
+                <div class="flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1 overflow-x-auto no-scrollbar">
+                    <button onclick="app.setLang('en')" id="mobile-lang-en" class="px-3 py-1 rounded-full text-xs font-bold bg-white dark:bg-gray-600 text-mdp-red shadow-sm whitespace-nowrap">EN</button>
+                    <button onclick="app.setLang('fr')" id="mobile-lang-fr" class="px-3 py-1 rounded-full text-xs font-bold text-gray-500 dark:text-gray-400 whitespace-nowrap">FR</button>
+                    <button onclick="app.setLang('it')" id="mobile-lang-it" class="px-3 py-1 rounded-full text-xs font-bold text-gray-500 dark:text-gray-400 whitespace-nowrap">IT</button>
+                    <button onclick="app.setLang('zh')" id="mobile-lang-zh" class="px-3 py-1 rounded-full text-xs font-bold text-gray-500 dark:text-gray-400 whitespace-nowrap">中文</button>
                 </div>
-                <button onclick="app.toggleTheme()" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">
+                <button onclick="app.toggleTheme()" class="w-10 h-10 ml-2 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 shrink-0">
                     <i id="mobile-theme-icon" class="fa-solid fa-moon"></i>
                 </button>
             </div>
@@ -199,13 +203,13 @@
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
                 <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-                        <span class="block text-mdp-grey uppercase text-xl md:text-2xl mb-2 tracking-widest" data-i18n="homeSubtitle">A New Generation Solid Surface</span>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
+                        <span class="block text-mdp-grey uppercase text-lg md:text-xl mb-2 tracking-widest" data-i18n="homeSubtitle">A New Generation Solid Surface</span>
                         <span data-i18n="homeTitle1">Your Partner… For</span><br>
                         <span class="text-mdp-red" data-i18n="homeTitle2">Manufacturer Direct</span><br>
                         <span data-i18n="homeTitle3">Premium Surfaces</span>
                     </h1>
-                    <p class="mt-4 max-w-2xl text-xl text-gray-300" data-i18n="homeDesc">1.1 Million Square Foot Factory / Warehouse. Operating since 1993. Manufacture facility using the finest Italian Technology.</p>
+                    <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-300 leading-relaxed" data-i18n="homeDesc">1.1 Million Square Foot Factory / Warehouse. Operating since 1993. Manufacture facility using the finest Italian Technology.</p>
                     <div class="mt-10 flex space-x-4">
                         <button onclick="app.navigate('collections')" class="bg-mdp-red hover:bg-mdp-darkred text-white px-8 py-3 rounded-md font-semibold transition-colors shadow-lg" data-i18n="btnExplore">Explore Collections</button>
                         <button onclick="app.navigate('contact')" class="bg-transparent border border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-md font-semibold transition-colors" data-i18n="btnContact">Contact Us</button>
@@ -219,7 +223,7 @@
                     <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6" data-i18n="quartzComposition">Our Quartz consists of 93 percent quartz, 7 percent resin</h2>
                     <p class="text-lg text-gray-600 dark:text-gray-300" data-i18n="quartzDesc">8K is a Low Silica Mineral Surface. We bring you the most popular and modern colours and patterns on the market with consistent, ultimate quality.</p>
                 </div>
-                <!-- Badges (Grayscale removed) -->
+                <!-- Badges -->
                 <div class="flex justify-center items-center gap-8 mt-10 transition duration-300">
                     <img src="nsf.png" alt="NSF Certified" class="h-16 w-auto object-contain">
                     <img src="greenguard.png" alt="Greenguard Certified" class="h-16 w-auto object-contain">
@@ -238,7 +242,40 @@
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
                             </div>
                             <div class="p-6 text-center">
-                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">LUSSO</h3>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="nameLusso">LUSSO</h3>
+                                <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
+                            </div>
+                        </div>
+                        <!-- Ultimate -->
+                        <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('ultimate')">
+                            <div class="h-48 bg-gray-300 overflow-hidden relative">
+                                <img src="CarraraOro.png" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1588854337221-4cfb6388ceea?auto=format&fit=crop&w=600&q=80'" alt="Ultimate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="nameUltimate">ULTIMATE</h3>
+                                <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
+                            </div>
+                        </div>
+                        <!-- Allegria -->
+                        <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('allegria')">
+                            <div class="h-48 bg-gray-300 overflow-hidden relative">
+                                <img src="OssoMarrone.png" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1590623190807-6c0b36ee2627?auto=format&fit=crop&w=600&q=80'" alt="Allegria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="nameAllegria">ALLEGRIA</h3>
+                                <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
+                            </div>
+                        </div>
+                        <!-- Prime -->
+                        <div class="group cursor-pointer bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all" onclick="app.navigate('prime')">
+                            <div class="h-48 bg-gray-300 overflow-hidden relative">
+                                <img src="Montreal.jpg" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80'" alt="Prime" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="namePrime">PRIME</h3>
                                 <p class="text-mdp-red font-medium text-sm" data-i18n="viewCollection">View Collection &rarr;</p>
                             </div>
                         </div>
@@ -534,7 +571,6 @@
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <!-- Updated Images for Gallery using your 'inuse' files with lazy loading -->
                     <img src="CarraraOroinuse.jpg" loading="lazy" alt="Carrara Oro Kitchen" onclick="app.openModal('Gallery - Carrara Oro', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
                     <img src="OssoMarroneinuse.jpg" loading="lazy" alt="Osso Marrone Bathroom" onclick="app.openModal('Gallery - Osso Marrone', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
                     <img src="Montrealinuse.jpg" loading="lazy" alt="Montreal Living Space" onclick="app.openModal('Gallery - Montreal', 'Residential Installation', this.src)" class="w-full h-64 object-cover rounded shadow hover:opacity-90 transition cursor-pointer">
@@ -545,87 +581,291 @@
             </div>
         </section>
 
-        <!-- RESOURCES VIEW -->
+        <!-- FAQ VIEW -->
+        <section id="view-faq" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="navFAQ">FAQ</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="faqSub">Frequently Asked Questions about our Quartz surfaces.</p>
+            </div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-4">
+                
+                <details class="group border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 dark:text-white font-medium">
+                        <span data-i18n="faq1Q">Can hot plates and pans be placed directly on quartz?</span>
+                        <span class="transition group-open:-rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="px-4 pb-4 leading-relaxed text-gray-600 dark:text-gray-300 text-sm" data-i18n="faq1A">Although quartz carries a high resistance to heat, please always use hot pads or trivets. Prolonged exposure to heat will damage quartz, and such damage is not covered by warranty.</p>
+                </details>
+
+                <details class="group border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 dark:text-white font-medium">
+                        <span data-i18n="faq2Q">Do I need to finish or seal quartz?</span>
+                        <span class="transition group-open:-rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="px-4 pb-4 leading-relaxed text-gray-600 dark:text-gray-300 text-sm" data-i18n="faq2A">No. Unlike natural stone products, quartz is a non-porous surface. You will NEVER have to apply a sealer to our surface.</p>
+                </details>
+
+                <details class="group border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 dark:text-white font-medium">
+                        <span data-i18n="faq3Q">How is quartz installed?</span>
+                        <span class="transition group-open:-rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="px-4 pb-4 leading-relaxed text-gray-600 dark:text-gray-300 text-sm" data-i18n="faq3A">Quartz is installed by trained and certified fabricators/installers. Using a certified fabricator/installer ensures that it is installed properly and under full warranty.</p>
+                </details>
+
+                <details class="group border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 dark:text-white font-medium">
+                        <span data-i18n="faq4Q">Can quartz be stained?</span>
+                        <span class="transition group-open:-rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="px-4 pb-4 leading-relaxed text-gray-600 dark:text-gray-300 text-sm" data-i18n="faq4A">Yes. Although quartz is non-porous and never needs to be sealed, surface staining can occur. To avoid staining, it’s best to wipe up spills in a timely manner. By following our care & maintenance guide most surface stains can be easily removed.</p>
+                </details>
+
+                <details class="group border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 dark:text-white font-medium">
+                        <span data-i18n="faq5Q">How do I care for quartz?</span>
+                        <span class="transition group-open:-rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="px-4 pb-4 leading-relaxed text-gray-600 dark:text-gray-300 text-sm" data-i18n="faq5A">Quartz needs very simple care – soap and water and a soft cloth to dry. Check out our Care & Maintenance Guide in the Resources section for more information.</p>
+                </details>
+
+                <details class="group border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 dark:text-white font-medium">
+                        <span data-i18n="faq6Q">Can quartz be used for fireplace cladding or as a cooktop backsplash?</span>
+                        <span class="transition group-open:-rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="px-4 pb-4 leading-relaxed text-gray-600 dark:text-gray-300 text-sm" data-i18n="faq6A">We do not recommend these types of applications as prolonged exposure to high heat may cause discolouration, warping, or cracking. These instances will not be covered under warranty.</p>
+                </details>
+
+                <details class="group border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 dark:text-white font-medium">
+                        <span data-i18n="faq7Q">Where can quartz be applied?</span>
+                        <span class="transition group-open:-rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="px-4 pb-4 leading-relaxed text-gray-600 dark:text-gray-300 text-sm" data-i18n="faq7A">Quartz can be used in a number of design applications, such as kitchen countertops, benches, islands, peninsulas; bathroom vanities, shower walls, bath and tub surrounds; table tops, furniture, window sills, wall coverings and thresholds, etc. Commercial uses such as healthcare facilities, restaurants, offices; including conference tables, reception and desktops, countertops and credenzas, lobby/interior walls, food preparation areas, laboratories, and inlays.</p>
+                </details>
+
+                <details class="group border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 dark:text-white font-medium">
+                        <span data-i18n="faq8Q">Will the small piece of sample I have match my countertop once it's installed?</span>
+                        <span class="transition group-open:-rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="px-4 pb-4 leading-relaxed text-gray-600 dark:text-gray-300 text-sm" data-i18n="faq8A">The smaller samples are cut from large quartz slabs and only represent a limited portion of the actual stone. Please refer to samples only as a general indication of a particular colour’s design pattern, aesthetics, and hue. Samples are not guaranteed to be an exact replica of the slabs and may vary from the actual, installed surface.</p>
+                </details>
+
+                <details class="group border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 dark:text-white font-medium">
+                        <span data-i18n="faq9Q">Is quartz consistent in colour?</span>
+                        <span class="transition group-open:-rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="px-4 pb-4 leading-relaxed text-gray-600 dark:text-gray-300 text-sm" data-i18n="faq9A">Our product is made from pure, natural quartz. Although quartz colours may be more consistent than marble or granite, variation in colour, shape, shade, pattern and size are inherent traits of quartz. In addition, the random distribution of particulates are an inherent part of overall design and composition and are not considered to be defects or product non-conformity.</p>
+                </details>
+
+                <details class="group border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 dark:text-white font-medium">
+                        <span data-i18n="faq10Q">What are the advantages of quartz?</span>
+                        <span class="transition group-open:-rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="px-4 pb-4 leading-relaxed text-gray-600 dark:text-gray-300 text-sm" data-i18n="faq10A">Quartz is nonporous preventing unwelcome germs, bacteria and mildew. Sealing is not required. With proper care & maintenance, it is the natural choice.</p>
+                </details>
+
+                <details class="group border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 p-4 text-gray-900 dark:text-white font-medium">
+                        <span data-i18n="faq11Q">What is natural quartz?</span>
+                        <span class="transition group-open:-rotate-180">
+                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                        </span>
+                    </summary>
+                    <p class="px-4 pb-4 leading-relaxed text-gray-600 dark:text-gray-300 text-sm" data-i18n="faq11A">Quartz is one of the hardest components of natural granite. Quartz rates seven out of 10 on Mohs Scale of Hardness. The only material harder are diamonds, sapphires and topaz. The quartz crystals are used to create a beautiful and strong surface that is highly scratch and impact resistant.</p>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- RESOURCES HUB VIEW -->
         <section id="view-resources" class="view-section">
             <div class="bg-gray-900 text-white py-20 px-4 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="navResources">Resources</h1>
                 <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="resourcesSub">Guides, forms, and insights for your premium surfaces.</p>
             </div>
             
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- About Us Card -->
+                    <div onclick="app.navigate('about')" class="cursor-pointer group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700 flex flex-col h-64">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
+                        <img src="Montrealinuse.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="relative z-20 mt-auto p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2" data-i18n="navAbout">About Us</h3>
+                            <p class="text-gray-200 text-sm" data-i18n="aboutDesc">Learn about our 1.1 million sqft manufacturing facility.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Card -->
+                    <div onclick="app.navigate('blog')" class="cursor-pointer group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700 flex flex-col h-64">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
+                        <img src="UltimaStatuarioinuse.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="relative z-20 mt-auto p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2" data-i18n="navBlog">Articles & Insights</h3>
+                            <p class="text-gray-200 text-sm" data-i18n="blogDesc">Read our latest industry news and design tips.</p>
+                        </div>
+                    </div>
+
+                    <!-- Care Card -->
+                    <div onclick="app.navigate('care')" class="cursor-pointer group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700 flex flex-col h-64">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
+                        <img src="CarraraOroinuse.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="relative z-20 mt-auto p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2" data-i18n="navCare">Care & Maintenance</h3>
+                            <p class="text-gray-200 text-sm" data-i18n="careDesc">Detailed guides on how to keep your surfaces pristine.</p>
+                        </div>
+                    </div>
+
+                    <!-- Downloads Card -->
+                    <div onclick="app.navigate('downloads')" class="cursor-pointer group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700 flex flex-col h-64">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 z-10"></div>
+                        <img src="OssoMarroneinuse.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="relative z-20 mt-auto p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2" data-i18n="navDownloads">Downloads & Forms</h3>
+                            <p class="text-gray-200 text-sm" data-i18n="downloadsDesc">Access warranties, waivers, and product brochures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUB-RESOURCE: ABOUT US -->
+        <section id="view-about" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <button onclick="app.navigate('resources')" class="mb-6 text-mdp-red hover:text-white transition font-bold text-sm tracking-widest uppercase">&larr; <span data-i18n="backToResources">Back to Resources</span></button>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="navAbout">About Us</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="aboutSub">The leader in quartz technology and manufacturing.</p>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-12">
+                    <p data-i18n="aboutP1">MDP Surfaces, which stands for Manufacturer Direct Premium, operates with a philosophy that is refreshingly straightforward: eliminate the middleman to provide high-end products at competitive prices. This isn't just a marketing slogan; it’s a business model built on over 30 years of industry experience.</p>
+                    <p data-i18n="aboutP2">While the company has a massive global footprint — including a breathtaking 1.1-million-square-foot manufacturing facility operating since 1993 — our warehouses maintain the feel of a local, close-knit partner dedicated to the community.</p>
+                    <p data-i18n="aboutP3">Utilizing advanced Italian technology, our signature 8K Ultra HD Quartz was developed specifically to bridge the gap between the durability of engineered stone and the aesthetic soul of natural marble. The resulting slabs feature vivid, pure patterns with a level of lustre and depth that traditional quartz often lacks.</p>
+                </div>
                 
-                <!-- Forms & Downloads Grid -->
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 border-b pb-2 dark:border-gray-800" data-i18n="downloads">Downloads & Forms</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <a href="https://drive.google.com/file/d/1mkSxBdJd98lmbyTlG982_5Yea0Z7CPie/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
-                            <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
-                                <i class="fa-solid fa-file-pdf text-2xl"></i>
-                            </div>
-                            <span class="font-medium text-gray-800 dark:text-gray-200" data-i18n="docCommWarranty">8K ULTRA - Commercial Warranty</span>
-                        </a>
-                        <a href="https://drive.google.com/file/d/11KiPk3Fdl4sqS62_LGvRkhFavXEPGt0X/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
-                            <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
-                                <i class="fa-solid fa-file-pdf text-2xl"></i>
-                            </div>
-                            <span class="font-medium text-gray-800 dark:text-gray-200" data-i18n="docResWarranty">8K ULTRA - Residential Warranty</span>
-                        </a>
-                        <a href="https://drive.google.com/file/d/1mE0xjTu2H--N6Jx-XXPA0vXfa30q6S8o/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
-                            <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
-                                <i class="fa-solid fa-hand-sparkles text-2xl"></i>
-                            </div>
-                            <span class="font-medium text-gray-800 dark:text-gray-200" data-i18n="docCare">MDP Care and Maintenance</span>
-                        </a>
-                        <a href="https://drive.google.com/file/d/1AQM06dwiYiHFyxd9jMk5TwMzFF45vl7p/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
-                            <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
-                                <i class="fa-solid fa-file-signature text-2xl"></i>
-                            </div>
-                            <span class="font-medium text-gray-800 dark:text-gray-200" data-i18n="docWaiver">Product Waiver Forms</span>
-                        </a>
-                        <a href="https://drive.google.com/file/d/1QwWzRp-N6KbCG7FD3vV7nNqcrz_MqGkv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
-                            <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
-                                <i class="fa-solid fa-book-open text-2xl"></i>
-                            </div>
-                            <span class="font-medium text-gray-800 dark:text-gray-200" data-i18n="docBrochure">Download Brochure</span>
-                        </a>
+                <!-- Factory Images Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <img src="VeneGrigioinuse.jpg" loading="lazy" alt="Factory Interior" class="w-full h-64 object-cover rounded shadow">
+                    <img src="CremaCaffeinuse.jpg" loading="lazy" alt="Manufacturing Process" class="w-full h-64 object-cover rounded shadow">
+                    <img src="NeroStatuarioinuse.jpg" loading="lazy" alt="Slab Storage" class="w-full h-64 object-cover rounded shadow">
+                    <img src="Pietrainuse.jpg" loading="lazy" alt="Precision Engineering" class="w-full h-64 object-cover rounded shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- SUB-RESOURCE: BLOG -->
+        <section id="view-blog" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <button onclick="app.navigate('resources')" class="mb-6 text-mdp-red hover:text-white transition font-bold text-sm tracking-widest uppercase">&larr; <span data-i18n="backToResources">Back to Resources</span></button>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="blogTitle">Articles & Insights</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="blogDesc">Read our latest industry news and design tips.</p>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SUB-RESOURCE: CARE & MAINTENANCE -->
+        <section id="view-care" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <button onclick="app.navigate('resources')" class="mb-6 text-mdp-red hover:text-white transition font-bold text-sm tracking-widest uppercase">&larr; <span data-i18n="backToResources">Back to Resources</span></button>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="careTitle">Care & Maintenance</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="careDesc">Detailed guides on how to keep your surfaces pristine.</p>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i class="fa-solid fa-spray-can-sparkles text-4xl text-mdp-red mb-6"></i>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careDaily">Daily Cleaning</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-i18n="careDailyText">For everyday maintenance, simply use a soft cloth or sponge with warm water and a mild dish soap. Wipe the surface clean and dry it thoroughly with a clean cloth to prevent water spots.</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i class="fa-solid fa-shield-virus text-4xl text-mdp-red mb-6"></i>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careStains">Stubborn Stains</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-i18n="careStainsText">For dried spills or heavy stains, apply a non-abrasive cleaner (like Soft Scrub Liquid Gel). Gently rub with a non-scratch pad, rinse generously with warm water, and dry completely.</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i class="fa-solid fa-ban text-4xl text-mdp-red mb-6"></i>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careAvoid">What to Avoid</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-i18n="careAvoidText">Avoid exposing your quartz to strong chemicals, solvents, bleach, or highly alkaline cleaners (pH > 10). If accidental exposure occurs, immediately flush the area with water.</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i class="fa-solid fa-fire text-4xl text-mdp-red mb-6"></i>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careHeat">Heat & Scratches</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-i18n="careHeatText">While highly scratch and heat resistant, quartz is not indestructible. Always use a trivet or hot pad under hot pans, and never cut directly on the surface without a cutting board.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Care & Maintenance -->
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 border-b pb-2 dark:border-gray-800" data-i18n="careTitle">Care & Maintenance</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-                            <i class="fa-solid fa-spray-can-sparkles text-3xl text-mdp-red mb-4"></i>
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careDaily">Daily Cleaning</h3>
-                            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="careDailyText">For everyday maintenance, simply use a soft cloth or sponge with warm water and a mild dish soap. Wipe the surface clean and dry it thoroughly with a clean cloth to prevent water spots.</p>
+        <!-- SUB-RESOURCE: DOWNLOADS -->
+        <section id="view-downloads" class="view-section">
+            <div class="bg-gray-900 text-white py-20 px-4 text-center">
+                <button onclick="app.navigate('resources')" class="mb-6 text-mdp-red hover:text-white transition font-bold text-sm tracking-widest uppercase">&larr; <span data-i18n="backToResources">Back to Resources</span></button>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="navDownloads">Downloads & Forms</h1>
+                <p class="text-mdp-grey max-w-2xl mx-auto" data-i18n="downloadsDesc">Access warranties, waivers, and product brochures.</p>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="https://drive.google.com/file/d/1mkSxBdJd98lmbyTlG982_5Yea0Z7CPie/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
+                        <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
+                            <i class="fa-solid fa-file-pdf text-2xl"></i>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-                            <i class="fa-solid fa-shield-virus text-3xl text-mdp-red mb-4"></i>
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careStains">Stubborn Stains</h3>
-                            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="careStainsText">For dried spills or heavy stains, apply a non-abrasive cleaner (like Soft Scrub Liquid Gel). Gently rub with a non-scratch pad, rinse generously with warm water, and dry completely.</p>
+                        <span class="font-medium text-gray-800 dark:text-gray-200" data-i18n="docCommWarranty">8K ULTRA - Commercial Warranty</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/11KiPk3Fdl4sqS62_LGvRkhFavXEPGt0X/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
+                        <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
+                            <i class="fa-solid fa-file-pdf text-2xl"></i>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-                            <i class="fa-solid fa-ban text-3xl text-mdp-red mb-4"></i>
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careAvoid">What to Avoid</h3>
-                            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="careAvoidText">Avoid exposing your quartz to strong chemicals, solvents, bleach, or highly alkaline cleaners (pH > 10). If accidental exposure occurs, immediately flush the area with water.</p>
+                        <span class="font-medium text-gray-800 dark:text-gray-200" data-i18n="docResWarranty">8K ULTRA - Residential Warranty</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1mE0xjTu2H--N6Jx-XXPA0vXfa30q6S8o/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
+                        <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
+                            <i class="fa-solid fa-hand-sparkles text-2xl"></i>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-                            <i class="fa-solid fa-fire text-3xl text-mdp-red mb-4"></i>
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="careHeat">Heat & Scratches</h3>
-                            <p class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="careHeatText">While highly scratch and heat resistant, quartz is not indestructible. Always use a trivet or hot pad under hot pans, and never cut directly on the surface without a cutting board.</p>
+                        <span class="font-medium text-gray-800 dark:text-gray-200" data-i18n="docCare">MDP Care and Maintenance</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1AQM06dwiYiHFyxd9jMk5TwMzFF45vl7p/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
+                        <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
+                            <i class="fa-solid fa-file-signature text-2xl"></i>
                         </div>
-                    </div>
+                        <span class="font-medium text-gray-800 dark:text-gray-200" data-i18n="docWaiver">Product Waiver Forms</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1QwWzRp-N6KbCG7FD3vV7nNqcrz_MqGkv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700 group">
+                        <div class="bg-red-100 dark:bg-red-900/30 p-4 rounded-full text-mdp-red group-hover:bg-mdp-red group-hover:text-white transition mr-4">
+                            <i class="fa-solid fa-book-open text-2xl"></i>
+                        </div>
+                        <span class="font-medium text-gray-800 dark:text-gray-200" data-i18n="docBrochure">Download Brochure</span>
+                    </a>
                 </div>
-
-                <!-- Articles & Blog -->
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 border-b pb-2 dark:border-gray-800" data-i18n="blogTitle">Articles & Insights</h2>
-                    <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Populated by JS -->
-                    </div>
-                </div>
-
             </div>
         </section>
 
@@ -639,20 +879,53 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div class="flex flex-col lg:flex-row gap-12">
                     <!-- Form -->
-                    <div class="w-full lg:w-1/2 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md border-t-4 border-mdp-red">
+                    <div class="w-full lg:w-7/12 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md border-t-4 border-mdp-red">
                         <form id="contactForm" name="contact" data-netlify="true" onsubmit="app.handleFormSubmit(event)">
                             <input type="hidden" name="form-name" value="contact" />
-                            <div class="mb-6">
-                                <label for="fullName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="fullName">Nom complet / Full Name: *</label>
-                                <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="fullName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="fullName">Full Name: *</label>
+                                    <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="emailAddress">Email Address: *</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="phone">Phone Number: *</label>
+                                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="inquiryType" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="inquiryType">Inquiry Type: *</label>
+                                    <select id="inquiryType" name="inquiryType" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                        <option value="" disabled selected data-i18n="selectOne">Select One</option>
+                                        <option value="General Inquiry" data-i18n="generalInquiry">General Inquiry</option>
+                                        <option value="Slab Viewing" data-i18n="slabViewing">Slab Viewing</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="customerType" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="customerType">Customer Type: *</label>
+                                    <select id="customerType" name="customerType" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                        <option value="" disabled selected data-i18n="selectOne">Select One</option>
+                                        <option value="Homeowner" data-i18n="homeowner">Homeowner</option>
+                                        <option value="Wholesaler" data-i18n="wholesaler">Wholesaler</option>
+                                        <option value="Owner" data-i18n="owner">Owner</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="city" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="city">City: *</label>
+                                    <input type="text" id="city" name="city" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="province" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="province">Province/State: *</label>
+                                    <input type="text" id="province" name="province" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                </div>
                             </div>
+                            
                             <div class="mb-6">
-                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="emailAddress">Adresse courriel / Email Address: *</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
-                            </div>
-                            <div class="mb-6">
-                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="yourMessage">Votre message / Your Message:</label>
-                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition"></textarea>
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="howCanWeHelp">How can we help?</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition"></textarea>
                             </div>
                             <button type="submit" class="w-full bg-mdp-red hover:bg-mdp-darkred text-white font-bold py-3 px-4 rounded transition-colors" data-i18n="submit">Submit</button>
                             <p id="formSuccess" class="hidden mt-4 text-green-600 dark:text-green-400 font-medium text-center" data-i18n="formSuccessMsg">Message sent successfully!</p>
@@ -660,7 +933,7 @@
                     </div>
 
                     <!-- Contact Info -->
-                    <div class="w-full lg:w-1/2 space-y-8">
+                    <div class="w-full lg:w-5/12 space-y-8">
                         <div>
                             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b pb-2 dark:border-gray-700" data-i18n="mainOffice">Main Office</h3>
                             <p class="text-gray-600 dark:text-gray-300 flex items-center mb-2"><i class="fa-solid fa-envelope w-6 text-mdp-red"></i> <a href="mailto:info@mdpsurfaces.com" class="hover:text-mdp-red transition">info@mdpsurfaces.com</a></p>
@@ -669,21 +942,15 @@
                         </div>
                         
                         <div>
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b pb-2 dark:border-gray-700" data-i18n="torOffice">Toronto Office</h3>
-                            <p class="text-gray-600 dark:text-gray-300 flex items-center"><i class="fa-solid fa-phone w-6 text-mdp-red"></i> <a href="tel:12268990129" class="hover:text-mdp-red transition">1-226-899-0129</a></p>
-                        </div>
-
-                        <div>
                             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b pb-2 dark:border-gray-700" data-i18n="hours">Hours</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-2"><strong>Warehouse:</strong> Monday to Friday: 8:00am - 4:00pm</p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-2"><strong>Warehouse:</strong> Monday to Friday: 9:00am - 4:00pm</p>
                             <p class="text-gray-600 dark:text-gray-300"><strong>Office:</strong> By Appointment Only.</p>
                         </div>
 
                         <!-- Slab Viewing Section -->
                         <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg border-l-4 border-mdp-red shadow-sm">
                             <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 flex items-center"><i class="fa-solid fa-calendar-check text-mdp-red mr-2"></i> <span data-i18n="slabViewingTitle">Slab Viewing Appointments</span></h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2"><span data-i18n="slabViewingText">For slab viewing please contact Mena to book an appointment:</span></p>
-                            <p class="font-bold text-mdp-red text-lg"><a href="mailto:info@mdpsurfaces.com" class="hover:underline">info@mdpsurfaces.com</a></p>
+                            <p class="text-gray-700 dark:text-gray-300 mb-2" data-i18n="slabViewingText">For slab viewing, please select 'Slab Viewing' in the contact form to book an appointment.</p>
                         </div>
                     </div>
                 </div>
@@ -693,7 +960,7 @@
         <!-- Dynamic Item Modal (Pop-up) -->
         <div id="itemModal" class="fixed inset-0 z-[100] hidden bg-black/80 backdrop-blur-sm overflow-y-auto opacity-0 transition-opacity duration-300" onclick="app.closeModal()">
             <div class="min-h-screen px-4 py-10 flex items-center justify-center pointer-events-none">
-                <div class="relative bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-full max-w-4xl flex flex-col md:flex-row transform scale-95 transition-transform duration-300 mx-auto pointer-events-auto" id="itemModalContent" onclick="event.stopPropagation()">
+                <div class="relative bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-full max-w-5xl flex flex-col md:flex-row transform scale-95 transition-transform duration-300 mx-auto pointer-events-auto" id="itemModalContent" onclick="event.stopPropagation()">
                     
                     <!-- Bubble X Close Button -->
                     <button onclick="app.closeModal()" class="absolute -top-3 -right-3 md:-top-4 md:-right-4 z-50 bg-mdp-red text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center shadow-xl hover:bg-mdp-darkred transition text-xl focus:outline-none ring-4 ring-white dark:ring-gray-900">
@@ -701,7 +968,7 @@
                     </button>
 
                     <!-- Left: Images & Info -->
-                    <div class="w-full md:w-1/2 relative bg-gray-200 dark:bg-gray-900 rounded-t-xl md:rounded-l-xl md:rounded-tr-none overflow-hidden flex flex-col">
+                    <div class="w-full md:w-5/12 relative bg-gray-200 dark:bg-gray-900 rounded-t-xl md:rounded-l-xl md:rounded-tr-none overflow-hidden flex flex-col">
                         <div class="h-64 md:h-full relative min-h-[250px] w-full flex-grow">
                             <!-- Single Product Image -->
                             <img id="modalImage" src="" alt="Product View" class="absolute inset-0 w-full h-full object-cover">
@@ -715,7 +982,7 @@
                     </div>
 
                     <!-- Right: Form -->
-                    <div class="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+                    <div class="w-full md:w-7/12 p-6 md:p-8 flex flex-col justify-center">
                         <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="inquiryTitle">Interested in this surface?</h4>
                         <p class="text-gray-600 dark:text-gray-300 mb-6 text-sm" data-i18n="inquiryDesc">Fill out the form below and we'll get back to you with availability and details.</p>
                         
@@ -724,16 +991,44 @@
                             <input type="hidden" name="form-name" value="item-inquiry" />
                             <input type="hidden" id="modalInterestedIn" name="interested_in" value="" />
                             
-                            <div class="mb-4">
-                                <label for="modalName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="fullName">Nom complet / Full Name: *</label>
-                                <input type="text" id="modalName" name="fullName" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="modalName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="fullName">Full Name: *</label>
+                                    <input type="text" id="modalName" name="fullName" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="modalEmail" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="emailAddress">Email Address: *</label>
+                                    <input type="email" id="modalEmail" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="modalPhone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="phone">Phone Number: *</label>
+                                    <input type="tel" id="modalPhone" name="phone" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="modalInquiryType" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="inquiryType">Inquiry Type: *</label>
+                                    <select id="modalInquiryType" name="inquiryType" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                        <option value="" disabled selected data-i18n="selectOne">Select One</option>
+                                        <option value="General Inquiry" data-i18n="generalInquiry">General Inquiry</option>
+                                        <option value="Slab Viewing" data-i18n="slabViewing">Slab Viewing</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="modalCustomerType" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="customerType">Customer Type: *</label>
+                                    <select id="modalCustomerType" name="customerType" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                        <option value="" disabled selected data-i18n="selectOne">Select One</option>
+                                        <option value="Homeowner" data-i18n="homeowner">Homeowner</option>
+                                        <option value="Wholesaler" data-i18n="wholesaler">Wholesaler</option>
+                                        <option value="Owner" data-i18n="owner">Owner</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="modalCity" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="city">City: *</label>
+                                    <input type="text" id="modalCity" name="city" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
+                                </div>
                             </div>
-                            <div class="mb-4">
-                                <label for="modalEmail" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="emailAddress">Adresse courriel / Email Address: *</label>
-                                <input type="email" id="modalEmail" name="email" required class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition">
-                            </div>
+                            
                             <div class="mb-6">
-                                <label for="modalMessage" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="yourMessage">Votre message / Your Message:</label>
+                                <label for="modalMessage" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" data-i18n="howCanWeHelp">How can we help?</label>
                                 <textarea id="modalMessage" name="message" rows="3" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-mdp-red focus:border-transparent outline-none transition"></textarea>
                             </div>
                             <button type="submit" class="w-full bg-mdp-red hover:bg-mdp-darkred text-white font-bold py-3 px-4 rounded transition-colors" data-i18n="submit">Submit</button>
@@ -773,7 +1068,7 @@
     <!-- Footer -->
     <footer class="bg-gray-100 dark:bg-mdp-darker border-t border-gray-200 dark:border-gray-800 pt-12 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                 <!-- Branding -->
                 <div>
                     <div class="mb-4 cursor-pointer inline-block" onclick="app.navigate('home')">
@@ -801,29 +1096,14 @@
                         <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="vanAddress">12380 Vickers Way, Richmond, BC V6V 1H9</p>
                     </div>
                 </div>
-
-                <!-- Warehouses 2 -->
+                
+                <!-- Quick Links & Contact -->
                 <div>
-                    <h4 class="font-bold text-gray-900 dark:text-white mb-4 invisible">Locations</h4>
-                    <div class="mb-4">
-                        <h5 class="font-semibold text-sm text-gray-800 dark:text-gray-200" data-i18n="torWarehouse1">TORONTO WAREHOUSE 1</h5>
-                        <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="torAddress1">150 Jardin Dr #6 Concord, ON L4K 1X6</p>
-                    </div>
-                    <div>
-                        <h5 class="font-semibold text-sm text-gray-800 dark:text-gray-200" data-i18n="torWarehouse2">TORONTO WAREHOUSE 2</h5>
-                        <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="torAddress2">22999 HWY 48 Georgina, ON L0E 1R0</p>
-                    </div>
-                </div>
-
-                <!-- Links -->
-                <div>
-                    <h4 class="font-bold text-gray-900 dark:text-white mb-4" data-i18n="downloads">Downloads & Forms</h4>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4" data-i18n="navContact">Contact</h4>
                     <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
-                        <li><a href="https://drive.google.com/file/d/1mkSxBdJd98lmbyTlG982_5Yea0Z7CPie/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-mdp-red transition"><i class="fa-solid fa-file-pdf mr-2"></i><span data-i18n="docCommWarranty">8K ULTRA - Commercial Warranty</span></a></li>
-                        <li><a href="https://drive.google.com/file/d/11KiPk3Fdl4sqS62_LGvRkhFavXEPGt0X/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-mdp-red transition"><i class="fa-solid fa-file-pdf mr-2"></i><span data-i18n="docResWarranty">8K ULTRA - Residential Warranty</span></a></li>
-                        <li><a href="https://drive.google.com/file/d/1mE0xjTu2H--N6Jx-XXPA0vXfa30q6S8o/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-mdp-red transition"><i class="fa-solid fa-file-pdf mr-2"></i><span data-i18n="docCare">MDP Care and Maintenance</span></a></li>
-                        <li><a href="https://drive.google.com/file/d/1AQM06dwiYiHFyxd9jMk5TwMzFF45vl7p/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-mdp-red transition"><i class="fa-solid fa-file-pdf mr-2"></i><span data-i18n="docWaiver">Product Waiver Forms</span></a></li>
-                        <li><a href="https://drive.google.com/file/d/1QwWzRp-N6KbCG7FD3vV7nNqcrz_MqGkv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-mdp-red transition"><i class="fa-solid fa-download mr-2"></i><span data-i18n="docBrochure">Download Brochure</span></a></li>
+                        <li><span class="font-semibold" data-i18n="hours">Hours</span>: Mon - Fri, 9:00am - 4:00pm</li>
+                        <li><i class="fa-solid fa-phone mr-2"></i>1-888-850-8838</li>
+                        <li><button onclick="app.navigate('contact')" class="text-mdp-red hover:underline font-medium mt-2" data-i18n="slabViewingTitle">Slab Viewing Appointments</button></li>
                     </ul>
                 </div>
             </div>
@@ -839,66 +1119,66 @@
         // --- 1. DATA: Product Collections & Blogs ---
         const products = {
             lusso: [
-                { id: "UHD-900", name: "Venatino Grigio", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", imgThumbnail: "VenatinoGrigio.jpg", imgModal: "VenatinoGrigioinuse.jpg" },
-                { id: "UHD-901", name: "Calacatta Rustico", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", imgThumbnail: "CalacattaRustico.jpg", imgModal: "CalacattaRusticoinuse.jpg" },
-                { id: "UHD-902", name: "Boticcino", size: "63” x 126”", descEn: "Colour is translucent.", descFr: "La couleur est translucide.", descIt: "Il colore è traslucido.", imgThumbnail: "Boticcino.jpg", imgModal: "Boticcinoinuse.jpg" },
-                { id: "UHD-903", name: "Moscato Beige", size: "63” x 126”", descEn: "Colour is translucent.", descFr: "La couleur est translucide.", descIt: "Il colore è traslucido.", imgThumbnail: "MoscatoBeige.jpg", imgModal: "MoscatoBeigeinuse.png" },
-                { id: "UHD-904", name: "Calacatta Picasso", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", imgThumbnail: "CalacattaPicasso.jpg", imgModal: "CalacattaPicassoinuse.jpg" },
-                { id: "UHD-905", name: "Marmo", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", imgThumbnail: "Marmo.jpg", imgModal: "Marmoinuse.jpg" },
-                { id: "UHD-906", name: "Statuario Classico", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", imgThumbnail: "StatuarioClassico.jpg", imgModal: "StatuarioClassicoinuse.jpg" }
+                { id: "UHD-900", name: "Venatino Grigio", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", descZh: "石英的自然特性可能会导致轻微的颜色变化。", imgThumbnail: "VenatinoGrigio.jpg", imgModal: "VenatinoGrigioinuse.jpg" },
+                { id: "UHD-901", name: "Calacatta Rustico", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", descZh: "石英的自然特性可能会导致轻微的颜色变化。", imgThumbnail: "CalacattaRustico.jpg", imgModal: "CalacattaRusticoinuse.jpg" },
+                { id: "UHD-902", name: "Boticcino", size: "63” x 126”", descEn: "Colour is translucent.", descFr: "La couleur est translucide.", descIt: "Il colore è traslucido.", descZh: "颜色是半透明的。", imgThumbnail: "Boticcino.jpg", imgModal: "Boticcinoinuse.jpg" },
+                { id: "UHD-903", name: "Moscato Beige", size: "63” x 126”", descEn: "Colour is translucent.", descFr: "La couleur est translucide.", descIt: "Il colore è traslucido.", descZh: "颜色是半透明的。", imgThumbnail: "MoscatoBeige.jpg", imgModal: "MoscatoBeigeinuse.png" },
+                { id: "UHD-904", name: "Calacatta Picasso", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", descZh: "石英的自然特性可能会导致轻微的颜色变化。", imgThumbnail: "CalacattaPicasso.jpg", imgModal: "CalacattaPicassoinuse.jpg" },
+                { id: "UHD-905", name: "Marmo", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", descZh: "石英的自然特性可能会导致轻微的颜色变化。", imgThumbnail: "Marmo.jpg", imgModal: "Marmoinuse.jpg" },
+                { id: "UHD-906", name: "Statuario Classico", size: "63” x 126”", descEn: "Natural characteristics in quartz may cause slight colour variation.", descFr: "Les caractéristiques naturelles du quartz peuvent causer une légère variation de couleur.", descIt: "Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.", descZh: "石英的自然特性可能会导致轻微的颜色变化。", imgThumbnail: "StatuarioClassico.jpg", imgModal: "StatuarioClassicoinuse.jpg" }
             ],
             ultimate: [
-                { id: "UHD-700", name: "Carrara Oro", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super-white with a subtle and undefined gold veining pattern, superior lustre.", descFr: "Grain ultra fin super-blanc avec un motif de veines dorées subtil et non défini, lustre supérieur.", descIt: "Grana ultra fine super-bianco con un motivo di venature dorate sottile e non definito, lucentezza superiore.", imgThumbnail: "CarraraOro.png", imgModal: "CarraraOroinuse.jpg" },
-                { id: "UHD-690", name: "Vene Grigio", size: "63” x 126”", descEn: "Vene Grigio is a soft elegant white with dark grey detailed veining.", descFr: "Vene Grigio est un blanc élégant et doux avec des veines gris foncé détaillées.", descIt: "Vene Grigio è un bianco elegante e morbido con dettagliate venature grigio scuro.", imgThumbnail: "VeneGrigio.png", imgModal: "VeneGrigioinuse.jpg" },
-                { id: "UHD-808", name: "Ultima Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a super high-definition broad diagonal grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises diagonales larges haute définition, lustre supérieur, profondeur.", descIt: "Bianco a grana ultra fine con motivo a venature grigie diagonali larghe ad altissima definizione, lucentezza superiore, profondità profonda.", imgThumbnail: "UltimaStatuario.jpg", imgModal: "UltimaStatuarioinuse.jpg" },
-                { id: "UHD-818", name: "Crema Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a high-definition characteristic diagonal and undefined grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises diagonales caractéristiques, lustre supérieur.", descIt: "Bianco a grana ultra fine con caratteristico motivo di venature grigie diagonali e non definite ad alta definizione, lucentezza superiore.", imgThumbnail: "CremaStatuario.jpg", imgModal: "CremaStatuarioinuse.jpg" },
-                { id: "UHD-828", name: "Bianco Ora", size: "Jumbo 63″x126″", descEn: "Ultra fine grain translucent white with a high-definition diagonal and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin blanc translucide avec veines grises diagonales haute définition, lustre supérieur.", descIt: "Bianco traslucido a grana ultra fine con motivo di venature grigie diagonali e non definite ad alta definizione, lucentezza superiore.", imgThumbnail: "BiancoOra.jpg", imgModal: "BiancoOrainuse.jpg" },
-                { id: "UHD-838", name: "Naturale Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a high-definition diagonal classic grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises classiques diagonales haute définition, lustre supérieur.", descIt: "Bianco a grana ultra fine con classico motivo a venature grigie diagonali ad alta definizione, lucentezza superiore.", imgThumbnail: "NaturaleStatuario.jpg", imgModal: "NaturaleStatuarioinuse.jpg" },
-                { id: "UHD-680", name: "Carrara", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super-white with a subtle and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin super-blanc avec un motif de veines grises subtil et non défini, lustre supérieur.", descIt: "Super-bianco a grana ultra fine con motivo di venature grigie sottile e non definito, lucentezza superiore.", imgThumbnail: "Carrara.jpg", imgModal: "Carrarainuse.jpg" },
-                { id: "UHD-684", name: "Carrara Chiaro", size: "Jumbo 63″x126″", descEn: "Ultra fine grain translucent white with a defined diagonal and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin blanc translucide avec veines grises définies et indéfinies, lustre supérieur.", descIt: "Bianco traslucido a grana ultra fine con motivo di venature grigie definite e non definite, lucentezza superiore.", imgThumbnail: "CarraraChiaro.jpg", imgModal: "CarraraChiaroinuse.jpg" },
-                { id: "UHD-681", name: "Aegean Grey", size: "Jumbo 63″x126″", descEn: "Fine grain light grey-concrete with an undefined seashell veining pattern, superior lustre.", descFr: "Grain fin gris clair avec un motif de veines de coquillage non défini, lustre supérieur.", descIt: "Cemento grigio chiaro a grana fine con motivo di venature a conchiglia non definito, lucentezza superiore.", imgThumbnail: "AegeanGrey.jpg", imgModal: "AegeanGreyinuse.jpg" },
-                { id: "UHD-682", name: "Aegean White", size: "Jumbo 63″x126″", descEn: "Fine grain white with an undefined cloud grey veining pattern, superior lustre.", descFr: "Grain fin blanc avec un motif de veines gris nuage non défini, lustre supérieur.", descIt: "Bianco a grana fine con motivo di venature grigio nuvola non definito, lucentezza superiore.", imgThumbnail: "AegeanWhite.jpg", imgModal: "AegeanWhiteinuse.jpg" },
-                { id: "UHD-683", name: "Noche", size: "Jumbo 63″x126″", descEn: "Fine grain medium grey-concrete with an undefined dark grey veining pattern, superior lustre.", descFr: "Grain fin gris moyen avec un motif de veines gris foncé non défini, lustre supérieur.", descIt: "Cemento grigio medio a grana fine con motivo di venature grigio scuro non definito, lucentezza superiore.", imgThumbnail: "Noche.jpg", imgModal: "Nocheinuse.jpg" },
-                { id: "UHD-686", name: "Biancaneve", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super white, pure and uniform pattern, classic lustre. (waiver required)", descFr: "Grain ultra fin super blanc, motif pur et uniforme, lustre classique. (décharge requise)", descIt: "Super bianco a grana ultra fine, motivo puro e uniforme, lucentezza classica. (richiesta liberatoria)", imgThumbnail: "Biancaneve.jpg", imgModal: "Biancaneveinuse.jpg" },
-                { id: "UHD-688", name: "Oyster", size: "Jumbo 63″x126″", descEn: "Fine grain off-white with translucent two-toned beige undefined shell pattern, superior lustre.", descFr: "Grain fin blanc cassé avec motif de coquille indéfini beige translucide bicolore, lustre supérieur.", descIt: "Bianco sporco a grana fine con motivo a conchiglia bicolore beige traslucido non definito, lucentezza superiore.", imgThumbnail: "Oyster.jpg", imgModal: "Oysterinuse.jpg" },
-                { id: "UHD-687", name: "MoonStone", size: "Jumbo 63″x126″", descEn: "Fine grain medium dark grey-concrete with an undefined dark grey veining pattern, superior lustre.", descFr: "Grain fin gris foncé moyen avec un motif de veines gris foncé non défini, lustre supérieur.", descIt: "Cemento grigio scuro medio a grana fine con motivo di venature grigio scuro non definito, lucentezza superiore.", imgThumbnail: "MoonStone.jpg", imgModal: "MoonStoneinuse.jpg" },
-                { id: "UHD-691", name: "Canella Cafe", size: "Jumbo 63″x126″", descEn: "Canella Café is a mid to dark brown color with smooth gold effect veining pattern in a superior lustre.", descFr: "Couleur brun moyen à foncé avec un motif de veines effet or lisse dans un lustre supérieur.", descIt: "Canella Café è un colore marrone medio-scuro con un motivo di venature lisce effetto oro in una lucentezza superiore.", imgThumbnail: "CanellaCafe.jpg", imgModal: "CanellaCafeinuse.png" },
-                { id: "UHD-868", name: "Bella Staturario", size: "Jumbo 63″x126″", descEn: "Bella Statuario is a light grey cloud effect color, soft smooth wave with superior lustre.", descFr: "Couleur effet nuage gris clair, vague douce et lisse avec un lustre supérieur.", descIt: "Bella Statuario è un colore effetto nuvola grigio chiaro, onda liscia e morbida con lucentezza superiore.", imgThumbnail: "BellaStaturario.jpg", imgModal: "BellaStaturarioinuse.png" },
-                { id: "UHD-878", name: "Argento", size: "Jumbo 63″x126″", descEn: "Argento has a light grey marble effect pattern with superior lustre.", descFr: "Argento a un motif effet marbre gris clair avec un lustre supérieur.", descIt: "Argento ha un motivo effetto marmo grigio chiaro con lucentezza superiore.", imgThumbnail: "Argento.jpg", imgModal: "Argentoinuse.png" },
-                { id: "UHD-858-L", name: "Nero Statuario", size: "Jumbo 63″x126″", descEn: "Deep dark black color in a Antico (mat) finish with high-definition broad diagonal white veining pattern. (waiver required)", descFr: "Couleur noir profond avec finition Antico (mat) et motif de veines blanches diagonales. (décharge requise)", descIt: "Colore nero scuro profondo in finitura Antico (opaca) con ampio motivo di venature bianche diagonali ad alta definizione. (richiesta liberatoria)", imgThumbnail: "NeroStatuario.jpg", imgModal: "NeroStatuarioinuse.jpg" },
-                { id: "UHD-685-L", name: "Pietra", size: "Jumbo 63″x126″", descEn: "Deep dark concrete look in a Antico (mat) finish with a smooth touch of diagonal white veining pattern. (waiver required)", descFr: "Aspect béton foncé avec finition Antico (mat) et veines blanches diagonales. (décharge requise)", descIt: "Effetto cemento scuro profondo in finitura Antico (opaca) con un tocco morbido di motivo di venature bianche diagonali. (richiesta liberatoria)", imgThumbnail: "Pietra.jpg", imgModal: "Pietrainuse.jpg" },
-                { id: "UHD-689", name: "Carrara Crema", size: "Jumbo 63″x126″", descEn: "Ultra fine grain beige with a subtle and undefined white veining throughout.", descFr: "Beige grain ultra fin avec des veines blanches subtiles et indéfinies.", descIt: "Beige a grana ultra fine con sottili venature bianche non definite su tutta la superficie.", imgThumbnail: "CarraraCrema.jpg", imgModal: "CarraraCremainuse.jpg" },
-                { id: "UHD-768", name: "Crema Caffe", size: "Jumbo 63″x126″", descEn: "A simple creamy look with a touch of soft caramel veining.", descFr: "Un look crémeux simple avec une touche de veines caramel doux.", descIt: "Un look cremoso e semplice con un tocco di morbide venature caramello.", imgThumbnail: "CremaCaffe.jpg", imgModal: "CremaCaffeinuse.jpg" }
+                { id: "UHD-700", name: "Carrara Oro", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super-white with a subtle and undefined gold veining pattern, superior lustre.", descFr: "Grain ultra fin super-blanc avec un motif de veines dorées subtil et non défini, lustre supérieur.", descIt: "Grana ultra fine super-bianco con un motivo di venature dorate sottile e non definito, lucentezza superiore.", descZh: "超细晶粒超白，带有微妙不规则的金纹图案，极佳光泽。", imgThumbnail: "CarraraOro.png", imgModal: "CarraraOroinuse.jpg" },
+                { id: "UHD-690", name: "Vene Grigio", size: "63” x 126”", descEn: "Vene Grigio is a soft elegant white with dark grey detailed veining.", descFr: "Vene Grigio est un blanc élégant et doux avec des veines gris foncé détaillées.", descIt: "Vene Grigio è un bianco elegante e morbido con dettagliate venature grigio scuro.", descZh: "Vene Grigio 是一种柔和优雅的白色，带有深灰色细致的纹理。", imgThumbnail: "VeneGrigio.png", imgModal: "VeneGrigioinuse.jpg" },
+                { id: "UHD-808", name: "Ultima Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a super high-definition broad diagonal grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises diagonales larges haute définition, lustre supérieur, profondeur.", descIt: "Bianco a grana ultra fine con motivo a venature grigie diagonali larghe ad altissima definizione, lucentezza superiore, profondità profonda.", descZh: "超细晶粒白，带有超高清宽幅对角灰色纹理图案，极佳光泽，深邃的层次感。", imgThumbnail: "UltimaStatuario.jpg", imgModal: "UltimaStatuarioinuse.jpg" },
+                { id: "UHD-818", name: "Crema Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a high-definition characteristic diagonal and undefined grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises diagonales caractéristiques, lustre supérieur.", descIt: "Bianco a grana ultra fine con caratteristico motivo di venature grigie diagonali e non definite ad alta definizione, lucentezza superiore.", descZh: "超细晶粒白，带有高清特色的对角线和不规则灰色纹理图案，极佳光泽，深邃层次感。", imgThumbnail: "CremaStatuario.jpg", imgModal: "CremaStatuarioinuse.jpg" },
+                { id: "UHD-828", name: "Bianco Ora", size: "Jumbo 63″x126″", descEn: "Ultra fine grain translucent white with a high-definition diagonal and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin blanc translucide avec veines grises diagonales haute définition, lustre supérieur.", descIt: "Bianco traslucido a grana ultra fine con motivo di venature grigie diagonali e non definite ad alta definizione, lucentezza superiore.", descZh: "超细晶粒半透明白，带有高清对角线和不规则灰色纹理图案，极佳光泽。", imgThumbnail: "BiancoOra.jpg", imgModal: "BiancoOrainuse.jpg" },
+                { id: "UHD-838", name: "Naturale Statuario", size: "Jumbo 63″x126″", descEn: "Ultra fine grain white with a high-definition diagonal classic grey veining pattern, superior lustre, profound depth.", descFr: "Grain ultra fin blanc avec veines grises classiques diagonales haute définition, lustre supérieur.", descIt: "Bianco a grana ultra fine con classico motivo a venature grigie diagonali ad alta definizione, lucentezza superiore.", descZh: "超细晶粒白，带有高清对角线经典灰色纹理图案，极佳光泽，深邃的层次感。", imgThumbnail: "NaturaleStatuario.jpg", imgModal: "NaturaleStatuarioinuse.jpg" },
+                { id: "UHD-680", name: "Carrara", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super-white with a subtle and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin super-blanc avec un motif de veines grises subtil et non défini, lustre supérieur.", descIt: "Super-bianco a grana ultra fine con motivo di venature grigie sottile e non definito, lucentezza superiore.", descZh: "超细晶粒超白，带有微妙不规则灰色纹理图案，极佳光泽。", imgThumbnail: "Carrara.jpg", imgModal: "Carrarainuse.jpg" },
+                { id: "UHD-684", name: "Carrara Chiaro", size: "Jumbo 63″x126″", descEn: "Ultra fine grain translucent white with a defined diagonal and undefined grey veining pattern, superior lustre.", descFr: "Grain ultra fin blanc translucide avec veines grises définies et indéfinies, lustre supérieur.", descIt: "Bianco traslucido a grana ultra fine con motivo di venature grigie definite e non definite, lucentezza superiore.", descZh: "超细晶粒半透明白，带有明确对角线及不规则灰色纹理图案，极佳光泽。", imgThumbnail: "CarraraChiaro.jpg", imgModal: "CarraraChiaroinuse.jpg" },
+                { id: "UHD-681", name: "Aegean Grey", size: "Jumbo 63″x126″", descEn: "Fine grain light grey-concrete with an undefined seashell veining pattern, superior lustre.", descFr: "Grain fin gris clair avec un motif de veines de coquillage non défini, lustre supérieur.", descIt: "Cemento grigio chiaro a grana fine con motivo di venature a conchiglia non definito, lucentezza superiore.", descZh: "细晶粒浅灰混凝土色，带有不规则贝壳纹理图案，极佳光泽。", imgThumbnail: "AegeanGrey.jpg", imgModal: "AegeanGreyinuse.jpg" },
+                { id: "UHD-682", name: "Aegean White", size: "Jumbo 63″x126″", descEn: "Fine grain white with an undefined cloud grey veining pattern, superior lustre.", descFr: "Grain fin blanc avec un motif de veines gris nuage non défini, lustre supérieur.", descIt: "Bianco a grana fine con motivo di venature grigio nuvola non definito, lucentezza superiore.", descZh: "细晶粒白色，带有不规则云灰色纹理图案，极佳光泽。", imgThumbnail: "AegeanWhite.jpg", imgModal: "AegeanWhiteinuse.jpg" },
+                { id: "UHD-683", name: "Noche", size: "Jumbo 63″x126″", descEn: "Fine grain medium grey-concrete with an undefined dark grey veining pattern, superior lustre.", descFr: "Grain fin gris moyen avec un motif de veines gris foncé non défini, lustre supérieur.", descIt: "Cemento grigio medio a grana fine con motivo di venature grigio scuro non definito, lucentezza superiore.", descZh: "细晶粒中灰混凝土色，带有不规则深灰色纹理图案，极佳光泽。", imgThumbnail: "Noche.jpg", imgModal: "Nocheinuse.jpg" },
+                { id: "UHD-686", name: "Biancaneve", size: "Jumbo 63″x126″", descEn: "Ultra fine grain super white, pure and uniform pattern, classic lustre. (waiver required)", descFr: "Grain ultra fin super blanc, motif pur et uniforme, lustre classique. (décharge requise)", descIt: "Super bianco a grana ultra fine, motivo puro e uniforme, lucentezza classica. (richiesta liberatoria)", descZh: "超细晶粒纯白，图案纯净均匀，经典光泽。（需要签署免责声明）", imgThumbnail: "Biancaneve.jpg", imgModal: "Biancaneveinuse.jpg" },
+                { id: "UHD-688", name: "Oyster", size: "Jumbo 63″x126″", descEn: "Fine grain off-white with translucent two-toned beige undefined shell pattern, superior lustre.", descFr: "Grain fin blanc cassé avec motif de coquille indéfini beige translucide bicolore, lustre supérieur.", descIt: "Bianco sporco a grana fine con motivo a conchiglia bicolore beige traslucido non definito, lucentezza superiore.", descZh: "细晶粒米白，带有半透明双色米色不规则贝壳图案，极佳光泽。", imgThumbnail: "Oyster.jpg", imgModal: "Oysterinuse.jpg" },
+                { id: "UHD-687", name: "MoonStone", size: "Jumbo 63″x126″", descEn: "Fine grain medium dark grey-concrete with an undefined dark grey veining pattern, superior lustre.", descFr: "Grain fin gris foncé moyen avec un motif de veines gris foncé non défini, lustre supérieur.", descIt: "Cemento grigio scuro medio a grana fine con motivo di venature grigio scuro non definito, lucentezza superiore.", descZh: "细晶粒中深灰色混凝土色，带有不规则深灰色纹理图案，极佳光泽。", imgThumbnail: "MoonStone.jpg", imgModal: "MoonStoneinuse.jpg" },
+                { id: "UHD-691", name: "Canella Cafe", size: "Jumbo 63″x126″", descEn: "Canella Café is a mid to dark brown color with smooth gold effect veining pattern in a superior lustre.", descFr: "Couleur brun moyen à foncé avec un motif de veines effet or lisse dans un lustre supérieur.", descIt: "Canella Café è un colore marrone medio-scuro con un motivo di venature lisce effetto oro in una lucentezza superiore.", descZh: "Canella Café 是一种中深褐色，带有平滑金色纹理图案，极佳光泽。", imgThumbnail: "CanellaCafe.jpg", imgModal: "CanellaCafeinuse.png" },
+                { id: "UHD-868", name: "Bella Staturario", size: "Jumbo 63″x126″", descEn: "Bella Statuario is a light grey cloud effect color, soft smooth wave with superior lustre.", descFr: "Couleur effet nuage gris clair, vague douce et lisse avec un lustre supérieur.", descIt: "Bella Statuario è un colore effetto nuvola grigio chiaro, onda liscia e morbida con lucentezza superiore.", descZh: "Bella Statuario 是一种浅灰色云朵效果颜色，具有柔软平滑的波浪和极佳光泽。", imgThumbnail: "BellaStaturario.jpg", imgModal: "BellaStaturarioinuse.png" },
+                { id: "UHD-878", name: "Argento", size: "Jumbo 63″x126″", descEn: "Argento has a light grey marble effect pattern with superior lustre.", descFr: "Argento a un motif effet marbre gris clair avec un lustre supérieur.", descIt: "Argento ha un motivo effetto marmo grigio chiaro con lucentezza superiore.", descZh: "Argento 具有浅灰色大理石效果图案，极佳光泽。", imgThumbnail: "Argento.jpg", imgModal: "Argentoinuse.png" },
+                { id: "UHD-858-L", name: "Nero Statuario", size: "Jumbo 63″x126″", descEn: "Deep dark black color in a Antico (mat) finish with high-definition broad diagonal white veining pattern. (waiver required)", descFr: "Couleur noir profond avec finition Antico (mat) et motif de veines blanches diagonales. (décharge requise)", descIt: "Colore nero scuro profondo in finitura Antico (opaca) con ampio motivo di venature bianche diagonali ad alta definizione. (richiesta liberatoria)", descZh: "深邃的黑色，Antico（哑光）饰面，带有高清宽幅对角白色纹理图案。（需要签署免责声明）", imgThumbnail: "NeroStatuario.jpg", imgModal: "NeroStatuarioinuse.jpg" },
+                { id: "UHD-685-L", name: "Pietra", size: "Jumbo 63″x126″", descEn: "Deep dark concrete look in a Antico (mat) finish with a smooth touch of diagonal white veining pattern. (waiver required)", descFr: "Aspect béton foncé avec finition Antico (mat) et veines blanches diagonales. (décharge requise)", descIt: "Effetto cemento scuro profondo in finitura Antico (opaca) con un tocco morbido di motivo di venature bianche diagonali. (richiesta liberatoria)", descZh: "深色混凝土外观，Antico（哑光）饰面，带有一丝对角白色平滑纹理图案。（需要签署免责声明）", imgThumbnail: "Pietra.jpg", imgModal: "Pietrainuse.jpg" },
+                { id: "UHD-689", name: "Carrara Crema", size: "Jumbo 63″x126″", descEn: "Ultra fine grain beige with a subtle and undefined white veining throughout.", descFr: "Beige grain ultra fin avec des veines blanches subtiles et indéfinies.", descIt: "Beige a grana ultra fine con sottili venature bianche non definite su tutta la superficie.", descZh: "超细晶粒米色，表面遍布微妙不规则的白色纹理。", imgThumbnail: "CarraraCrema.jpg", imgModal: "CarraraCremainuse.jpg" },
+                { id: "UHD-768", name: "Crema Caffe", size: "Jumbo 63″x126″", descEn: "A simple creamy look with a touch of soft caramel veining.", descFr: "Un look crémeux simple avec une touche de veines caramel doux.", descIt: "Un look cremoso e semplice con un tocco di morbide venature caramello.", descZh: "简约的奶油色外观，带有一点柔和的焦糖色纹理。", imgThumbnail: "CremaCaffe.jpg", imgModal: "CremaCaffeinuse.jpg" }
             ],
             allegria: [
-                { id: "UHD-788", name: "Osso Marrone", size: "63” x 126”", descEn: "Osso Marrone is a beige effect color, soft smooth wave with superior lustre.", descFr: "Couleur effet beige, vague douce et lisse avec un lustre supérieur.", descIt: "Osso Marrone è un colore effetto beige, onda liscia e morbida con lucentezza superiore.", imgThumbnail: "OssoMarrone.png", imgModal: "OssoMarroneinuse.jpg" },
-                { id: "UHD-798", name: "Ghiacciaio", size: "63” x 126”", descEn: "Ghiacciaio is an effect of an ice look with smooth waves and lustre.", descFr: "Effet d'un aspect de glace avec des vagues lisses et du lustre.", descIt: "Ghiacciaio è un effetto ghiaccio con onde lisce e lucentezza.", imgThumbnail: "Ghiacciaio.png", imgModal: "Ghiacciaioinuse.jpg" },
-                { id: "UHD-848", name: "Calacatta Marmo", size: "Jumbo 63″x126″", descEn: "A soft elegant white/grey marble look & feel.", descFr: "Un aspect et une sensation de marbre blanc/gris doux et élégant.", descIt: "Un look e una sensazione di marmo bianco/grigio morbido ed elegante.", imgThumbnail: "CalacattaMarmo.png", imgModal: "CalacattaMarmoinuse.png" },
-                { id: "UHD-718", name: "Calacatta Vene Fino", size: "Jumbo 63″x126″", descEn: "A Calacatta style with slim grey veining throughout with a soft cloudy look.", descFr: "Un style Calacatta avec de fines veines grises et un aspect doux et nuageux.", descIt: "Uno stile Calacatta con sottili venature grigie ovunque con un aspetto morbido e nuvoloso.", imgThumbnail: "CalacattaVeneFino.png", imgModal: "CalacattaVeneFinoinuse.png" },
-                { id: "UHD-898", name: "Nuvola", size: "Jumbo 63″x126″", descEn: "A soft lace veining of light and dark gray flow throughout.", descFr: "De douces veines de dentelle gris clair et foncé s'écoulent partout.", descIt: "Morbide venature in pizzo di grigio chiaro e scuro scorrono ovunque.", imgThumbnail: "Nuvola.png", imgModal: "Nuvolainuse.png" },
-                { id: "UHD-728", name: "Oro Luminoso", size: "Jumbo 63″x126″", descEn: "A soft elegant Calacatta gold color veining style.", descFr: "Un style de veines douces et élégantes couleur or Calacatta.", descIt: "Un morbido ed elegante stile di venature color oro Calacatta.", imgThumbnail: "OroLuminoso.png", imgModal: "OroLuminosoinuse.png" },
-                { id: "UHD-708", name: "Calacatta Nero", size: "Jumbo 63″x126″", descEn: "A soft elegant Calacatta black color veining style.", descFr: "Un style de veines douces et élégantes couleur noir Calacatta.", descIt: "Un morbido ed elegante stile di venature color nero Calacatta.", imgThumbnail: "CalacattaNero.png", imgModal: "CalacattaNeroinuse.png" },
-                { id: "UHD-738", name: "Brezza Oro", size: "Jumbo 63″x126″", descEn: "A vibrant elegance of soft Calacatta with a fine touch of gold veining.", descFr: "Une élégance vibrante de Calacatta doux avec une fine touche de veines dorées.", descIt: "Una vibrante eleganza di morbido Calacatta con un tocco raffinato di venature dorate.", imgThumbnail: "BrezzaOro.png", imgModal: "BrezzaOroinuse.png" },
-                { id: "UHD-748", name: "Nero Marmo", size: "Jumbo 63″x126″", descEn: "A Calacatta style with slim white veining throughout with a soft and smooth look.", descFr: "Un style Calacatta avec de fines veines blanches et un aspect doux et lisse.", descIt: "Uno stile Calacatta con sottili venature bianche ovunque con un aspetto morbido e liscio.", imgThumbnail: "NeroMarmo.png", imgModal: "NeroMarmoinuse.png" },
-                { id: "UHD-758", name: "Macchiato", size: "Jumbo 63″x126″", descEn: "An espresso brown with soft gold veining throughout.", descFr: "Un brun expresso avec de douces veines dorées partout.", descIt: "Un marrone espresso con morbide venature dorate ovunque.", imgThumbnail: "Macchiato.png", imgModal: "Macchiatoinuse.png" },
-                { id: "UHD-778", name: "Sabbia Oro", size: "Jumbo 63″x126″", descEn: "A wavey golden sand with an elegant finish.", descFr: "Un sable doré ondulé avec une finition elegante.", descIt: "Una sabbia dorata ondulata con una finitura elegante.", imgThumbnail: "SabbiaOro.jpg", imgModal: "SabbiaOroinuse.jpg" }
+                { id: "UHD-788", name: "Osso Marrone", size: "63” x 126”", descEn: "Osso Marrone is a beige effect color, soft smooth wave with superior lustre.", descFr: "Couleur effet beige, vague douce et lisse avec un lustre supérieur.", descIt: "Osso Marrone è un colore effetto beige, onda liscia e morbida con lucentezza superiore.", descZh: "Osso Marrone 是一种米色效果的颜色，柔软平滑的波浪，极佳光泽。", imgThumbnail: "OssoMarrone.png", imgModal: "OssoMarroneinuse.jpg" },
+                { id: "UHD-798", name: "Ghiacciaio", size: "63” x 126”", descEn: "Ghiacciaio is an effect of an ice look with smooth waves and lustre.", descFr: "Effet d'un aspect de glace avec des vagues lisses et du lustre.", descIt: "Ghiacciaio è un effetto ghiaccio con onde lisce e lucentezza.", descZh: "Ghiacciaio 是一种具有平滑波浪和光泽的冰冷外观效果。", imgThumbnail: "Ghiacciaio.png", imgModal: "Ghiacciaioinuse.jpg" },
+                { id: "UHD-848", name: "Calacatta Marmo", size: "Jumbo 63″x126″", descEn: "A soft elegant white/grey marble look & feel.", descFr: "Un aspect et une sensation de marbre blanc/gris doux et élégant.", descIt: "Un look e una sensazione di marmo bianco/grigio morbido ed elegante.", descZh: "柔和优雅的白色/灰色大理石外观与质感。", imgThumbnail: "CalacattaMarmo.png", imgModal: "CalacattaMarmoinuse.png" },
+                { id: "UHD-718", name: "Calacatta Vene Fino", size: "Jumbo 63″x126″", descEn: "A Calacatta style with slim grey veining throughout with a soft cloudy look.", descFr: "Un style Calacatta avec de fines veines grises et un aspect doux et nuageux.", descIt: "Uno stile Calacatta con sottili venature grigie ovunque con un aspetto morbido e nuvoloso.", descZh: "Calacatta 风格，遍布纤细灰色纹理，具有柔和的云朵外观。", imgThumbnail: "CalacattaVeneFino.png", imgModal: "CalacattaVeneFinoinuse.png" },
+                { id: "UHD-898", name: "Nuvola", size: "Jumbo 63″x126″", descEn: "A soft lace veining of light and dark gray flow throughout.", descFr: "De douces veines de dentelle gris clair et foncé s'écoulent partout.", descIt: "Morbide venature in pizzo di grigio chiaro e scuro scorrono ovunque.", descZh: "表面流淌着柔和的浅灰色和深灰色蕾丝纹理。", imgThumbnail: "Nuvola.png", imgModal: "Nuvolainuse.png" },
+                { id: "UHD-728", name: "Oro Luminoso", size: "Jumbo 63″x126″", descEn: "A soft elegant Calacatta gold color veining style.", descFr: "Un style de veines douces et élégantes couleur or Calacatta.", descIt: "Un morbido ed elegante stile di venature color oro Calacatta.", descZh: "一种柔和优雅的 Calacatta 金色纹理风格。", imgThumbnail: "OroLuminoso.png", imgModal: "OroLuminosoinuse.png" },
+                { id: "UHD-708", name: "Calacatta Nero", size: "Jumbo 63″x126″", descEn: "A soft elegant Calacatta black color veining style.", descFr: "Un style de veines douces et élégantes couleur noir Calacatta.", descIt: "Un morbido ed elegante stile di venature color nero Calacatta.", descZh: "一种柔和优雅的 Calacatta 黑色纹理风格。", imgThumbnail: "CalacattaNero.png", imgModal: "CalacattaNeroinuse.png" },
+                { id: "UHD-738", name: "Brezza Oro", size: "Jumbo 63″x126″", descEn: "A vibrant elegance of soft Calacatta with a fine touch of gold veining.", descFr: "Une élégance vibrante de Calacatta doux avec une fine touche de veines dorées.", descIt: "Una vibrante eleganza di morbido Calacatta con un tocco raffinato di venature dorate.", descZh: "充满活力的优雅柔软 Calacatta，带有一丝细腻的金色纹理。", imgThumbnail: "BrezzaOro.png", imgModal: "BrezzaOroinuse.png" },
+                { id: "UHD-748", name: "Nero Marmo", size: "Jumbo 63″x126″", descEn: "A Calacatta style with slim white veining throughout with a soft and smooth look.", descFr: "Un style Calacatta avec de fines veines blanches et un aspect doux et lisse.", descIt: "Uno stile Calacatta con sottili venature bianche ovunque con un aspetto morbido e liscio.", descZh: "Calacatta 风格，遍布纤细的白色纹理，外观柔和光滑。", imgThumbnail: "NeroMarmo.png", imgModal: "NeroMarmoinuse.png" },
+                { id: "UHD-758", name: "Macchiato", size: "Jumbo 63″x126″", descEn: "An espresso brown with soft gold veining throughout.", descFr: "Un brun expresso avec de douces veines dorées partout.", descIt: "Un marrone espresso con morbide venature dorate ovunque.", descZh: "浓缩咖啡般的棕色，遍布柔和的金色纹理。", imgThumbnail: "Macchiato.png", imgModal: "Macchiatoinuse.png" },
+                { id: "UHD-778", name: "Sabbia Oro", size: "Jumbo 63″x126″", descEn: "A wavey golden sand with an elegant finish.", descFr: "Un sable doré ondulé avec une finition elegante.", descIt: "Una sabbia dorata ondulata con una finitura elegante.", descZh: "波浪状的金色沙子，饰面优雅。", imgThumbnail: "SabbiaOro.jpg", imgModal: "SabbiaOroinuse.jpg" }
             ],
             prime: [
-                { id: "UHD-300", name: "Montreal", size: "Jumbo 63″x126″", descEn: "Fine grain white, pure and uniform pattern, superior lustre.", descFr: "Grain fin blanc, motif pur et uniforme, lustre supérieur.", descIt: "Bianco a grana fine, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Montreal.jpg", imgModal: "Montrealinuse.jpg" },
-                { id: "UHD-301", name: "Toronto", size: "Jumbo 63″x126″", descEn: "Midsize particulate white, pure and uniform pattern, superior lustre.", descFr: "Particules de taille moyenne blanc, motif pur et uniforme, lustre supérieur.", descIt: "Bianco particolato di medie dimensioni, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Toronto.jpg", imgModal: "Torontoinuse.jpg" },
-                { id: "UHD-302", name: "Vancouver", size: "Jumbo 63″x126″", descEn: "Large particulate white, pure and uniform pattern, superior lustre.", descFr: "Grandes particules blanc, motif pur et uniforme, lustre supérieur.", descIt: "Bianco particolato grande, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Vancouver.jpg", imgModal: "Vancouverinuse.jpg" },
-                { id: "UHD-303", name: "Calgary", size: "Jumbo 63″x126″", descEn: "Midsize particulate light grey, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris clair, motif pur et uniforme, lustre supérieur.", descIt: "Grigio chiaro particolato di medie dimensioni, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Calgary.jpg", imgModal: "Calgaryinuse.jpg" },
-                { id: "UHD-304", name: "Ottawa", size: "Jumbo 63″x126″", descEn: "Midsize particulate medium grey with reflection, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris moyen avec réflexion, motif pur et uniforme, lustre supérieur.", descIt: "Grigio medio particolato di medie dimensioni con riflesso, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Ottawa.jpg", imgModal: "Ottawainuse.jpg" },
-                { id: "UHD-308", name: "Regina", size: "Jumbo 63″x126″", descEn: "Midsize particulate white with reflection, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes blanc avec réflexion, motif pur et uniforme, lustre supérieur.", descIt: "Bianco particolato di medie dimensioni con riflesso, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Regina.jpg", imgModal: "Reginainuse.jpg" },
-                { id: "UHD-305", name: "Sydney", size: "Jumbo 63″x126″", descEn: "Sydney is a black color with reflective mirror particulates in a midsize black quartz pattern. (waiver required)", descFr: "Couleur noire avec particules de miroir réfléchissantes dans un motif de quartz noir de taille moyenne. (décharge requise)", descIt: "Sydney è un colore nero con particelle di specchio riflettenti in un motivo a quarzo nero di medie dimensioni. (richiesta liberatoria)", imgThumbnail: "Sydney.jpg", imgModal: "Sydneyinuse.png" },
-                { id: "UHD-307", name: "Edmonton", size: "Jumbo 63″x126″", descEn: "Midsize particulate medium grey, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris moyen, motif pur et uniforme, lustre supérieur.", descIt: "Grigio medio particolato di medie dimensioni, motivo puro e uniforme, lucentezza superiore.", imgThumbnail: "Edmonton.png", imgModal: "Edmontoninuse.jpg" }
+                { id: "UHD-300", name: "Montreal", size: "Jumbo 63″x126″", descEn: "Fine grain white, pure and uniform pattern, superior lustre.", descFr: "Grain fin blanc, motif pur et uniforme, lustre supérieur.", descIt: "Bianco a grana fine, motivo puro e uniforme, lucentezza superiore.", descZh: "细晶粒白色，图案纯净均匀，极佳光泽。", imgThumbnail: "Montreal.jpg", imgModal: "Montrealinuse.jpg" },
+                { id: "UHD-301", name: "Toronto", size: "Jumbo 63″x126″", descEn: "Midsize particulate white, pure and uniform pattern, superior lustre.", descFr: "Particules de taille moyenne blanc, motif pur et uniforme, lustre supérieur.", descIt: "Bianco particolato di medie dimensioni, motivo puro e uniforme, lucentezza superiore.", descZh: "中等颗粒白色，图案纯净均匀，极佳光泽。", imgThumbnail: "Toronto.jpg", imgModal: "Torontoinuse.jpg" },
+                { id: "UHD-302", name: "Vancouver", size: "Jumbo 63″x126″", descEn: "Large particulate white, pure and uniform pattern, superior lustre.", descFr: "Grandes particules blanc, motif pur et uniforme, lustre supérieur.", descIt: "Bianco particolato grande, motivo puro e uniforme, lucentezza superiore.", descZh: "大颗粒白色，图案纯净均匀，极佳光泽。", imgThumbnail: "Vancouver.jpg", imgModal: "Vancouverinuse.jpg" },
+                { id: "UHD-303", name: "Calgary", size: "Jumbo 63″x126″", descEn: "Midsize particulate light grey, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris clair, motif pur et uniforme, lustre supérieur.", descIt: "Grigio chiaro particolato di medie dimensioni, motivo puro e uniforme, lucentezza superiore.", descZh: "中等颗粒浅灰色，图案纯净均匀，极佳光泽。", imgThumbnail: "Calgary.jpg", imgModal: "Calgaryinuse.jpg" },
+                { id: "UHD-304", name: "Ottawa", size: "Jumbo 63″x126″", descEn: "Midsize particulate medium grey with reflection, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris moyen avec réflexion, motif pur et uniforme, lustre supérieur.", descIt: "Grigio medio particolato di medie dimensioni con riflesso, motivo puro e uniforme, lucentezza superiore.", descZh: "中等颗粒中灰色带反光，图案纯净均匀，极佳光泽。", imgThumbnail: "Ottawa.jpg", imgModal: "Ottawainuse.jpg" },
+                { id: "UHD-308", name: "Regina", size: "Jumbo 63″x126″", descEn: "Midsize particulate white with reflection, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes blanc avec réflexion, motif pur et uniforme, lustre supérieur.", descIt: "Bianco particolato di medie dimensioni con riflesso, motivo puro e uniforme, lucentezza superiore.", descZh: "中等颗粒白色带反光，图案纯净均匀，极佳光泽。", imgThumbnail: "Regina.jpg", imgModal: "Reginainuse.jpg" },
+                { id: "UHD-305", name: "Sydney", size: "Jumbo 63″x126″", descEn: "Sydney is a black color with reflective mirror particulates in a midsize black quartz pattern. (waiver required)", descFr: "Couleur noire avec particules de miroir réfléchissantes dans un motif de quartz noir de taille moyenne. (décharge requise)", descIt: "Sydney è un colore nero con particelle di specchio riflettenti in un motivo a quarzo nero di medie dimensioni. (richiesta liberatoria)", descZh: "悉尼是一种黑色，含有反光镜面颗粒，呈中等尺寸的黑色石英图案。（需要签署免责声明）", imgThumbnail: "Sydney.jpg", imgModal: "Sydneyinuse.png" },
+                { id: "UHD-307", name: "Edmonton", size: "Jumbo 63″x126″", descEn: "Midsize particulate medium grey, pure and uniform pattern, superior lustre.", descFr: "Particules moyennes gris moyen, motif pur et uniforme, lustre supérieur.", descIt: "Grigio medio particolato di medie dimensioni, motivo puro e uniforme, lucentezza superiore.", descZh: "中等颗粒中灰色，图案纯净均匀，极佳光泽。", imgThumbnail: "Edmonton.png", imgModal: "Edmontoninuse.jpg" }
             ]
         };
 
         const blogArticles = [
             {
                 id: 1,
-                img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
+                img: "CalacattaVeneFinoinuse.png",
                 titleEn: "The Rise of Low Silica Mineral Surfaces",
                 descEn: "Discover why 8K ultra-premium low silica surfaces are defining the future of safe, sustainable kitchen design.",
                 contentEn: `
@@ -931,13 +1211,24 @@
                     <p>Le nostre superfici 8K sono realizzate utilizzando una tecnologia italiana all'avanguardia. Questo processo ci consente di ridurre drasticamente il contenuto di silice pur mantenendo una lastra incredibilmente densa, non porosa e strutturalmente superiore.</p>
                     <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Perché è importante per la tua casa</h4>
                     <p>Per i proprietari di casa e i designer, queste superfici offrono la perfetta sinergia tra responsabilità ambientale e lusso mozzafiato. Si ottiene la stessa resistenza a graffi, calore e macchie del quarzo premium tradizionale, insieme a una totale tranquillità.</p>
+                `,
+                titleZh: "低二氧化硅矿物表面的兴起",
+                descZh: "探索为什么 8K 超高端低二氧化硅表面正在定义安全、可持续厨房设计的未来。",
+                contentZh: `
+                    <p>石材加工行业目前正在经历其历史上最巨大且最重要的转变之一。随着人们对石材加工者健康和安全的关注日益增加，全球市场正迅速转向更安全、更智能的材料。像我们独有的 8K 系列这样的<strong>低二氧化硅矿物表面</strong>，绝对处于这场革命的最前沿。</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">行业的转变</h4>
+                    <p>历史上，传统的人造石英含有高水平的结晶二氧化硅。在切割、研磨和抛光阶段，二氧化硅粉尘会随空气飘散，给处理石材的工匠带来严重的呼吸系统风险。通过向低二氧化硅配方的过渡，行业将人类健康置于首位，同时不迫使消费者在他们渴望的奢华美感上妥协。</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">意大利工程的优势</h4>
+                    <p>我们的 8K 表面采用最先进的意大利技术制造。这种先进的工程过程使我们能够大幅降低二氧化硅含量，同时为矿物表面注入独有的树脂混合物。结果如何？打造出了一块极其致密、无孔且结构优越的板材。</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">为什么这对你的家很重要</h4>
+                    <p>对于房主、建筑师和设计师来说，低二氧化硅表面提供了环保责任与令人惊叹的奢华完美结合。您将获得与传统高级石英相同程度的抗刮擦、抗热和抗顽固污渍能力，同时您还可以安心地知道，您美丽的新厨房或浴室是在安全且可持续的方式下打造的。</p>
                 `
             },
             {
                 id: 2,
                 titleEn: "Quartz Edge Profiles: Choosing the Right Look",
                 descEn: "From eased edges to dramatic waterfalls, learn how to select the perfect edge profile for your project.",
-                img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+                img: "Nuvolainuse.png",
                 contentEn: `
                     <p>When selecting a premium quartz countertop, the color and the flow of the veining are usually the first exciting decisions a client makes. However, it is the <strong>edge profile</strong> that ultimately frames the stone, dictating whether your kitchen feels ultra-modern, classic, or softly transitional.</p>
                     <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">The Eased Edge</h4>
@@ -974,13 +1265,26 @@
                     <p>L'Ogee è un profilo tradizionale premium caratterizzato da una curva a forma di S. Aggiunge un livello di eleganza classica ed è spesso abbinato alle nostre pietre effetto marmo per replicare l'estetica di una villa europea.</p>
                     <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">L'isola a Cascata (Waterfall)</h4>
                     <p>Far scendere il quarzo verticalmente lungo i lati di un'isola per incontrare il pavimento è una grande tendenza di design. Crea un flusso continuo di venature che funge da punto focale mozzafiato.</p>
+                `,
+                titleZh: "石英台面边缘造型：选择合适的外观",
+                descZh: "从平缓边缘到引人注目的瀑布式边缘，了解如何为您的项目选择完美的边缘造型。",
+                contentZh: `
+                    <p>在选择高级石英台面时，颜色和纹理的走向通常是客户最初的兴奋决定。然而，最终勾勒出石材轮廓的其实是<strong>边缘造型</strong>，它决定了您的厨房是感觉超现代、经典，还是柔和的过渡风格。</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">缓和边缘（Eased Edge）</h4>
+                    <p>通常被称为“直边”，缓和边缘实际上稍微做了柔化处理，以防止缺口和受伤。它提供了一种干净的建筑外观，最大化了石材的视觉厚度。这是目前现代极简设计中最受欢迎的选择。</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">牛鼻边和半牛鼻边（Bullnose & Half-Bullnose）</h4>
+                    <p>完整的牛鼻边提供了一个完全圆润的边缘，赋予厨房更柔软、更温暖和更流畅的感觉。它在人流量大的家庭厨房中非常受欢迎，因为没有尖角使得它对小孩子非常安全。</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">奥吉边缘（Ogee Edge）</h4>
+                    <p>奥吉边缘是一种高级的传统边缘轮廓，呈现S形曲线（顶部圆润，向下进入凹面）。它增加了一层经典的华丽优雅感，经常与我们的Ultimate系列等具有戏剧性大理石外观的石材搭配使用。</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">瀑布式面板（Waterfall Panel）</h4>
+                    <p>虽然严格来说不是一种“边缘”，但让石英垂直沿着厨房岛台两侧延伸至地板是一大设计趋势。它创造了纹理无缝连续的流动感，成为开放式生活空间中引人注目的焦点。</p>
                 `
             },
             {
                 id: 3,
                 titleEn: "Understanding the Antico (Matte) Finish",
                 descEn: "A stylish, non-glossy finish that is soft to the touch and distinctly unique.",
-                img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80",
+                img: "Pietrainuse.jpg",
                 contentEn: `
                     <p>The <strong>Antico Finish</strong> is a rapidly growing trend in modern interior design, offering a smooth, non-gloss, matte appearance with low reflectivity. It is soft to the touch and provides a highly sophisticated, organic alternative to traditional high-gloss polished materials.</p>
                     <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">The Aesthetic Appeal of Matte</h4>
@@ -1011,6 +1315,68 @@
                     <p>Passare la mano su una superficie Antico regala una sensazione completamente diversa rispetto al quarzo lucido. Tuttavia, poiché manca di uno strato sigillante lucido, la superficie interagisce diversamente con la vita quotidiana. Può mostrare impronte digitali o oli di cottura più facilmente.</p>
                     <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">Cura e manutenzione in dettaglio</h4>
                     <p>È fondamentale capire che la finitura Antico è altamente resistente ai graffi, ma non antigraffio. Fortunatamente, mantenerla è semplice. I segni superficiali e gli oli possono generalmente essere rimossi utilizzando una spugna non abrasiva insieme a un abrasivo liquido delicato. Con un po' di cura quotidiana in più, una superficie Antico ti ricompensa con un'estetica ineguagliabile.</p>
+                `,
+                titleZh: "了解 Antico（哑光）饰面",
+                descZh: "一种时尚、无光泽的饰面，触感柔软且别具一格。",
+                contentZh: `
+                    <p><strong>Antico 饰面</strong>在现代室内设计中呈现出快速增长的趋势，提供平滑、无光泽的哑光外观和低反射率。它触感柔软，为传统高光泽抛光材料提供了一种高度精致的有机替代方案。</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">哑光的美学吸引力</h4>
+                    <p>Antico 饰面在光线充足或橱柜下方有巧妙照明的环境中表现出色。由于表面不会像镜子一样反射光线，石材的实际深度、纹理和真实质感成为了房间中无可争议的明星。它与天然木柜、拉丝黄铜装置和朴素色调搭配得非常美丽。</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">触感体验与使用痕迹</h4>
+                    <p>用手滑过 Antico 表面，感觉与抛光石英完全不同。它感觉更为扎实和原始。然而，由于它没有高光泽密封层，表面与日常生活的互动也有所不同。与抛光表面相比，它可能更容易显示指纹、食用油或水渍，在清理之前会在日常使用中形成独特的“生活痕迹”。</p>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-2">深入了解护理与维护</h4>
+                    <p>了解 Antico 具有高度防刮性，但并非“绝对防刮”这一点至关重要。由于其哑光质感，有时可能会出现滑动金属锅具产生的表面痕迹。幸运的是，维护 Antico 相对简单。日常的污渍和油渍通常可以使用非研磨性清洁垫以及像 Soft Scrub 这样的温和液体研磨剂去除。只需付出一点点额外的日常护理，Antico 表面就会以无与伦比的超现代美感回报您。</p>
+                `
+            },
+            {
+                id: 4,
+                titleEn: "MDP Surfaces: The leader in quartz technology",
+                descEn: "By Miranda Lightstone - The Suburban. How this Montreal company is changing the landscape of premium materials.",
+                img: "UltimaStatuarioinuse.jpg",
+                contentEn: `
+                    <p class="text-sm text-mdp-red font-bold uppercase tracking-wider mb-6">By Miranda Lightstone | The Suburban | Feb 19, 2026</p>
+                    <p>When it comes to home renovations or large-scale commercial builds, the choice of surface is often the defining detail of a project. It’s the centrepiece of the kitchen, the elegance of the lobby, and the durability required for daily life. In the heart of Pointe-Claire, a company called MDP Surfaces is quietly changing the landscape of how these premium materials are sourced and delivered to the Montreal market.</p>
+                    <p>MDP, which stands for Manufacturer Direct Premium, operates with a philosophy that is refreshingly straightforward: eliminate the middleman to provide high-end products at competitive prices. This isn't just a marketing slogan; it’s a business model built on over 25 years of industry experience. While the company has a massive global footprint — including a 1.1-million-square-foot manufacturing facility — their Selkirk Avenue warehouse maintains the feel of a local, close-knit partner dedicated to the West Island community.</p>
+                    <p>The head of this local operation is Mena Mencini, general manager of MDP Surfaces. Mencini’s journey to the helm of a major surfacing supplier isn't exactly typical. "I was in finance before going into construction," she admits with a smile.</p>
+                    <p>Despite her early career in the financial world, construction was always in her blood. Growing up, she watched her father work as a contractor, frequently visiting job sites and falling in love with the process of building something from the ground up. "I had a passion for construction as a youngster but obviously didn't go into that in school," she recalls.</p>
+                    <p>It was after having her children that Mencini felt the pull to return to something she truly loved — and something closer to home. She traded the balance sheets for blueprints and hasn't looked back. Now, with MDP Surfaces for 20 years, Mencini has found a way to merge her professional expertise with her love for human connection. "I’m a people person," she says. "I love seeing them happy."</p>
+                    <p>For Mencini, the business is about more than just stone slabs. "We offer countertop solutions, not just products," she explains. "We supply top-quality products, but what truly sets us apart is the partnership."</p>
+                    <p>That partnership is evident in their leap in quartz technology. Their signature 8K Ultra HD Quartz was developed specifically to bridge the gap between the durability of engineered stone and the aesthetic soul of natural marble. Utilizing advanced Italian technology, the resulting slabs feature vivid, pure patterns with a level of lustre and depth that traditional quartz often lacks. From the soft, wave-like textures of the Allegria Collection to the bold, diagonal veining of the Ultimate Collection, the goal is an absolute replication of natural stone’s intricate beauty.</p>
+                    <p>Beyond the product itself, the company’s "CTS" (Cut-to-Size) solution highlights their unique approach. By reviewing shop drawings and handling everything from manufacturing to logistics, they offer a blueprint for developers and contractors to execute high-rise and multi-family projects with significantly less waste and reduced overhead. It’s a level of precision that matches their 10-year commercial warranty, ensuring the final result is as reliable as it is beautiful.</p>
+                    <p>For those looking to explore these surfaces firsthand, the North American Buyers Warehouse is open Monday through Friday at 808 Selkirk Ave. in Pointe-Claire. Whether you are a contractor seeking a strategic partnership or a homeowner looking for that perfect slab, Mencini and her team at MDP Surfaces prove that high-end design doesn't have to be complicated.</p>
+                `,
+                titleFr: "MDP Surfaces : Le leader de la technologie du quartz",
+                descFr: "Par Miranda Lightstone - The Suburban. Comment cette entreprise de Montréal change le paysage des matériaux premium.",
+                contentFr: `
+                    <p class="text-sm text-mdp-red font-bold uppercase tracking-wider mb-6">Par Miranda Lightstone | The Suburban | 19 Fév 2026</p>
+                    <p>Lorsqu'il s'agit de rénovations domiciliaires ou de constructions commerciales à grande échelle, le choix de la surface est souvent le détail déterminant d'un projet. C'est la pièce maîtresse de la cuisine, l'élégance du hall d'entrée et la durabilité requise pour la vie quotidienne. Au cœur de Pointe-Claire, une entreprise appelée MDP Surfaces change discrètement la façon dont ces matériaux de qualité supérieure sont achetés et livrés sur le marché montréalais.</p>
+                    <p>MDP, qui signifie Manufacturer Direct Premium (Direct Manufacturier Premium), fonctionne avec une philosophie remarquablement simple : éliminer les intermédiaires pour fournir des produits haut de gamme à des prix compétitifs. Ce n'est pas seulement un slogan marketing ; c'est un modèle d'affaires construit sur plus de 25 ans d'expérience. Bien que l'entreprise ait une empreinte mondiale massive — y compris une usine de fabrication de 1,1 million de pieds carrés — leur entrepôt de l'avenue Selkirk conserve l'atmosphère d'un partenaire local dévoué à la communauté de l'Ouest-de-l'Île.</p>
+                    <p>À la tête de cette opération locale se trouve Mena Mencini, directrice générale de MDP Surfaces. "J'étais dans la finance avant d'aller dans la construction", admet-elle avec le sourire. La construction a toujours été dans son sang. En grandissant, elle a vu son père travailler comme entrepreneur, visitant fréquemment les chantiers et tombant amoureuse du processus de construction.</p>
+                    <p>Pour Mme Mencini, l'entreprise est bien plus que de simples dalles de pierre. "Nous offrons des solutions de comptoirs, pas seulement des produits", explique-t-elle. "Nous fournissons des produits de qualité supérieure, mais ce qui nous distingue vraiment, c'est le partenariat."</p>
+                    <p>Ce partenariat est évident dans leur bond technologique en matière de quartz. Leur quartz exclusif 8K Ultra HD a été développé spécifiquement pour combler le fossé entre la durabilité de la pierre reconstituée et l'âme esthétique du marbre naturel. Utilisant une technologie italienne avancée, les dalles qui en résultent présentent des motifs vifs et purs avec un niveau de lustre que le quartz traditionnel n'a souvent pas.</p>
+                    <p>Au-delà du produit lui-même, la solution "CTS" (Coupé sur Mesure) de l'entreprise met en évidence son approche unique. En examinant les dessins d'atelier et en gérant tout, de la fabrication à la logistique, ils offrent un plan aux promoteurs pour exécuter des projets de grande hauteur avec beaucoup moins de déchets. Que vous soyez un entrepreneur à la recherche d'un partenariat stratégique ou un propriétaire à la recherche de la dalle parfaite, Mme Mencini et son équipe prouvent que le design haut de gamme n'a pas à être compliqué.</p>
+                `,
+                titleIt: "MDP Surfaces: Il leader nella tecnologia del quarzo",
+                descIt: "Di Miranda Lightstone - The Suburban. Come questa azienda sta cambiando il panorama dei materiali premium.",
+                contentIt: `
+                    <p class="text-sm text-mdp-red font-bold uppercase tracking-wider mb-6">Di Miranda Lightstone | The Suburban | 19 Feb 2026</p>
+                    <p>Quando si tratta di ristrutturazioni domestiche o di costruzioni commerciali su larga scala, la scelta della superficie è spesso il dettaglio decisivo di un progetto. Nel cuore di Pointe-Claire, un'azienda chiamata MDP Surfaces sta silenziosamente cambiando il panorama di come questi materiali di prima qualità vengono reperiti e consegnati al mercato di Montreal.</p>
+                    <p>MDP, che sta per Manufacturer Direct Premium, opera con una filosofia rinfrescante e semplice: eliminare gli intermediari per fornire prodotti di fascia alta a prezzi competitivi. Questo non è solo uno slogan di marketing; è un modello di business costruito su oltre 25 anni di esperienza nel settore. Mentre l'azienda ha un'enorme impronta globale — tra cui un impianto di produzione di 1,1 milioni di piedi quadrati — il loro magazzino di Selkirk Avenue mantiene l'atmosfera di un partner locale dedicato alla comunità.</p>
+                    <p>A capo di questa operazione locale c'è Mena Mencini, direttore generale di MDP Surfaces. "Ero nella finanza prima di entrare nelle costruzioni", ammette con un sorriso. Nonostante i suoi inizi nel mondo finanziario, l'edilizia è sempre stata nel suo sangue.</p>
+                    <p>Per Mencini, il business riguarda molto più delle semplici lastre di pietra. "Offriamo soluzioni per piani di lavoro, non solo prodotti", spiega. "Forniamo prodotti di alta qualità, ma ciò che ci distingue veramente è la partnership."</p>
+                    <p>Questa partnership è evidente nel loro salto nella tecnologia del quarzo. Il loro caratteristico Quarzo 8K Ultra HD è stato sviluppato specificamente per colmare il divario tra la durabilità della pietra ingegnerizzata e l'anima estetica del marmo naturale. Utilizzando l'avanzata tecnologia italiana, le lastre risultanti presentano motivi vividi e puri con un livello di lucentezza e profondità che spesso manca al quarzo tradizionale.</p>
+                    <p>Oltre al prodotto in sé, la soluzione "CTS" (Taglio su Misura) dell'azienda evidenzia il loro approccio unico. Esaminando i disegni esecutivi e gestendo tutto, dalla produzione alla logistica, offrono un progetto per sviluppatori e appaltatori per eseguire progetti a molti piani con molti meno sprechi. Che tu sia un appaltatore in cerca di una partnership strategica o un proprietario di casa alla ricerca della lastra perfetta, Mencini e il suo team in MDP Surfaces dimostrano che il design di fascia alta non deve essere complicato.</p>
+                `,
+                titleZh: "MDP Surfaces：石英技术的领导者",
+                descZh: "Miranda Lightstone / The Suburban 撰稿。这家蒙特利尔公司如何改变高端材料的市场格局。",
+                contentZh: `
+                    <p class="text-sm text-mdp-red font-bold uppercase tracking-wider mb-6">作者：Miranda Lightstone | The Suburban | 2026 年 2 月 19 日</p>
+                    <p>在进行房屋翻新或大型商业建筑时，表面材料的选择通常是项目的决定性细节。它是厨房的核心、大堂的优雅所在，也是日常生活所需的耐用性保障。在Pointe-Claire的中心地带，一家名为 MDP Surfaces 的公司正在悄然改变这些优质材料在蒙特利尔市场的采购和交付方式。</p>
+                    <p>MDP代表“厂家直销高端品质”（Manufacturer Direct Premium），其经营理念令人耳目一新且非常直接：消除中间商，以具有竞争力的价格提供高端产品。这不仅仅是一句营销口号，而是建立在 25 年以上行业经验基础上的商业模式。虽然该公司拥有庞大的全球业务版图——包括一个占地 110 万平方英尺的制造工厂——但他们在塞尔柯克大道（Selkirk Avenue）的仓库仍保持着致力于西岛社区的紧密本地合作伙伴的感觉。</p>
+                    <p>负责这项本地业务的是 MDP Surfaces 的总经理 Mena Mencini。“在进入建筑行业之前，我从事金融工作，”她微笑着承认。尽管早年在金融界工作，但建筑的血液一直在她体内流淌。伴随着她的成长，她看着父亲作为承包商工作，经常参观施工现场，并爱上了从头开始建造事物的过程。</p>
+                    <p>对于 Mencini 来说，这项业务不仅仅是石板。“我们提供台面解决方案，而不仅仅是产品，”她解释说。“我们提供高质量的产品，但真正让我们与众不同的是合作伙伴关系。”</p>
+                    <p>这种伙伴关系体现在他们在石英技术上的飞跃。他们标志性的 8K 超高清石英石是专门为弥合人造石的耐用性和天然大理石的美学灵魂之间的差距而开发的。利用先进的意大利技术，生产出的板材具有生动、纯净的图案，其光泽度和深度是传统石英通常所缺乏的。</p>
+                    <p>除了产品本身之外，该公司的“CTS”（定制切割）解决方案突出了他们独特的方法。通过审查车间图纸并处理从制造到物流的所有事务，他们为开发商和承包商提供了一个蓝图，可以显着减少浪费并降低开销来执行高层和多户住宅项目。无论您是寻求战略合作伙伴关系的承包商，还是寻找完美石板的房主，Mencini 和她在 MDP Surfaces 的团队都证明了高端设计不必复杂。</p>
                 `
             }
         ];
@@ -1019,7 +1385,7 @@
         const translations = {
             en: {
                 navHome: "Home", navCollections: "Collections", navLusso: "Lusso", navUltimate: "Ultimate", 
-                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Cut To Size", navGallery: "Gallery", navResources: "Resources", navContact: "Contact",
+                navAllegria: "Allegria", navPrime: "Prime", navCTS: "(CTS) Cut To Size", navGallery: "Gallery", navFAQ: "FAQ", navResources: "Resources", navContact: "Contact",
                 homeSubtitle: "A New Generation Solid Surface",
                 homeTitle1: "Your Partner… For", homeTitle2: "Manufacturer Direct", homeTitle3: "Premium Surfaces",
                 homeDesc: "1.1 Million Square Foot Factory / Warehouse. Operating since 1993. Manufacture facility using the finest Italian Technology.",
@@ -1030,6 +1396,8 @@
                 testimonialsTitle: "What Our Partners Say",
                 rating5: "5.0 Rating", review1: "1 review", review2: "2 reviews", review4: "4 reviews", review7: "7 reviews", review8: "8 reviews", localGuide58: "Local Guide · 58 reviews",
                 lussoTitle: "LUSSO COLLECTION", ultimateTitle: "ULTIMATE COLLECTION", allegriaTitle: "ALLEGRIA COLLECTION", primeTitle: "PRIME COLLECTION",
+                nameLusso: "LUSSO", nameUltimate: "ULTIMATE", nameAllegria: "ALLEGRIA", namePrime: "PRIME",
+                sizeLabel: "Size:",
                 lowSilica: "8K is a Low Silica Mineral Surface. Natural characteristics in quartz may cause slight colour variation.",
                 reqSample: "Request Sample 4x6",
                 ctsTitle: "CTS Solution",
@@ -1041,7 +1409,39 @@
                 step4: "You sign-off on drawings with PO & 50% deposit",
                 step5: "Final production of your project",
                 gallerySub: "See our stunning surfaces in action.",
+                faqSub: "Frequently Asked Questions about our Quartz surfaces.",
+                faq1Q: "Can hot plates and pans be placed directly on quartz?",
+                faq1A: "Although quartz carries a high resistance to heat, please always use hot pads or trivets. Prolonged exposure to heat will damage quartz, and such damage is not covered by warranty.",
+                faq2Q: "Do I need to finish or seal quartz?",
+                faq2A: "No. Unlike natural stone products, quartz is a non-porous surface. You will NEVER have to apply a sealer to our surface.",
+                faq3Q: "How is quartz installed?",
+                faq3A: "Quartz is installed by trained and certified fabricators/installers. Using a certified fabricator/installer ensures that it is installed properly and under full warranty.",
+                faq4Q: "Can quartz be stained?",
+                faq4A: "Yes. Although quartz is non-porous and never needs to be sealed, surface staining can occur. To avoid staining, it’s best to wipe up spills in a timely manner. By following our care & maintenance guide most surface stains can be easily removed.",
+                faq5Q: "How do I care for quartz?",
+                faq5A: "Quartz needs very simple care – soap and water and a soft cloth to dry. Check out our Care & Maintenance Guide in the Resources section for more information.",
+                faq6Q: "Can quartz be used for fireplace cladding or as a cooktop backsplash?",
+                faq6A: "We do not recommend these types of applications as prolonged exposure to high heat may cause discolouration, warping, or cracking. These instances will not be covered under warranty.",
+                faq7Q: "Where can quartz be applied?",
+                faq7A: "Quartz can be used in a number of design applications, such as kitchen countertops, islands, bathroom vanities, shower walls, table tops, and more. Commercial uses include healthcare facilities, restaurants, offices, reception desks, and interior walls.",
+                faq8Q: "Will the small piece of sample I have match my countertop once it's installed?",
+                faq8A: "The smaller samples are cut from large quartz slabs and only represent a limited portion of the actual stone. Please refer to samples only as a general indication of a particular colour’s design pattern, aesthetics, and hue. Samples are not guaranteed to be an exact replica of the slabs.",
+                faq9Q: "Is quartz consistent in colour?",
+                faq9A: "Our product is made from pure, natural quartz. Although quartz colours may be more consistent than marble or granite, variation in colour, shape, shade, pattern and size are inherent traits of quartz and are not considered to be defects.",
+                faq10Q: "What are the advantages of quartz?",
+                faq10A: "Quartz is nonporous preventing unwelcome germs, bacteria and mildew. Sealing is not required. With proper care & maintenance, it is the natural choice.",
+                faq11Q: "What is natural quartz?",
+                faq11A: "Quartz is one of the hardest components of natural granite. Quartz rates seven out of 10 on Mohs Scale of Hardness. The only material harder are diamonds, sapphires and topaz. It creates a beautiful and strong surface that is highly scratch and impact resistant.",
                 resourcesSub: "Guides, forms, and insights for your premium surfaces.",
+                navAbout: "About Us", aboutDesc: "Learn about our 1.1 million sqft manufacturing facility.",
+                navBlog: "Articles & Insights", blogDesc: "Read our latest industry news and design tips.",
+                navCare: "Care & Maintenance", careDesc: "Detailed guides on how to keep your surfaces pristine.",
+                navDownloads: "Downloads & Forms", downloadsDesc: "Access warranties, waivers, and product brochures.",
+                backToResources: "Back to Resources",
+                aboutSub: "The leader in quartz technology and manufacturing.",
+                aboutP1: "MDP Surfaces, which stands for Manufacturer Direct Premium, operates with a philosophy that is refreshingly straightforward: eliminate the middleman to provide high-end products at competitive prices. This isn't just a marketing slogan; it’s a business model built on over 30 years of industry experience.",
+                aboutP2: "While the company has a massive global footprint — including a breathtaking 1.1-million-square-foot manufacturing facility operating since 1993 — our warehouses maintain the feel of a local, close-knit partner dedicated to the community.",
+                aboutP3: "Utilizing advanced Italian technology, our signature 8K Ultra HD Quartz was developed specifically to bridge the gap between the durability of engineered stone and the aesthetic soul of natural marble. The resulting slabs feature vivid, pure patterns with a level of lustre and depth that traditional quartz often lacks.",
                 downloads: "Downloads & Forms",
                 docCommWarranty: "8K ULTRA - Commercial Warranty",
                 docResWarranty: "8K ULTRA - Residential Warranty",
@@ -1056,23 +1456,25 @@
                 blogTitle: "Articles & Insights",
                 readArticle: "Read Article",
                 contactUsToday: "Contact Us TODAY!", getInTouch: "Get in touch, we're here to help! Send us a message.",
-                fullName: "Nom complet / Full Name: *", emailAddress: "Adresse courriel / Email Address: *", yourMessage: "Votre message / Your Message:",
+                fullName: "Full Name: *", emailAddress: "Email Address: *", 
+                phone: "Phone Number: *", city: "City: *", province: "Province/State: *",
+                inquiryType: "Inquiry Type: *", generalInquiry: "General Inquiry", slabViewing: "Slab Viewing",
+                customerType: "Customer Type: *", selectOne: "Select One", homeowner: "Homeowner", wholesaler: "Wholesaler", owner: "Owner",
+                howCanWeHelp: "How can we help?",
                 submit: "Submit", formSuccessMsg: "Message sent successfully!",
                 hours: "Hours", footerDesc: "Your Partner…For Manufacturer Direct Premium Surfaces.",
                 ourWarehouses: "OUR WAREHOUSES",
                 mtlWarehouse: "MONTREAL WAREHOUSE", mtlAddress: "808 Selkirk Ave, Pointe Claire, QC H9R 3S3",
                 vanWarehouse: "VANCOUVER WAREHOUSE", vanAddress: "12380 Vickers Way, Richmond, BC V6V 1H9",
-                torWarehouse1: "TORONTO WAREHOUSE 1", torAddress1: "150 Jardin Dr #6 Concord, ON L4K 1X6",
-                torWarehouse2: "TORONTO WAREHOUSE 2", torAddress2: "22999 HWY 48 Georgina, ON L0E 1R0",
-                mainOffice: "Main Office", torOffice: "Toronto Office",
-                slabViewingTitle: "Slab Viewing Appointments", slabViewingText: "For slab viewing please contact Mena to book an appointment:",
+                mainOffice: "Main Office",
+                slabViewingTitle: "Slab Viewing Appointments", slabViewingText: "For slab viewing, please select 'Slab Viewing' in the contact form to book an appointment.",
                 reviewsTitle: "Google Reviews",
                 inquiryTitle: "Interested in this surface?",
                 inquiryDesc: "Fill out the form below and we'll get back to you with availability and details."
             },
             fr: {
                 navHome: "Accueil", navCollections: "Collections", navLusso: "Lusso", navUltimate: "Ultimate", 
-                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Coupé sur Mesure", navGallery: "Galerie", navResources: "Ressources", navContact: "Contact",
+                navAllegria: "Allegria", navPrime: "Prime", navCTS: "(CTS) Coupé sur Mesure", navGallery: "Galerie", navFAQ: "FAQ", navResources: "Ressources", navContact: "Contact",
                 homeSubtitle: "Une Surface Solide Nouvelle Génération",
                 homeTitle1: "Votre Partenaire… Pour", homeTitle2: "Direct Manufacturier", homeTitle3: "Surfaces Premium",
                 homeDesc: "Usine / Entrepôt de 1,1 million de pieds carrés. En opération depuis 1993. Installation de fabrication utilisant la meilleure technologie italienne.",
@@ -1083,6 +1485,8 @@
                 testimonialsTitle: "Ce Que Disent Nos Partenaires",
                 rating5: "Note de 5.0", review1: "1 avis", review2: "2 avis", review4: "4 avis", review7: "7 avis", review8: "8 avis", localGuide58: "Local Guide · 58 avis",
                 lussoTitle: "COLLECTION LUSSO", ultimateTitle: "COLLECTION ULTIMATE", allegriaTitle: "COLLECTION ALLEGRIA", primeTitle: "COLLECTION PRIME",
+                nameLusso: "LUSSO", nameUltimate: "ULTIMATE", nameAllegria: "ALLEGRIA", namePrime: "PRIME",
+                sizeLabel: "Taille :",
                 lowSilica: "8K est une surface minérale à faible teneur en silice. Les caractéristiques naturelles peuvent causer de légères variations.",
                 reqSample: "Demander Échantillon 4x6",
                 ctsTitle: "Solution sur Mesure (CTS)",
@@ -1094,7 +1498,39 @@
                 step4: "Vous signez les dessins avec le bon de commande et un acompte de 50 %",
                 step5: "Production finale de votre projet",
                 gallerySub: "Découvrez nos superbes surfaces en action.",
+                faqSub: "Foire aux questions concernant nos surfaces de quartz.",
+                faq1Q: "Puis-je placer des plats ou casseroles chaudes directement sur le quartz ?",
+                faq1A: "Bien que le quartz soit très résistant à la chaleur, utilisez toujours un dessous de plat. Une exposition prolongée à la chaleur endommagera le quartz et n'est pas couverte par la garantie.",
+                faq2Q: "Dois-je sceller le quartz ?",
+                faq2A: "Non. Contrairement aux produits en pierre naturelle, le quartz est non poreux. Vous n'aurez JAMAIS besoin d'appliquer de scellant.",
+                faq3Q: "Comment le quartz est-il installé ?",
+                faq3A: "Le quartz est installé par des fabricants/installateurs formés et certifiés, ce qui garantit une installation correcte sous garantie.",
+                faq4Q: "Le quartz peut-il se tacher ?",
+                faq4A: "Oui. Bien qu'il soit non poreux, des taches peuvent apparaître. Essuyez les déversements rapidement. Consultez notre guide d'entretien pour éliminer les taches tenaces.",
+                faq5Q: "Comment entretenir le quartz ?",
+                faq5A: "Un entretien simple suffit : eau, savon doux et un chiffon doux pour sécher. Consultez notre guide d'entretien dans la section Ressources.",
+                faq6Q: "Peut-on utiliser le quartz pour une cheminée ou en dosseret derrière la cuisinière ?",
+                faq6A: "Nous ne recommandons pas ces applications, car la chaleur intense prolongée peut causer des décolorations ou des fissures non couvertes par la garantie.",
+                faq7Q: "Où peut-on appliquer le quartz ?",
+                faq7A: "Comptoirs de cuisine, îlots, vanités de salle de bain, murs de douche, plateaux de table. Également en milieu commercial : hôpitaux, restaurants, bureaux, etc.",
+                faq8Q: "Mon petit échantillon correspondra-t-il exactement à mon comptoir ?",
+                faq8A: "Les petits échantillons ne représentent qu'une portion limitée de la dalle. Ils sont une indication générale du design, mais peuvent varier légèrement de la surface finale.",
+                faq9Q: "La couleur du quartz est-elle uniforme ?",
+                faq9A: "Le quartz est naturel. Bien qu'il soit plus uniforme que le marbre ou le granit, des variations de couleur, de motif et de taille des particules sont inhérentes au produit et ne sont pas des défauts.",
+                faq10Q: "Quels sont les avantages du quartz ?",
+                faq10A: "Il est non poreux, ce qui empêche les germes, les bactéries et la moisissure. Aucun scellant n'est requis. C'est le choix naturel.",
+                faq11Q: "Qu'est-ce que le quartz naturel ?",
+                faq11A: "C'est l'un des composants les plus durs du granit (7 sur l'échelle de Mohs). Seuls les diamants, les saphirs et les topazes sont plus durs. Il crée une surface très résistante aux rayures et aux chocs.",
                 resourcesSub: "Guides, formulaires et conseils pour vos surfaces premium.",
+                navAbout: "À Propos", aboutDesc: "Découvrez notre usine de fabrication de 1,1 million de pi².",
+                navBlog: "Articles et Aperçus", blogDesc: "Lisez nos dernières nouvelles et conseils de design.",
+                navCare: "Entretien", careDesc: "Guides détaillés pour garder vos surfaces impeccables.",
+                navDownloads: "Téléchargements", downloadsDesc: "Accédez aux garanties, décharges et brochures.",
+                backToResources: "Retour aux Ressources",
+                aboutSub: "Le leader de la technologie et de la fabrication du quartz.",
+                aboutP1: "MDP Surfaces, qui signifie Direct Manufacturier Premium, fonctionne avec une philosophie remarquablement simple : éliminer les intermédiaires pour fournir des produits haut de gamme à des prix compétitifs. Ce n'est pas seulement un slogan marketing ; c'est un modèle d'affaires construit sur plus de 30 ans d'expérience.",
+                aboutP2: "Bien que l'entreprise ait une empreinte mondiale massive — y compris une usine de fabrication de 1,1 million de pieds carrés en opération depuis 1993 — nos entrepôts conservent l'atmosphère d'un partenaire local dévoué à la communauté.",
+                aboutP3: "Utilisant une technologie italienne avancée, notre quartz 8K Ultra HD a été développé pour combler le fossé entre la durabilité de la pierre et l'esthétique du marbre naturel. Les dalles qui en résultent présentent des motifs purs avec un niveau de lustre que le quartz traditionnel n'a souvent pas.",
                 downloads: "Téléchargements et Formulaires",
                 docCommWarranty: "8K ULTRA - Garantie Commerciale",
                 docResWarranty: "8K ULTRA - Garantie Résidentielle",
@@ -1109,23 +1545,25 @@
                 blogTitle: "Articles et Aperçus",
                 readArticle: "Lire l'Article",
                 contactUsToday: "Contactez-nous AUJOURD'HUI!", getInTouch: "Entrez en contact, nous sommes là pour vous aider ! Envoyez-nous un message.",
-                fullName: "Nom complet / Full Name: *", emailAddress: "Adresse courriel / Email Address: *", yourMessage: "Votre message / Your Message:",
+                fullName: "Nom complet : *", emailAddress: "Adresse courriel : *",
+                phone: "Téléphone : *", city: "Ville : *", province: "Province/État : *",
+                inquiryType: "Type de demande : *", generalInquiry: "Demande Générale", slabViewing: "Visualisation de tranches",
+                customerType: "Type de client : *", selectOne: "Sélectionnez", homeowner: "Propriétaire", wholesaler: "Grossiste", owner: "Propriétaire (Entreprise)",
+                howCanWeHelp: "Comment pouvons-nous vous aider ?",
                 submit: "Soumettre", formSuccessMsg: "Message envoyé avec succès !",
                 hours: "Heures", footerDesc: "Votre Partenaire…Pour Des Surfaces Premium Directement Du Manufacturier.",
                 ourWarehouses: "NOS ENTREPÔTS",
                 mtlWarehouse: "ENTREPÔT DE MONTRÉAL", mtlAddress: "808 Avenue Selkirk, Pointe-Claire, QC H9R 3S3",
                 vanWarehouse: "ENTREPÔT DE VANCOUVER", vanAddress: "12380 Vickers Way, Richmond, BC V6V 1H9",
-                torWarehouse1: "ENTREPÔT DE TORONTO 1", torAddress1: "150 Jardin Dr #6 Concord, ON L4K 1X6",
-                torWarehouse2: "ENTREPÔT DE TORONTO 2", torAddress2: "22999 HWY 48 Georgina, ON L0E 1R0",
-                mainOffice: "Bureau Principal", torOffice: "Bureau de Toronto",
-                slabViewingTitle: "Rendez-vous pour Visualisation", slabViewingText: "Pour la visualisation des tranches, veuillez contacter Mena pour prendre rendez-vous :",
+                mainOffice: "Bureau Principal",
+                slabViewingTitle: "Rendez-vous pour Visualisation", slabViewingText: "Pour la visualisation de tranches, veuillez sélectionner 'Visualisation' dans le formulaire de contact.",
                 reviewsTitle: "Avis Google",
                 inquiryTitle: "Intéressé par cette surface ?",
                 inquiryDesc: "Remplissez le formulaire ci-dessous et nous vous contacterons avec les disponibilités et les détails."
             },
             it: {
                 navHome: "Home", navCollections: "Collezioni", navLusso: "Lusso", navUltimate: "Ultimate", 
-                navAllegria: "Allegria", navPrime: "Prime", navCTS: "Su Misura", navGallery: "Galleria", navResources: "Risorse", navContact: "Contatti",
+                navAllegria: "Allegria", navPrime: "Prime", navCTS: "(CTS) Su Misura", navGallery: "Galleria", navFAQ: "FAQ", navResources: "Risorse", navContact: "Contatti",
                 homeSubtitle: "Una Superficie Solida di Nuova Generazione",
                 homeTitle1: "Il Tuo Partner… Per", homeTitle2: "Produttore Diretto", homeTitle3: "Superfici Premium",
                 homeDesc: "Fabbrica / Magazzino di 1,1 milioni di piedi quadrati. Operativi dal 1993. Struttura di produzione che utilizza la migliore tecnologia italiana.",
@@ -1136,6 +1574,8 @@
                 testimonialsTitle: "Cosa Dicono i Nostri Partner",
                 rating5: "Valutazione 5.0", review1: "1 recensione", review2: "2 recensioni", review4: "4 recensioni", review7: "7 recensioni", review8: "8 recensioni", localGuide58: "Local Guide · 58 recensioni",
                 lussoTitle: "COLLEZIONE LUSSO", ultimateTitle: "COLLEZIONE ULTIMATE", allegriaTitle: "COLLEZIONE ALLEGRIA", primeTitle: "COLLEZIONE PRIME",
+                nameLusso: "LUSSO", nameUltimate: "ULTIMATE", nameAllegria: "ALLEGRIA", namePrime: "PRIME",
+                sizeLabel: "Dimensioni:",
                 lowSilica: "8K è una superficie minerale a basso contenuto di silice. Le caratteristiche naturali del quarzo possono causare lievi variazioni di colore.",
                 reqSample: "Richiedi Campione 4x6",
                 ctsTitle: "Soluzione su Misura (CTS)",
@@ -1147,7 +1587,39 @@
                 step4: "Firmi i disegni con ordine d'acquisto e deposito del 50%",
                 step5: "Produzione finale del tuo progetto",
                 gallerySub: "Guarda le nostre splendide superfici in azione.",
+                faqSub: "Domande frequenti sulle nostre superfici in quarzo.",
+                faq1Q: "Si possono posizionare pentole e piatti caldi direttamente sul quarzo?",
+                faq1A: "Anche se il quarzo ha un'alta resistenza al calore, usare sempre sottopentole. L'esposizione prolungata al calore danneggerà il quarzo e non è coperta da garanzia.",
+                faq2Q: "Devo sigillare il quarzo?",
+                faq2A: "No. A differenza della pietra naturale, il quarzo è non poroso. Non dovrai MAI applicare un sigillante.",
+                faq3Q: "Come viene installato il quarzo?",
+                faq3A: "Il quarzo viene installato da installatori certificati. Questo assicura un'installazione corretta coperta da piena garanzia.",
+                faq4Q: "Il quarzo può macchiarsi?",
+                faq4A: "Sì. Anche se non poroso, le macchie superficiali possono verificarsi. È meglio pulire le fuoriuscite tempestivamente seguendo la nostra guida alla manutenzione.",
+                faq5Q: "Come mi prendo cura del quarzo?",
+                faq5A: "Richiede una cura semplice: acqua, sapone e un panno morbido. Consulta la nostra Guida alla Manutenzione nella sezione Risorse.",
+                faq6Q: "Il quarzo può essere usato per il rivestimento di caminetti o retrocucina?",
+                faq6A: "Non raccomandiamo queste applicazioni poiché l'esposizione prolungata ad alto calore può causare scolorimento o crepe non coperte da garanzia.",
+                faq7Q: "Dove può essere applicato il quarzo?",
+                faq7A: "Piani cucina, isole, top per bagni, pareti doccia, tavoli. Anche per usi commerciali come ospedali, ristoranti, uffici.",
+                faq8Q: "Il piccolo campione corrisponderà al mio piano di lavoro installato?",
+                faq8A: "I piccoli campioni sono indicativi del motivo e del colore. Potrebbero variare leggermente rispetto all'intera lastra installata.",
+                faq9Q: "Il colore del quarzo è uniforme?",
+                faq9A: "Essendo quarzo naturale, le variazioni di colore, forma e distribuzione delle particelle sono caratteristiche intrinseche e non difetti.",
+                faq10Q: "Quali sono i vantaggi del quarzo?",
+                faq10A: "È non poroso e previene germi, batteri e muffe. Non richiede sigillatura. È la scelta naturale e sicura.",
+                faq11Q: "Cos'è il quarzo naturale?",
+                faq11A: "È uno dei componenti più duri del granito (7 sulla scala di Mohs). Solo diamanti, zaffiri e topazi sono più duri. È altamente resistente a graffi e urti.",
                 resourcesSub: "Guide, moduli e approfondimenti per le tue superfici premium.",
+                navAbout: "Chi Siamo", aboutDesc: "Scopri il nostro stabilimento di produzione di 1,1 milioni di piedi quadrati.",
+                navBlog: "Articoli e Approfondimenti", blogDesc: "Leggi le nostre ultime novità del settore e i consigli di design.",
+                navCare: "Cura e Manutenzione", careDesc: "Guide dettagliate su come mantenere le tue superfici incontaminate.",
+                navDownloads: "Download e Moduli", downloadsDesc: "Accedi a garanzie, esenzioni e brochure dei prodotti.",
+                backToResources: "Torna alle Risorse",
+                aboutSub: "Il leader nella tecnologia e produzione del quarzo.",
+                aboutP1: "MDP Surfaces, che sta per Manufacturer Direct Premium, opera con una filosofia semplice: eliminare gli intermediari per fornire prodotti di fascia alta a prezzi competitivi. È un modello di business costruito su oltre 30 anni di esperienza.",
+                aboutP2: "Mentre l'azienda ha un'enorme impronta globale — tra cui un impianto di produzione di 1,1 milioni di piedi quadrati operativo dal 1993 — i nostri magazzini mantengono l'atmosfera di un partner locale dedicato alla comunità.",
+                aboutP3: "Utilizzando l'avanzata tecnologia italiana, il nostro caratteristico Quarzo 8K Ultra HD è stato sviluppato per colmare il divario tra la durabilità della pietra e l'anima estetica del marmo naturale.",
                 downloads: "Download e Moduli",
                 docCommWarranty: "8K ULTRA - Garanzia Commerciale",
                 docResWarranty: "8K ULTRA - Garanzia Residenziale",
@@ -1162,19 +1634,110 @@
                 blogTitle: "Articoli e Approfondimenti",
                 readArticle: "Leggi l'Articolo",
                 contactUsToday: "Contattaci OGGI STESSO!", getInTouch: "Mettiti in contatto, siamo qui per aiutarti! Inviaci un messaggio.",
-                fullName: "Nome Completo / Full Name: *", emailAddress: "Indirizzo Email / Email Address: *", yourMessage: "Il Tuo Messaggio / Your Message:",
+                fullName: "Nome Completo: *", emailAddress: "Indirizzo Email: *",
+                phone: "Telefono: *", city: "Città: *", province: "Provincia/Stato: *",
+                inquiryType: "Tipo di Richiesta: *", generalInquiry: "Richiesta Generale", slabViewing: "Visione delle Lastre",
+                customerType: "Tipo di cliente: *", selectOne: "Seleziona", homeowner: "Proprietario", wholesaler: "Grossista", owner: "Titolare",
+                howCanWeHelp: "Come possiamo aiutare?",
                 submit: "Invia", formSuccessMsg: "Messaggio inviato con successo!",
                 hours: "Orari", footerDesc: "Il Tuo Partner…Per Superfici Premium Direttamente dal Produttore.",
                 ourWarehouses: "I NOSTRI MAGAZZINI",
                 mtlWarehouse: "MAGAZZINO DI MONTREAL", mtlAddress: "808 Selkirk Ave, Pointe Claire, QC H9R 3S3",
                 vanWarehouse: "MAGAZZINO DI VANCOUVER", vanAddress: "12380 Vickers Way, Richmond, BC V6V 1H9",
-                torWarehouse1: "MAGAZZINO DI TORONTO 1", torAddress1: "150 Jardin Dr #6 Concord, ON L4K 1X6",
-                torWarehouse2: "MAGAZZINO DI TORONTO 2", torAddress2: "22999 HWY 48 Georgina, ON L0E 1R0",
-                mainOffice: "Ufficio Principale", torOffice: "Ufficio di Toronto",
-                slabViewingTitle: "Appuntamenti per la Visione delle Lastre", slabViewingText: "Per la visione delle lastre, contatta Mena per fissare un appuntamento:",
+                mainOffice: "Ufficio Principale",
+                slabViewingTitle: "Appuntamenti per la Visione delle Lastre", slabViewingText: "Per la visione delle lastre, seleziona 'Visione Lastre' nel modulo di contatto per prenotare un appuntamento.",
                 reviewsTitle: "Recensioni Google",
                 inquiryTitle: "Interessato a questa superficie?",
                 inquiryDesc: "Compila il modulo sottostante e ti ricontatteremo con disponibilità e dettagli."
+            },
+            zh: {
+                navHome: "首页", navCollections: "系列产品", navLusso: "Lusso 系列", navUltimate: "Ultimate 系列", 
+                navAllegria: "Allegria 系列", navPrime: "Prime 系列", navCTS: "(CTS) 定制切割", navGallery: "案例图库", navFAQ: "常见问题", navResources: "资源中心", navContact: "联系我们",
+                homeSubtitle: "新一代实体面材",
+                homeTitle1: "您值得信赖的合作伙伴…", homeTitle2: "厂家直销", homeTitle3: "高端表面材料",
+                homeDesc: "占地 110 万平方英尺的工厂/仓库。自 1993 年开始运营。采用最优质的意大利技术进行制造。",
+                btnExplore: "探索系列产品", btnContact: "联系我们",
+                quartzComposition: "我们的石英石由 93% 的天然石英和 7% 的树脂组成",
+                quartzDesc: "8K 是一种低二氧化硅矿物表面。我们以始终如一的顶级质量，为您带来市场上最受欢迎、最现代的色彩和图案。",
+                ourCollections: "我们的系列", viewCollection: "查看系列 &rarr;",
+                testimonialsTitle: "我们的合作伙伴评价",
+                rating5: "5.0 评分", review1: "1 条评论", review2: "2 条评论", review4: "4 条评论", review7: "7 条评论", review8: "8 条评论", localGuide58: "本地向导 · 58 条评论",
+                lussoTitle: "LUSSO 系列", ultimateTitle: "ULTIMATE 系列", allegriaTitle: "ALLEGRIA 系列", primeTitle: "PRIME 系列",
+                nameLusso: "LUSSO 系列", nameUltimate: "ULTIMATE 系列", nameAllegria: "ALLEGRIA 系列", namePrime: "PRIME 系列",
+                sizeLabel: "尺寸：",
+                lowSilica: "8K 是一种低二氧化硅矿物表面。石英的自然特性可能会导致轻微的颜色变化。",
+                reqSample: "索取 4x6 样品",
+                ctsTitle: "定制切割服务 (CTS)",
+                ctsSubtitle: "为石英石、花岗岩和大理石表面提供图纸定制切割解决方案。我们是您值得信赖的合作伙伴。",
+                weOfferYou: "我们为您提供：", valueAdded: "增值优势：", fiveEasySteps: "5 个简单步骤：",
+                step1: "我们根据您的车间图纸进行审核和报价",
+                step2: "发送对照样品供您批准",
+                step3: "确认最终细节（水槽位置、边缘处理）",
+                step4: "您通过采购订单和 50% 定金确认图纸",
+                step5: "项目的最终生产",
+                gallerySub: "查看我们令人惊叹的表面安装效果。",
+                faqSub: "关于石英表面的常见问题解答。",
+                faq1Q: "热的盘子和锅可以直接放在石英石上吗？",
+                faq1A: "虽然石英石具有很高的耐热性，但请始终使用隔热垫或三脚架。长时间暴露在高温下会损坏石英石，此类损坏不在保修范围内。",
+                faq2Q: "我需要对石英石进行抛光或密封吗？",
+                faq2A: "不需要。与天然石材产品不同，石英石是无孔表面。您永远不需要在我们的表面上涂抹密封剂。",
+                faq3Q: "石英石是如何安装的？",
+                faq3A: "石英石由经过培训和认证的加工商/安装人员安装。使用认证的安装人员可确保石英石安装正确且享有全面保修。",
+                faq4Q: "石英石会被染色吗？",
+                faq4A: "会。虽然石英石是无孔的且不需要密封，但仍可能发生表面染色。为避免染色，最好及时擦拭溢出物。按照我们的护理指南，大多数表面污渍都可以轻松去除。",
+                faq5Q: "我该如何保养石英石？",
+                faq5A: "石英石的保养非常简单——只需用肥皂和水清洗，然后用软布擦干。请在“资源中心”查看我们的《保养与维护指南》。",
+                faq6Q: "石英石可以用于壁炉覆面或炉灶防溅板吗？",
+                faq6A: "我们不推荐进行此类应用，因为长时间暴露在高温下可能会导致变色、翘曲或开裂。这些情况不在保修范围内。",
+                faq7Q: "石英石可以应用在哪里？",
+                faq7A: "厨房台面、岛台、浴室梳妆台、淋浴墙、桌面等。也适用于医疗设施、餐厅、办公室等商业用途。",
+                faq8Q: "我持有的小块样品安装后会和我的台面完全一样吗？",
+                faq8A: "较小的样品是从大块石英石板上切割下来的。请将样品仅作为特定颜色设计图案和色调的总体参考，实际安装可能会略有不同。",
+                faq9Q: "石英石的颜色一致吗？",
+                faq9A: "虽然石英颜色可能比大理石或花岗岩更一致，但颜色、形状、色调和颗粒大小的变化是石英的固有特征，不被视为缺陷。",
+                faq10Q: "石英石有什么优点？",
+                faq10A: "它是无孔的，可防止细菌和霉菌的滋生。不需要密封。在适当的保养下，它是自然的选择。",
+                faq11Q: "什么是天然石英？",
+                faq11A: "石英是天然花岗岩中最坚硬的成分之一。石英在莫氏硬度表上评分为 7（满分 10）。它是极其耐刮擦和耐冲击的表面。",
+                resourcesSub: "高端表面的指南、表格和见解。",
+                navAbout: "关于我们", aboutDesc: "了解我们占地 110 万平方英尺的制造工厂。",
+                navBlog: "博客与文章", blogDesc: "阅读最新的行业新闻和设计提示。",
+                navCare: "保养与维护", careDesc: "了解如何保持表面整洁的详细指南。",
+                navDownloads: "下载与表格", downloadsDesc: "获取保修单、免责声明和产品手册。",
+                backToResources: "返回资源中心",
+                aboutSub: "石英技术和制造的领导者。",
+                aboutP1: "MDP代表“厂家直销高端品质”，其经营理念非常直接：消除中间商，以具有竞争力的价格提供高端产品。这是建立在 30 多年行业经验基础上的商业模式。",
+                aboutP2: "虽然该公司拥有庞大的全球业务版图——包括自 1993 年以来运营的占地 110 万平方英尺的制造工厂——但我们的仓库仍保持着致力于社区的本地合作伙伴的感觉。",
+                aboutP3: "利用先进的意大利技术，我们的 8K 超高清石英石是专门为弥合人造石的耐用性和天然大理石的美学之间的差距而开发的。",
+                downloads: "下载与表格",
+                docCommWarranty: "8K ULTRA - 商业保修",
+                docResWarranty: "8K ULTRA - 住宅保修",
+                docCare: "MDP 保养与维护指南",
+                docWaiver: "产品免责声明表格",
+                docBrochure: "下载产品手册",
+                careTitle: "保养与维护",
+                careDaily: "日常清洁", careDailyText: "日常维护只需使用软布或海绵蘸取温水和温和洗洁精。擦拭表面并用干净的布彻底擦干，以防止水渍。",
+                careStains: "顽固污渍", careStainsText: "对于顽固污渍，请使用非研磨性清洁剂。用防刮海绵轻轻擦拭，用温水彻底冲洗并完全擦干。",
+                careAvoid: "避免事项", careAvoidText: "避免让石英石接触强力化学品、溶剂、漂白剂或高碱性清洁剂。如果发生意外接触，请立即用水冲洗该区域。",
+                careHeat: "高温与防刮擦", careHeatText: "虽然石英石高度防刮防热，但并非坚不可摧。请始终在热锅下使用隔热垫，不要直接在表面上切割。",
+                blogTitle: "行业文章与见解",
+                readArticle: "阅读文章",
+                contactUsToday: "今天就联系我们！", getInTouch: "与我们取得联系，我们随时为您提供帮助！请给我们留言。",
+                fullName: "全名: *", emailAddress: "电子邮件地址: *",
+                phone: "电话号码: *", city: "城市: *", province: "省/州: *",
+                inquiryType: "咨询类型: *", generalInquiry: "一般咨询", slabViewing: "预约看板",
+                customerType: "客户类型: *", selectOne: "请选择", homeowner: "房主 (Homeowner)", wholesaler: "批发商 (Wholesaler)", owner: "企业主 (Owner)",
+                howCanWeHelp: "我们能提供什么帮助？",
+                submit: "提交", formSuccessMsg: "消息发送成功！",
+                hours: "营业时间", footerDesc: "您值得信赖的合作伙伴…厂家直销高端表面材料。",
+                ourWarehouses: "我们的仓库",
+                mtlWarehouse: "蒙特利尔仓库", mtlAddress: "808 Selkirk Ave, Pointe Claire, QC H9R 3S3",
+                vanWarehouse: "温哥华仓库", vanAddress: "12380 Vickers Way, Richmond, BC V6V 1H9",
+                mainOffice: "主要办公室",
+                slabViewingTitle: "预约参观大板", slabViewingText: "如需预约参观大板，请在联系表格中选择“预约看板”。",
+                reviewsTitle: "Google 评价",
+                inquiryTitle: "对这款表面材料感兴趣？",
+                inquiryDesc: "填写下方表格，我们将回复您可用性及详细信息。"
             }
         };
 
@@ -1192,7 +1755,7 @@
                 
                 // Set initial view based on hash or default to home
                 const hash = window.location.hash.substring(1);
-                if(['home','lusso','ultimate','allegria','prime','cts','gallery','resources','contact'].includes(hash)) {
+                if(['home','lusso','ultimate','allegria','prime','cts','gallery','faq','resources','about','blog','care','downloads','contact'].includes(hash)) {
                     this.navigate(hash);
                 } else {
                     this.navigate('home');
@@ -1253,8 +1816,8 @@
                 this.currentLang = lang;
                 localStorage.setItem('mdp_lang', lang);
                 
-                // Update toggle buttons UI dynamically for EN, FR, IT
-                ['lang-en', 'lang-fr', 'lang-it', 'mobile-lang-en', 'mobile-lang-fr', 'mobile-lang-it'].forEach(id => {
+                // Update toggle buttons UI dynamically for EN, FR, IT, ZH
+                ['lang-en', 'lang-fr', 'lang-it', 'lang-zh', 'mobile-lang-en', 'mobile-lang-fr', 'mobile-lang-it', 'mobile-lang-zh'].forEach(id => {
                     const el = document.getElementById(id);
                     if(el.id.endsWith(lang)) {
                         el.classList.remove('text-gray-500', 'dark:text-gray-400');
@@ -1300,15 +1863,26 @@
                 
                 items.forEach(item => {
                     // Logic to pull the correct language description
-                    const desc = this.currentLang === 'en' ? item.descEn : (this.currentLang === 'fr' ? item.descFr : item.descIt);
+                    let desc;
+                    if(this.currentLang === 'en') desc = item.descEn;
+                    else if(this.currentLang === 'fr') desc = item.descFr;
+                    else if(this.currentLang === 'it') desc = item.descIt;
+                    else desc = item.descZh;
                     
                     // Grab the exact image filenames you specified in the products list
                     const imgThumbnail = item.imgThumbnail;
                     const imgModal = item.imgModal;
                     
+                    let localizedSize = item.size;
+                    if (this.currentLang === 'zh') localizedSize = localizedSize.replace('Jumbo', '加大版');
+                    else if (this.currentLang === 'fr') localizedSize = localizedSize.replace('Jumbo', 'Géant');
+                    else if (this.currentLang === 'it') localizedSize = localizedSize.replace('Jumbo', 'Gigante');
+
+                    const sizeLabel = translations[this.currentLang].sizeLabel || "Size:";
+                    
                     // Escape single quotes for the onclick handler safely
                     const safeName = item.name.replace(/'/g, "\\'");
-                    const safeIdSize = `${item.id} - ${item.size}`.replace(/'/g, "\\'");
+                    const safeIdSize = `${item.id} - ${localizedSize}`.replace(/'/g, "\\'");
                     
                     const card = `
                         <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow group cursor-pointer" onclick="app.openModal('${safeName}', '${safeIdSize}', '${imgModal}', '${collectionName}')">
@@ -1325,7 +1899,7 @@
                             </div>
                             <div class="p-5">
                                 <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">${item.name}</h3>
-                                <p class="text-xs text-gray-500 dark:text-gray-400 mb-3 font-semibold tracking-wider">Size: ${item.size}</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 mb-3 font-semibold tracking-wider">${sizeLabel} ${localizedSize}</p>
                                 <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">${desc}</p>
                             </div>
                         </div>
@@ -1343,8 +1917,11 @@
                 const readBtnText = translations[this.currentLang].readArticle || "Read Article";
                 
                 blogArticles.forEach(article => {
-                    const title = this.currentLang === 'en' ? article.titleEn : (this.currentLang === 'fr' ? article.titleFr : article.titleIt);
-                    const desc = this.currentLang === 'en' ? article.descEn : (this.currentLang === 'fr' ? article.descFr : article.descIt);
+                    let title, desc;
+                    if(this.currentLang === 'en') { title = article.titleEn; desc = article.descEn; }
+                    else if(this.currentLang === 'fr') { title = article.titleFr; desc = article.descFr; }
+                    else if(this.currentLang === 'it') { title = article.titleIt; desc = article.descIt; }
+                    else { title = article.titleZh; desc = article.descZh; }
                     
                     const card = `
                         <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow border border-gray-100 dark:border-gray-700 flex flex-col group cursor-pointer" onclick="app.openBlogModal(${article.id})">
@@ -1366,8 +1943,11 @@
                 const article = blogArticles.find(a => a.id === id);
                 if(!article) return;
 
-                const title = this.currentLang === 'en' ? article.titleEn : (this.currentLang === 'fr' ? article.titleFr : article.titleIt);
-                const content = this.currentLang === 'en' ? article.contentEn : (this.currentLang === 'fr' ? article.contentFr : article.contentIt);
+                let title, content;
+                if(this.currentLang === 'en') { title = article.titleEn; content = article.contentEn; }
+                else if(this.currentLang === 'fr') { title = article.titleFr; content = article.contentFr; }
+                else if(this.currentLang === 'it') { title = article.titleIt; content = article.contentIt; }
+                else { title = article.titleZh; content = article.contentZh; }
 
                 document.getElementById('blogModalTitle').textContent = title;
                 document.getElementById('blogModalBody').innerHTML = content;
